@@ -31,20 +31,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Environment Variables
 
-The application form requires email configuration to send application submissions. Create a `.env.local` file in the root directory with the following variables:
+Both the application form and contact form require email configuration to send submissions. Create a `.env.local` file in the root directory with the following variables:
 
-### Using Resend (Recommended)
+### Using SMTP (Direct Email)
 
-```env
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-RESEND_FROM_EMAIL=noreply@yourdomain.com
-```
-
-Get your Resend API key from [https://resend.com/api-keys](https://resend.com/api-keys)
-
-### Using SMTP (Alternative)
-
-If you prefer to use SMTP instead of Resend, uncomment the Nodemailer code in `src/app/api/apply/route.ts` and configure:
+The forms use SMTP to send emails directly to your inbox. Configure your email provider settings:
 
 ```env
 SMTP_HOST=smtp.gmail.com
@@ -55,12 +46,26 @@ SMTP_PASSWORD=your-app-password
 SMTP_FROM_EMAIL=your-email@gmail.com
 ```
 
+#### Gmail Setup:
+
+1. Go to your Google Account settings
+2. Enable 2-Step Verification
+3. Go to [App Passwords](https://myaccount.google.com/apppasswords)
+4. Create a new app password (select "Mail" and "Other" device)
+5. Use this app password as your `SMTP_PASSWORD` (not your regular Gmail password)
+
+#### Other Email Providers:
+
+- **Outlook/Hotmail**: `smtp-mail.outlook.com`, port `587`
+- **Yahoo**: `smtp.mail.yahoo.com`, port `587`
+- **Custom domain**: Check with your email provider for SMTP settings
+
 ### Testing Locally
 
 1. Copy `.env.example` to `.env.local` (or create `.env.local` manually)
 2. Add your email service credentials
 3. Restart the development server: `npm run dev`
-4. Navigate to `/apply` and submit a test application
+4. Navigate to `/apply` or `/contact` and submit a test form
 5. Check that the email is received at `Darultahawiyyah@gmail.com`
 
 **Note:** Never commit `.env.local` to version control. It's already in `.gitignore`.
@@ -93,13 +98,6 @@ SMTP_FROM_EMAIL=your-email@gmail.com
 1. In your Vercel project dashboard, go to **Settings** > **Environment Variables**
 2. Add the following variables for each environment (Production, Preview, Development):
 
-   **For Resend (Recommended):**
-   ```
-   RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   RESEND_FROM_EMAIL=noreply@yourdomain.com
-   ```
-
-   **Or for SMTP (Alternative):**
    ```
    SMTP_HOST=smtp.gmail.com
    SMTP_PORT=587
@@ -114,8 +112,8 @@ SMTP_FROM_EMAIL=your-email@gmail.com
 
 ### Step 4: Test Email Functionality
 
-1. After deployment, navigate to `https://your-domain.vercel.app/apply`
-2. Fill out and submit a test application
+1. After deployment, navigate to `https://your-domain.vercel.app/apply` or `https://your-domain.vercel.app/contact`
+2. Fill out and submit a test form
 3. Check that the email is received at `Darultahawiyyah@gmail.com`
 4. Verify the email subject and body format are correct
 
@@ -128,7 +126,7 @@ SMTP_FROM_EMAIL=your-email@gmail.com
 
 ### Troubleshooting
 
-- **Email not sending?** Check that environment variables are set correctly and the service (Resend/SMTP) is properly configured
+- **Email not sending?** Check that environment variables are set correctly and SMTP credentials are valid. For Gmail, make sure you're using an App Password, not your regular password
 - **Build errors?** Ensure all dependencies are in `package.json` and run `npm install` locally to verify
 - **Environment variables not working?** Make sure to redeploy after adding variables
 
