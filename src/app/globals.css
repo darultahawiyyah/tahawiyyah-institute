@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  /* Design System Colors */
+  --bg: #0B0D10;
+  --surface: #0F1623;
+  --surface2: #0B1220;
+  --text: #E8EDF5;
+  --muted: #A9B4C7;
+  --brand: #0E2A47;
+  --brand2: #0B2036;
+  --gold: #c6b89a;
+  --gold2: #a8957a;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand2: var(--brand2);
+  --color-gold: var(--gold);
+  --color-gold2: var(--gold2);
+  --color-border: var(--border);
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background polish: radial gradient glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(14, 42, 71, 0.3) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle noise overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* Ensure content is above background effects */
+body > * {
+  position: relative;
+  z-index: 2;
+}
