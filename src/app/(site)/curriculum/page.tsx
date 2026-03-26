@@ -143,7 +143,7 @@ export default function Curriculum() {
               <AccordionItem
                 title="Semester 1 (6 subjects)"
                 defaultOpen
-        >
+            >
                 <div className="space-y-6 pt-2">
                   {semester1Subjects.map((subject) => (
                     <Card key={subject.name}>
@@ -190,14 +190,9 @@ export default function Curriculum() {
               {/* SEMESTERS 2, 3, 4 — TBD */}
               {tbdSemesters.map((semester) => (
                 <AccordionItem
-                  key={semester.number}
-                  title={
-                    <span className="flex items-center gap-3">
-                      {semester.label}
-                      <Badge>TBD</Badge>
-                    </span>
-                  }
-                >
+                   key={semester.number}
+                    title={`${semester.label} (TBD)`}
+                      >
                   <div className="flex flex-col items-center justify-center py-12 text-center">
                     <p className="text-lg font-medium text-muted">
                       Subjects &amp; descriptions — TBD
