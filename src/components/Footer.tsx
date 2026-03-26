@@ -8,6 +8,7 @@ import { cn } from "@/lib/cn";
 const quickLinks = [
   { href: "/program", label: "Program" },
   { href: "/curriculum", label: "Curriculum" },
+  { href: "/teachers", label: "Teachers" },
   { href: "/schedule", label: "Schedule" },
   { href: "/apply", label: "Apply" },
   { href: "/contact", label: "Contact" },
@@ -15,7 +16,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-[rgba(11,13,16,0.7)] backdrop-blur-md" role="contentinfo">
+    <footer className="border-t border-border bg-[rgba(247,245,240,0.85)] backdrop-blur-md" role="contentinfo">
       <Container>
         <div className="py-12 md:py-16">
           {/* Main Footer Content */}
