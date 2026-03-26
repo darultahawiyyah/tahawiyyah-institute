@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* Design System Colors */
-  --bg: #0B0D10;
-  --surface: #0F1623;
-  --surface2: #0B1220;
-  --text: #E8EDF5;
-  --muted: #A9B4C7;
-  --brand: #0E2A47;
-  --brand2: #0B2036;
-  --gold: #c6b89a;
-  --gold2: #a8957a;
-  --border: rgba(255, 255, 255, 0.08);
+  /* Design System Colors — Light Theme */
+  --bg: #F7F5F0;
+  --surface: #FFFFFF;
+  --surface2: #EDE9E1;
+  --text: #1C1917;
+  --muted: #6B6560;
+  --brand: #D6CEBE;
+  --brand2: #C4B8A5;
+  --gold: #8B7355;
+  --gold2: #6F5B42;
+  --border: rgba(0, 0, 0, 0.1);
 }
 
 @theme {
@@ -26,7 +26,7 @@
   --color-gold2: var(--gold2);
   --color-border: var(--border);
 
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -47,7 +47,7 @@ body::before {
   height: 50%;
   background: radial-gradient(
     circle at top left,
-    rgba(14, 42, 71, 0.3) 0%,
+    rgba(139, 115, 85, 0.06) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -67,15 +67,15 @@ body::after {
       0deg,
       transparent,
       transparent 2px,
-      rgba(255, 255, 255, 0.01) 2px,
-      rgba(255, 255, 255, 0.01) 4px
+      rgba(0, 0, 0, 0.008) 2px,
+      rgba(0, 0, 0, 0.008) 4px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 2px,
-      rgba(255, 255, 255, 0.01) 2px,
-      rgba(255, 255, 255, 0.01) 4px
+      rgba(0, 0, 0, 0.008) 2px,
+      rgba(0, 0, 0, 0.008) 4px
     );
   pointer-events: none;
   z-index: 1;

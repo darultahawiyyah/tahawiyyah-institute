@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/program", label: "Program" },
   { href: "/curriculum", label: "Curriculum" },
+  { href: "/teachers", label: "Teachers" },
   { href: "/schedule", label: "Schedule" },
   { href: "/contact", label: "Contact" },
 ];
@@ -49,9 +50,9 @@ export function Navbar() {
       <nav
         className={cn(
           "sticky top-0 z-50 h-[72px] backdrop-blur-md",
-          isMobileMenuOpen 
-            ? "bg-[rgba(11,13,16,0.95)]" 
-            : "bg-[rgba(11,13,16,0.7)] border-b border-border"
+          isMobileMenuOpen
+            ? "bg-[rgba(247,245,240,0.97)]"
+            : "bg-[rgba(247,245,240,0.85)] border-b border-border"
         )}
         role="navigation"
         aria-label="Main navigation"
