@@ -13,7 +13,7 @@ import {
   CardContent,
 } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { applySchema, trackOptions, type ApplyFormData } from "@/lib/apply-schema";
+import { applySchema, type ApplyFormData } from "@/lib/apply-schema";
 import { cn } from "@/lib/cn";
 
 const fadeUpVariants = {
@@ -352,13 +352,12 @@ export default function Apply() {
                           <option value="sric">SRIC</option>
                         </optgroup>
                         <optgroup label="Individual Courses">
-                          {trackOptions
-                            .filter((o) => o.group === "Individual Courses")
-                            .map((o) => (
-                              <option key={o.value} value={o.value}>
-                                {o.label}
-                              </option>
-                            ))}
+                          <option value="fqh-101">FQH 101 — Fiqh &amp; Uṣūl al-Fiqh</option>
+                          <option value="aqd-101">AQD 101 — ʿAqīda &amp; Islamic Theology</option>
+                          <option value="had-101">HAD 101 — Ḥadīth Sciences</option>
+                          <option value="taf-101">TAF 101 — Tafsīr &amp; Qurʾānic Studies</option>
+                          <option value="taj-101">TAJ 101 — Tajwīd &amp; Qurʾānic Recitation</option>
+                          <option value="arb-101">ARB 101 — Arabic Language &amp; Grammar</option>
                         </optgroup>
                       </select>
                       {errors.preferredTrack && (
