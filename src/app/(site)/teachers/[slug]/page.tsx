@@ -21,152 +21,109 @@ interface TeacherData {
   title: string;
   summary: string;
   education: string[];
-  specializations: string[];
   biography: string;
-  teachingPhilosophy: string;
   courses: string[];
 }
 
 const teachersData: TeacherData[] = [
   {
     slug: "mawlana-arqam",
-    name: "Mawlana Arqam",
-    title: "Instructor — Fiqh & Usul al-Fiqh",
+    name: "Mawlānā Arqam",
+    title: "Instructor — Fiqh & Uṣūl al-Fiqh",
     summary:
-      "Mawlana Arqam specializes in Hanafi jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
+      "Mawlānā Arqam specializes in Ḥanafī jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
     education: [
-      "Traditional Alim course in Hanafi Fiqh",
-      "Advanced studies in Usul al-Fiqh",
-      "Ijazat in classical Fiqh texts",
-    ],
-    specializations: [
-      "Hanafi Fiqh",
-      "Usul al-Fiqh (Principles of Jurisprudence)",
-      "Comparative Jurisprudence",
-      "Islamic Legal Theory",
+      "Traditional ʿĀlim course in Ḥanafī Fiqh",
+      "Advanced studies in Uṣūl al-Fiqh",
+      "Ijāzāt in classical Fiqh texts",
     ],
     biography:
-      "Mawlana Arqam began his journey of Islamic scholarship at a young age and went on to complete a rigorous traditional Alim course with a focus on Hanafi Fiqh. He studied under senior scholars and received personal Ijazat in several classical texts of jurisprudence. His deep engagement with the principles of Fiqh allows him to not only convey rulings but help students understand the reasoning behind them. He has dedicated his career to teaching and has trained numerous students in the intricacies of Hanafi jurisprudence. At Tahawiyyah Institute, Mawlana Arqam oversees the Fiqh curriculum and ensures students develop both knowledge and analytical thinking.",
-    teachingPhilosophy:
-      "Mawlana Arqam believes that Fiqh should not be learned in isolation from its principles. By grounding students in Usul al-Fiqh alongside practical rulings, he helps them develop the analytical skills needed to engage with the tradition critically and faithfully. His classes combine close reading of classical texts with real-world application.",
-    courses: ["Al-Fiqh al-Muyassar", "Mukhtasar al-Quduri", "Usul al-Shashi"],
+      "Mawlānā Arqam began his journey of Islamic scholarship at a young age and went on to complete a rigorous traditional ʿĀlim course with a focus on Ḥanafī Fiqh. He studied under senior scholars and received personal Ijāzāt in several classical texts of jurisprudence. His deep engagement with the principles of Fiqh allows him to not only convey rulings but help students understand the reasoning behind them. He has dedicated his career to teaching and has trained numerous students in the intricacies of Ḥanafī jurisprudence. At Ṭaḥāwiyya Institute, Mawlānā Arqam oversees the Fiqh curriculum and ensures students develop both knowledge and analytical thinking.",
+    courses: ["FQH 101"],
   },
   {
     slug: "mawlana-fahim",
-    name: "Mawlana Fahim",
-    title: "Instructor — Hadith Sciences",
+    name: "Mawlānā Fahim",
+    title: "Instructor — Ḥadīth Sciences",
     summary:
-      "Mawlana Fahim brings rigorous training in hadith authentication and the study of prophetic traditions, helping students connect with the Sunnah.",
+      "Mawlānā Fahim brings rigorous training in ḥadīth authentication and the study of Prophetic traditions, helping students connect with the Sunna.",
     education: [
-      "Traditional Alim course with specialization in Hadith",
-      "Advanced studies in Mustalah al-Hadith",
-      "Ijazat in the Six Books of Hadith",
-    ],
-    specializations: [
-      "Mustalah al-Hadith (Hadith Terminology)",
-      "Takhrij al-Hadith (Hadith Verification)",
-      "Study of the Six Canonical Collections",
-      "Prophetic Biography through Hadith",
+      "Traditional ʿĀlim course with specialization in Ḥadīth",
+      "Advanced studies in Muṣṭalaḥ al-Ḥadīth",
+      "Ijāzāt in the Six Books of Ḥadīth",
     ],
     biography:
-      "Mawlana Fahim developed an early passion for the Prophetic traditions and dedicated years to studying under scholars of hadith. He specialized in Hadith Sciences during his traditional studies and developed a deep expertise in the methodology of hadith authentication. Beyond his formal education, he participated in private study circles where he received detailed Ijazat in the six canonical collections. His approach combines traditional methodology with an awareness of how hadith scholarship connects to contemporary Muslim life. At Tahawiyyah Institute, Mawlana Fahim leads the Hadith Sciences track and helps students develop a meaningful relationship with the Sunnah.",
-    teachingPhilosophy:
-      "Mawlana Fahim believes that understanding hadith methodology is essential for any student of knowledge. Without knowing how to verify a narration, one cannot truly engage with the Prophetic tradition. His classes go beyond just reading hadith texts — they teach students how those texts were preserved, transmitted, and authenticated across generations.",
-    courses: [
-      "Riyadh al-Saliheen",
-      "Al-Bayquniyyah",
-      "Selected chapters from Sahih al-Bukhari",
-    ],
+      "Mawlānā Fahim developed an early passion for the Prophetic traditions and dedicated years to studying under scholars of ḥadīth. He specialized in Ḥadīth Sciences during his traditional studies and developed a deep expertise in the methodology of ḥadīth authentication. Beyond his formal education, he participated in private study circles where he received detailed Ijāzāt in the six canonical collections. His approach combines traditional methodology with an awareness of how ḥadīth scholarship connects to contemporary Muslim life. At Ṭaḥāwiyya Institute, Mawlānā Fahim leads the Ḥadīth Sciences track and helps students develop a meaningful relationship with the Sunna.",
+    courses: ["HAD 101"],
   },
   {
     slug: "mawlana-rohan",
-    name: "Mawlana Rohan",
-    title: "Instructor — Aqidah & Islamic Theology",
+    name: "Mawlānā Rohan",
+    title: "Instructor — ʿAqīda & Islamic Theology",
     summary:
-      "Mawlana Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
+      "Mawlānā Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
     education: [
-      "Traditional Alim course with focus on Aqidah",
-      "Advanced studies in Maturidi Theology",
-      "Ijazah in Al-Aqidah al-Tahawiyyah",
-    ],
-    specializations: [
-      "Maturidi Theology",
-      "Classical Creedal Texts",
-      "Comparative Theology",
-      "History of Islamic Thought",
+      "Traditional ʿĀlim course with focus on ʿAqīda",
+      "Advanced studies in Māturīdī Theology",
+      "Ijāza in al-ʿAqīda al-Ṭaḥāwiyya",
     ],
     biography:
-      "Mawlana Rohan's passion for Islamic theology grew during his traditional studies, where he immersed himself in the works of classical Maturidi scholars. He has spent years building a comprehensive understanding of creedal theology and its historical development. His ability to present complex theological concepts in a clear and relatable manner has made him a valued instructor. At Tahawiyyah Institute, Mawlana Rohan leads the Aqidah track and ensures that students not only memorize creedal points but truly understand the reasoning behind them, building conviction that is both intellectually sound and spiritually grounded.",
-    teachingPhilosophy:
-      "Mawlana Rohan emphasizes the importance of understanding why we believe what we believe. Rather than rote memorization of creedal statements, he encourages his students to engage with the intellectual tradition, ask questions, and develop a deeply rooted conviction that can withstand modern challenges.",
-    courses: [
-      "Al-Aqidah al-Wasitiyyah",
-      "Sharh al-Aqidah al-Tahawiyyah",
-      "Al-Fiqh al-Akbar",
+      "Mawlānā Rohan's passion for Islamic theology grew during his traditional studies, where he immersed himself in the works of classical Māturīdī scholars. He has spent years building a comprehensive understanding of creedal theology and its historical development. His ability to present complex theological concepts in a clear and relatable manner has made him a valued instructor. At Ṭaḥāwiyya Institute, Mawlānā Rohan leads the ʿAqīda track and ensures that students not only memorize creedal points but truly understand the reasoning behind them, building conviction that is both intellectually sound and spiritually grounded.",
+    courses: ["AQD 101"],
+  },
+  {
+    slug: "qari-nazrul",
+    name: "Qāriʾ Nazrul",
+    title: "Instructor — Tajwīd & Qurʾānic Recitation",
+    summary:
+      "Qāriʾ Nazrul brings expertise in the rules and application of Tajwīd, guiding students toward accurate and beautiful recitation of the Qurʾān.",
+    education: [
+      "Formal certification in Qurʾānic recitation and Tajwīd",
+      "Ijāza in Ḥafṣ ʿan ʿĀṣim via the recognized chain of transmission",
+      "Advanced study of Makhārij al-Ḥurūf and recitation characteristics",
     ],
+    biography:
+      "Qāriʾ Nazrul has devoted his life to the recitation and transmission of the Qurʾān. Having studied under accomplished scholars of Tajwīd, he received his Ijāza through a verified sanad connecting to the authentic tradition of Qurʾānic recitation. His patient and methodical teaching style makes the rules of Tajwīd accessible to students at all levels. At Ṭaḥāwiyya Institute, Qāriʾ Nazrul teaches Tajwīd & Qurʾānic Recitation, ensuring students develop the correct articulation points and recitation characteristics needed for accurate and beautiful tilāwa.",
+    courses: ["TAJ 101"],
   },
   {
     slug: "bint-instructor-1",
-    name: "Bint — TBD",
-    title: "Instructor — Tafsir & Qur'anic Studies",
+    name: "Ustādha Bint — TBD",
+    title: "Instructor — Tafsīr & Qurʾānic Studies",
     summary:
       "Biography coming soon.",
     education: [
       "Details coming soon",
     ],
-    specializations: [
-      "Tafsir & Qur'anic Studies",
-    ],
     biography:
-      "Full biography coming soon. This instructor will be teaching Tafsir and Qur'anic Studies at Tahawiyyah Institute.",
-    teachingPhilosophy:
-      "Details coming soon.",
-    courses: [
-      "Tafsir al-Jalalayn (selected surahs)",
-      "Uloom al-Qur'an",
-    ],
+      "Full biography coming soon. This instructor will be teaching Tafsīr and Qurʾānic Studies at Ṭaḥāwiyya Institute.",
+    courses: ["TAF 101"],
   },
   {
     slug: "bint-instructor-2",
-    name: "Bint — TBD",
-    title: "Instructor — Tajwid & Qur'anic Recitation",
+    name: "Ustādha Bint — TBD",
+    title: "Instructor — Tajwīd & Qurʾānic Recitation",
     summary:
       "Biography coming soon.",
     education: [
       "Details coming soon",
     ],
-    specializations: [
-      "Tajwid & Qur'anic Recitation",
-    ],
     biography:
-      "Full biography coming soon. This instructor will be teaching Tajwid and Qur'anic Recitation at Tahawiyyah Institute.",
-    teachingPhilosophy:
-      "Details coming soon.",
-    courses: [
-      "Al-Jazariyyah",
-      "Practical Tajwid Application",
-    ],
+      "Full biography coming soon. This instructor will be teaching Tajwīd and Qurʾānic Recitation at Ṭaḥāwiyya Institute.",
+    courses: ["TAJ 101"],
   },
   {
     slug: "bint-instructor-3",
-    name: "Bint — TBD",
+    name: "Ustādha Bint — TBD",
     title: "Instructor — Arabic Language & Grammar",
     summary:
       "Biography coming soon.",
     education: [
       "Details coming soon",
     ],
-    specializations: [
-      "Arabic Language & Grammar",
-    ],
     biography:
-      "Full biography coming soon. This instructor will be teaching Arabic Language and Grammar at Tahawiyyah Institute.",
-    teachingPhilosophy:
-      "Details coming soon.",
-    courses: [
-      "Al-Ajrumiyyah",
-      "Qatr al-Nada",
-    ],
+      "Full biography coming soon. This instructor will be teaching Arabic Language and Grammar at Ṭaḥāwiyya Institute.",
+    courses: ["ARB 101"],
   },
 ];
 
@@ -252,22 +209,6 @@ export default function TeacherBiographyPage({
                 {teacher.biography}
               </p>
             </motion.section>
-
-            {/* Teaching Philosophy */}
-            <motion.section
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h2 className="text-2xl font-semibold text-text">
-                Teaching Philosophy
-              </h2>
-              <Divider />
-              <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-                {teacher.teachingPhilosophy}
-              </p>
-            </motion.section>
           </div>
 
           {/* Sidebar — Right Column */}
@@ -297,39 +238,12 @@ export default function TeacherBiographyPage({
               </Card>
             </motion.div>
 
-            {/* Specializations */}
-            <motion.div
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold text-text">
-                    Specializations
-                  </h3>
-                  <ul className="mt-3 space-y-2">
-                    {teacher.specializations.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-muted"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
             {/* Courses Taught */}
             <motion.div
               variants={fadeUpVariants}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.5, delay: 0.45 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Card>
                 <CardContent className="pt-6">
@@ -358,7 +272,7 @@ export default function TeacherBiographyPage({
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
           className="mt-16"
         >
           <ButtonLink href="/teachers" variant="outline" size="md">

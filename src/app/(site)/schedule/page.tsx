@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Monitor, Clock, Calendar } from "lucide-react";
+import { MapPin, Clock, Calendar } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import {
   Card,
@@ -23,7 +23,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -46,67 +46,116 @@ export default function Schedule() {
               Schedule
             </h1>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-              Our program is delivered fully online, providing flexible learning
-              that accommodates different schedules and time zones.
+              Classes are offered at two locations. Find the schedule for your
+              preferred track below.
             </p>
           </motion.div>
         </Container>
       </section>
 
-      {/* SCHEDULE CARD */}
+      {/* SCHEDULE CARDS */}
       <section className="border-b border-border bg-surface2 py-16 md:py-24">
         <Container>
           <motion.div
-            className="max-w-2xl"
+            className="grid gap-6 md:grid-cols-2 max-w-4xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            variants={fadeUpVariants}
-            transition={{ duration: 0.6 }}
+            variants={staggerContainer}
           >
-            <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10">
-                    <Monitor className="h-6 w-6 text-gold" />
+            {/* MADANI MASJID */}
+            <motion.div variants={fadeUpVariants}>
+              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10">
+                      <MapPin className="h-6 w-6 text-gold" />
+                    </div>
+                    <CardTitle className="text-2xl">Madani Masjid</CardTitle>
                   </div>
-                  <CardTitle className="text-2xl">Online Schedule</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Calendar className="h-5 w-5 text-gold" />
-                    <div>
-                      <p className="text-sm font-medium text-muted">Days</p>
-                      <p className="text-lg font-semibold text-text">
-                        Monday & Wednesday
-                      </p>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="h-5 w-5 text-gold" />
+                      <div>
+                        <p className="text-sm font-medium text-muted">Days</p>
+                        <p className="text-lg font-semibold text-text">
+                          Monday &amp; Wednesday
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="h-5 w-5 text-gold" />
+                      <div>
+                        <p className="text-sm font-medium text-muted">Time</p>
+                        <p className="text-lg font-semibold text-text">
+                          7:10 PM – 9:00 PM
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-gold" />
-                    <div>
-                      <p className="text-sm font-medium text-muted">Time</p>
-                      <p className="text-lg font-semibold text-text">
-                        7:10 PM – 9:00 PM
-                      </p>
-                    </div>
+
+                  <div className="rounded-lg border border-border bg-surface p-4">
+                    <p className="text-sm text-muted">
+                      <strong className="text-text">Class Duration:</strong>{" "}
+                      45–60 minutes per session
+                    </p>
                   </div>
-                </div>
-                
-                <div className="rounded-lg border border-border bg-surface p-4">
-                  <p className="text-sm text-muted">
-                    <strong className="text-text">Class Duration:</strong>{" "}
-                    45–60 minutes per session
+
+                  <p className="text-xs italic text-muted/80">
+                    Schedule subject to change
                   </p>
-                </div>
-                
-                <p className="text-xs italic text-muted/80">
-                  Schedule subject to change
-                </p>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* SRIC */}
+            <motion.div variants={fadeUpVariants}>
+              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10">
+                      <MapPin className="h-6 w-6 text-gold" />
+                    </div>
+                    <CardTitle className="text-2xl">SRIC</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="h-5 w-5 text-gold" />
+                      <div>
+                        <p className="text-sm font-medium text-muted">Days</p>
+                        <p className="text-lg font-semibold text-text">
+                          Monday &amp; Wednesday
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="h-5 w-5 text-gold" />
+                      <div>
+                        <p className="text-sm font-medium text-muted">Time</p>
+                        <p className="text-lg font-semibold text-text">
+                          7:10 PM – 9:00 PM
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="rounded-lg border border-border bg-surface p-4">
+                    <p className="text-sm text-muted">
+                      <strong className="text-text">Class Duration:</strong>{" "}
+                      45–60 minutes per session
+                    </p>
+                  </div>
+
+                  <p className="text-xs italic text-muted/80">
+                    Schedule subject to change
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </motion.div>
         </Container>
       </section>

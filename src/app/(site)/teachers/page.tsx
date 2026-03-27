@@ -16,42 +16,49 @@ const fadeUpVariants = {
 const teachers = [
   {
     slug: "mawlana-arqam",
-    name: "Mawlana Arqam",
-    title: "Instructor — Fiqh & Usul al-Fiqh",
+    name: "Mawlānā Arqam",
+    title: "Instructor — Fiqh & Uṣūl al-Fiqh",
     summary:
-      "Mawlana Arqam specializes in Hanafi jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
+      "Mawlānā Arqam specializes in Ḥanafī jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
   },
   {
     slug: "mawlana-fahim",
-    name: "Mawlana Fahim",
-    title: "Instructor — Hadith Sciences",
+    name: "Mawlānā Fahim",
+    title: "Instructor — Ḥadīth Sciences",
     summary:
-      "Mawlana Fahim brings rigorous training in hadith authentication and the study of prophetic traditions, helping students connect with the Sunnah.",
+      "Mawlānā Fahim brings rigorous training in ḥadīth authentication and the study of Prophetic traditions, helping students connect with the Sunna.",
   },
   {
     slug: "mawlana-rohan",
-    name: "Mawlana Rohan",
-    title: "Instructor — Aqidah & Islamic Theology",
+    name: "Mawlānā Rohan",
+    title: "Instructor — ʿAqīda & Islamic Theology",
     summary:
-      "Mawlana Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
+      "Mawlānā Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
+  },
+  {
+    slug: "qari-nazrul",
+    name: "Qāriʾ Nazrul",
+    title: "Instructor — Tajwīd & Qurʾānic Recitation",
+    summary:
+      "Qāriʾ Nazrul brings expertise in the rules and application of Tajwīd, guiding students toward accurate and beautiful recitation of the Qurʾān.",
   },
   {
     slug: "bint-instructor-1",
-    name: "Bint — TBD",
-    title: "Instructor — Tafsir & Qur'anic Studies",
+    name: "Ustādha Bint — TBD",
+    title: "Instructor — Tafsīr & Qurʾānic Studies",
     summary:
       "Biography coming soon.",
   },
   {
     slug: "bint-instructor-2",
-    name: "Bint — TBD",
-    title: "Instructor — Tajwid & Qur'anic Recitation",
+    name: "Ustādha Bint — TBD",
+    title: "Instructor — Tajwīd & Qurʾānic Recitation",
     summary:
       "Biography coming soon.",
   },
   {
     slug: "bint-instructor-3",
-    name: "Bint — TBD",
+    name: "Ustādha Bint — TBD",
     title: "Instructor — Arabic Language & Grammar",
     summary:
       "Biography coming soon.",
@@ -72,7 +79,7 @@ export default function TeachersPage() {
           <SectionHeader
             eyebrow="Our Faculty"
             title="Meet Our Teachers"
-            description="Our instructors are dedicated scholars with years of study and teaching experience. Get to know the educators guiding your journey through the Tahawiyyah program."
+            description="Our instructors are dedicated scholars with years of study and teaching experience. Get to know the educators guiding your journey through the Ṭaḥāwiyya program."
           />
         </motion.div>
 

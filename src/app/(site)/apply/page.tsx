@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, Loader2, ArrowRight } from "lucide-react";
@@ -31,14 +31,10 @@ export default function Apply() {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
     reset,
   } = useForm<ApplyFormData>({
     resolver: zodResolver(applySchema),
-    defaultValues: {
-      availability: [],
-    },
   });
 
   const onSubmit = async (data: ApplyFormData) => {
@@ -117,9 +113,8 @@ export default function Apply() {
                 </h2>
                 <p className="mb-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
                   Our comprehensive 2-year Islamic studies program is designed
-                  to provide you with authentic knowledge and practical skills.
-                  Our fully online format offers flexible learning that fits
-                  your schedule.
+                  to provide you with authentic knowledge and practical skills
+                  in the traditional Islamic sciences.
                 </p>
                 <p className="max-w-prose text-base leading-relaxed text-muted md:text-lg">
                   Join a community of dedicated students committed to
@@ -352,67 +347,12 @@ export default function Apply() {
                         )}
                       >
                         <option value="">Select a track</option>
-                        <option value="online">Online</option>
-                        <option value="not-sure">Not sure</option>
+                        <option value="madani">Madani</option>
+                        <option value="sric">SRIC</option>
                       </select>
                       {errors.preferredTrack && (
                         <p className="mt-1 text-sm text-red-500">
                           {errors.preferredTrack.message}
-                        </p>
-                      )}
-                    </div>
-
-                    {/* AVAILABILITY */}
-                    <div>
-                      <label className="mb-2 block text-sm font-medium text-text">
-                        Availability <span className="text-red-500">*</span>
-                      </label>
-                      <Controller
-                        name="availability"
-                        control={control}
-                        render={({ field }) => (
-                          <div className="space-y-2">
-                            {[
-                              { value: "mon", label: "Monday" },
-                              { value: "wed", label: "Wednesday" },
-                            ].map((option) => (
-                              <label
-                                key={option.value}
-                                className="flex items-center gap-3"
-                              >
-                                <input
-                                  type="checkbox"
-                                  value={option.value}
-                                  disabled={isSubmitting}
-                                  checked={field.value?.includes(option.value as "mon" | "wed")}
-                                  onChange={(e) => {
-                                    const currentValue = field.value || [];
-                                    if (e.target.checked) {
-                                      field.onChange([...currentValue, option.value as "mon" | "wed"]);
-                                    } else {
-                                      field.onChange(
-                                        currentValue.filter(
-                                          (v) => v !== option.value
-                                        )
-                                      );
-                                    }
-                                  }}
-                                  className={cn(
-                                    "h-4 w-4 rounded border-border text-gold focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg",
-                                    "disabled:opacity-50 disabled:cursor-not-allowed"
-                                  )}
-                                />
-                                <span className="text-sm text-text">
-                                  {option.label}
-                                </span>
-                              </label>
-                            ))}
-                          </div>
-                        )}
-                      />
-                      {errors.availability && (
-                        <p className="mt-1 text-sm text-red-500">
-                          {errors.availability.message}
                         </p>
                       )}
                     </div>

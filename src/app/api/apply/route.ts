@@ -31,19 +31,10 @@ export async function POST(request: NextRequest) {
     // Format email subject
     const subject = `[Tahawiyyah Institute] New Application - ${data.firstName} ${data.lastName}`;
 
-    // Format availability
-    const availabilityMap: Record<string, string> = {
-      mon: "Monday",
-      wed: "Wednesday",
-    };
-    const availabilityText = data.availability
-      .map((a) => availabilityMap[a])
-      .join(", ");
-
     // Format preferred track
     const trackMap: Record<string, string> = {
-      online: "Online",
-      "not-sure": "Not sure",
+      madani: "Madani",
+      sric: "SRIC",
     };
     const trackText = trackMap[data.preferredTrack];
 
@@ -61,12 +52,12 @@ export async function POST(request: NextRequest) {
             <h1 style="color: #1f2937; margin-top: 0; margin-bottom: 24px; font-size: 24px; font-weight: 600;">
               New Application Received
             </h1>
-            
+
             <div style="background-color: #ffffff; border-radius: 6px; padding: 20px; margin-bottom: 20px;">
               <h2 style="color: #374151; font-size: 18px; font-weight: 600; margin-top: 0; margin-bottom: 16px; border-bottom: 2px solid #f3f4f6; padding-bottom: 8px;">
                 Applicant Information
               </h2>
-              
+
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563; width: 140px;">Name:</td>
@@ -86,10 +77,6 @@ export async function POST(request: NextRequest) {
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Preferred Track:</td>
                   <td style="padding: 8px 0; color: #1f2937;">${trackText}</td>
                 </tr>
-                <tr>
-                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Availability:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">${availabilityText}</td>
-                </tr>
                 ${data.notes ? `
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Notes:</td>
@@ -104,7 +91,7 @@ export async function POST(request: NextRequest) {
                 ` : ""}
               </table>
             </div>
-            
+
             <p style="color: #6b7280; font-size: 14px; margin-top: 24px; margin-bottom: 0;">
               This email was sent from the Tahawiyyah Institute application form.
             </p>
@@ -121,7 +108,6 @@ Applicant Information:
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
 ${data.phone ? `Phone: ${data.phone}\n` : ""}Preferred Track: ${trackText}
-Availability: ${availabilityText}
 ${data.notes ? `Notes: ${data.notes}\n` : ""}
 
 This email was sent from the Tahawiyyah Institute application form.
@@ -170,4 +156,3 @@ This email was sent from the Tahawiyyah Institute application form.
     );
   }
 }
-

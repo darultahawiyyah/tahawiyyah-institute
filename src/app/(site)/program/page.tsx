@@ -134,11 +134,11 @@ export default function Program() {
               <CardContent className="pt-6">
                 <ul className="space-y-4">
                   {[
-                    "Develop a comprehensive understanding of core Islamic sciences including Fiqh, Aqidah, Hadith, Tafsir, Tajwid, and Arabic",
+                    "Develop a comprehensive understanding of core Islamic sciences including Fiqh, ʿAqīda, Ḥadīth, Tafsīr, Tajwīd, and Arabic",
                     "Build a strong foundation in traditional Islamic scholarship and methodology",
                     "Cultivate the ability to read and understand classical Islamic texts",
                     "Gain practical skills in applying Islamic knowledge to contemporary contexts",
-                    "Foster a deep connection with the Qur'an through proper recitation and understanding",
+                    "Foster a deep connection with the Qurʾān through proper recitation and understanding",
                     "Prepare students for advanced study or teaching roles in Islamic education",
                   ].map((objective, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -193,7 +193,7 @@ export default function Program() {
               {
                 icon: GraduationCap,
                 label: "Core Subjects",
-                value: "Fiqh, Aqidah, Tafsir, Hadith, Tajwid, Arabic",
+                value: "Fiqh, ʿAqīda, Tafsīr, Ḥadīth, Tajwīd, Arabic",
               },
               {
                 icon: FileText,
@@ -254,7 +254,7 @@ export default function Program() {
                 icon: BookOpen,
                 title: "Comprehensive Knowledge",
                 description:
-                  "Master the fundamentals of Fiqh, Aqidah, Hadith, Tafsir, Tajwid, and Arabic with confidence and depth.",
+                  "Master the fundamentals of Fiqh, ʿAqīda, Ḥadīth, Tafsīr, Tajwīd, and Arabic with confidence and depth.",
               },
               {
                 icon: CheckCircle2,
@@ -264,9 +264,9 @@ export default function Program() {
               },
               {
                 icon: Award,
-                title: "Qur'anic Mastery",
+                title: "Qurʾānic Mastery",
                 description:
-                  "Recite the Qur'an with proper Tajwid and develop a meaningful relationship with the sacred text.",
+                  "Recite the Qurʾān with proper Tajwīd and develop a meaningful relationship with the sacred text.",
               },
               {
                 icon: Users,
@@ -284,7 +284,7 @@ export default function Program() {
                 icon: Heart,
                 title: "Spiritual Growth",
                 description:
-                  "Deepen your connection with Allah through knowledge, practice, and the application of learned principles.",
+                  "Deepen your connection with Allāh through knowledge, practice, and the application of learned principles.",
               },
             ].map((outcome, index) => (
               <motion.div key={index} variants={fadeUpVariants}>
@@ -320,19 +320,19 @@ export default function Program() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Award className="h-6 w-6 text-gold" />
-                  <CardTitle className="text-gold">Ijazah Opportunity</CardTitle>
+                  <CardTitle className="text-gold">Ijāza Opportunity</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="max-w-prose text-base leading-relaxed text-muted md:text-lg">
                   Students who successfully complete the program and meet all
                   academic and recitation standards may be eligible to receive an
-                  <strong className="text-text"> Ijazah in Qur'an Recitation</strong>.
+                  <strong className="text-text"> Ijāza in Qurʾān Recitation</strong>.
                   This traditional certification is granted contingent upon
-                  demonstrating mastery of Tajwid rules, accurate memorization, and
+                  demonstrating mastery of Tajwīd rules, accurate memorization, and
                   meeting the rigorous standards set by our qualified instructors.
-                  The Ijazah represents a recognized chain of transmission
-                  (sanad) connecting you to the authentic tradition of Qur'anic
+                  The Ijāza represents a recognized chain of transmission
+                  (sanad) connecting you to the authentic tradition of Qurʾānic
                   recitation.
                 </p>
               </CardContent>

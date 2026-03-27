@@ -46,7 +46,7 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border bg-bg pb-16 md:py-24">
         {/* Subtle radial glow behind right card */}
         <div className="absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full bg-gold/5 blur-3xl" />
-        
+
         <Container className="pt-4 md:pt-0">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-stretch">
             {/* Left Content */}
@@ -61,20 +61,20 @@ export default function Home() {
               <Badge variant="gold" className="w-fit">
                 Islamic Studies Program
               </Badge>
-              
+
               <h1 className="text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
                 Transform Your Understanding
                 <br />
                 <span className="text-gold">Through Sacred Knowledge</span>
               </h1>
-              
+
               <p className="max-w-prose text-base leading-relaxed text-muted md:text-lg">
                 Join our comprehensive 2-year Islamic studies program designed to
                 deepen your understanding of the faith. Study with experienced
                 scholars in a structured curriculum that balances traditional
                 knowledge with contemporary application.
               </p>
-              
+
               {/* CTA Row */}
               <div className="flex flex-col gap-4 sm:flex-row">
                 <ButtonLink href="/apply" variant="primary" size="md">
@@ -84,7 +84,7 @@ export default function Home() {
                   View Curriculum
                 </ButtonLink>
               </div>
-              
+
               {/* Trust Bullets */}
               <div className="flex flex-col gap-4 pt-4">
                 <div className="flex items-center gap-3 text-sm text-muted">
@@ -92,16 +92,12 @@ export default function Home() {
                   <span>2-year structured program</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted">
-                  <Users className="h-5 w-5 text-gold" />
-                  <span>Fully online program</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-muted">
                   <Award className="h-5 w-5 text-gold" />
                   <span>End-of-semester exams</span>
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Right Feature Card */}
             <motion.div
               initial="hidden"
@@ -125,19 +121,12 @@ export default function Home() {
                         <Clock className="h-4 w-4 flex-shrink-0 text-gold" />
                         <span className="text-xs font-medium text-muted sm:text-sm">Schedule:</span>
                       </div>
-                      <span className="text-sm text-text sm:ml-0">Mondays & Wednesdays, 7:10 PM – 9:00 PM</span>
-                    </div>
-                    <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center">
-                      <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 flex-shrink-0 text-gold" />
-                        <span className="text-xs font-medium text-muted sm:text-sm">Format:</span>
-                      </div>
-                      <span className="text-sm text-text sm:ml-0">Fully online</span>
+                      <span className="text-sm text-text sm:ml-0">Mondays &amp; Wednesdays, 7:10 PM – 9:00 PM</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-              
+
               {/* Logo below card - expands to fill remaining space */}
               <div className="mt-6 flex flex-1 items-end justify-center">
                 <Image
@@ -169,7 +158,7 @@ export default function Home() {
               description="Comprehensive Islamic education designed for serious students seeking authentic knowledge."
             />
           </motion.div>
-          
+
           <motion.div
             className="mt-12 grid gap-6 md:grid-cols-3"
             initial="hidden"
@@ -182,7 +171,7 @@ export default function Home() {
                 icon: BookOpen,
                 title: "Comprehensive Curriculum",
                 description:
-                  "Covering Fiqh, Aqidah, Hadith, Tajwid, Arabic, and Tafsir across four structured semesters.",
+                  "Covering Fiqh, ʿAqīda, Ḥadīth, Tajwīd, Arabic, and Tafsīr across four structured semesters.",
               },
               {
                 icon: Users,
@@ -230,7 +219,7 @@ export default function Home() {
                 description="This program is designed for students who are committed to deepening their understanding of Islam through structured, traditional learning."
               />
             </motion.div>
-            
+
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -244,7 +233,7 @@ export default function Home() {
                     {[
                       "Muslims seeking structured Islamic education",
                       "Students ready for a 2-year commitment",
-                      "Those seeking flexible online learning options",
+                      "Those seeking flexible learning options",
                       "Learners interested in traditional Islamic sciences",
                       "Individuals preparing for deeper religious study",
                     ].map((item, index) => (
@@ -279,7 +268,7 @@ export default function Home() {
               description="Four semesters covering essential Islamic sciences with progressive depth and complexity."
             />
           </motion.div>
-          
+
           <motion.div
             className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
             initial="hidden"
@@ -290,19 +279,19 @@ export default function Home() {
             {[
               {
                 title: "Semester 1",
-                badges: ["Fiqh", "Aqidah", "Hadith", "Tajwid", "Arabic"],
+                badges: ["Fiqh", "ʿAqīda", "Ḥadīth", "Tajwīd", "Arabic"],
               },
               {
                 title: "Semester 2",
-                badges: ["Fiqh", "Aqidah", "Tafsir", "Tajwid", "Arabic", "Hadith"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Tajwīd", "Arabic", "Ḥadīth"],
               },
               {
                 title: "Semester 3",
-                badges: ["Fiqh", "Aqidah", "Tafsir", "Hadith", "Arabic", "Tajwid"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Ḥadīth", "Arabic", "Tajwīd"],
               },
               {
                 title: "Semester 4",
-                badges: ["Fiqh", "Aqidah", "Tafsir", "Hadith", "Arabic", "Tajwid"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Ḥadīth", "Arabic", "Tajwīd"],
               },
             ].map((semester, index) => (
               <motion.div key={index} variants={fadeUpVariants}>
@@ -356,4 +345,3 @@ export default function Home() {
     </div>
   );
 }
-
