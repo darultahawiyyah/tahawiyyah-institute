@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { applySchema } from "@/lib/apply-schema";
+import { applySchema, trackOptions } from "@/lib/apply-schema";
 import nodemailer from "nodemailer";
 
 // SMTP configuration for direct email sending
@@ -32,11 +32,9 @@ export async function POST(request: NextRequest) {
     const subject = `[Tahawiyyah Institute] New Application - ${data.firstName} ${data.lastName}`;
 
     // Format preferred track
-    const trackMap: Record<string, string> = {
-      madani: "Madani",
-      sric: "SRIC",
-    };
-    const trackText = trackMap[data.preferredTrack];
+    const trackText =
+      trackOptions.find((o) => o.value === data.preferredTrack)?.label ??
+      data.preferredTrack;
 
     // HTML email body
     const htmlBody = `

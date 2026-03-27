@@ -13,7 +13,7 @@ import {
   CardContent,
 } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { applySchema, type ApplyFormData } from "@/lib/apply-schema";
+import { applySchema, trackOptions, type ApplyFormData } from "@/lib/apply-schema";
 import { cn } from "@/lib/cn";
 
 const fadeUpVariants = {
@@ -346,9 +346,20 @@ export default function Apply() {
                           errors.preferredTrack && "border-red-500/50"
                         )}
                       >
-                        <option value="">Select a track</option>
-                        <option value="madani">Madani</option>
-                        <option value="sric">SRIC</option>
+                        <option value="">Select a track or course</option>
+                        <optgroup label="Full Tracks">
+                          <option value="madani">Madani</option>
+                          <option value="sric">SRIC</option>
+                        </optgroup>
+                        <optgroup label="Individual Courses">
+                          {trackOptions
+                            .filter((o) => o.group === "Individual Courses")
+                            .map((o) => (
+                              <option key={o.value} value={o.value}>
+                                {o.label}
+                              </option>
+                            ))}
+                        </optgroup>
                       </select>
                       {errors.preferredTrack && (
                         <p className="mt-1 text-sm text-red-500">
