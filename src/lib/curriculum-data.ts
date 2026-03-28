@@ -16,7 +16,7 @@ export const semester1Courses: CourseData[] = [
     slug: "fqh-101",
     code: "FQH 101",
     name: "Fiqh",
-    fullName: "Fiqh & Uṣūl al-Fiqh",
+    fullName: "Fiqh",
     instructor: "Mawlānā Arqam",
     instructorSlug: "mawlana-arqam",
     location: "Madani Masjid & SRIC",

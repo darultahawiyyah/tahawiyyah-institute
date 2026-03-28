@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
 const quickLinks = [
   { href: "/program", label: "Program" },
   { href: "/curriculum", label: "Curriculum" },
-  { href: "/teachers", label: "Teachers" },
+  { href: "/teachers", label: "Faculty" },
   { href: "/schedule", label: "Schedule" },
   { href: "/apply", label: "Apply" },
   { href: "/contact", label: "Contact" },

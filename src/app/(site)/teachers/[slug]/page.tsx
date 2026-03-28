@@ -28,17 +28,17 @@ interface TeacherData {
 const teachersData: TeacherData[] = [
   {
     slug: "mawlana-arqam",
-    name: "Mawlānā Arqam",
-    title: "Instructor — Fiqh & Uṣūl al-Fiqh",
+    name: "Shaykh Arqam Masroor",
+    title: "Instructor — Fiqh",
     summary:
-      "Mawlānā Arqam specializes in Ḥanafī jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
+      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in Ḥanafī jurisprudence and currently pursuing a postgraduate specialization in Islamic law.",
     education: [
-      "Traditional ʿĀlim course in Ḥanafī Fiqh",
-      "Advanced studies in Uṣūl al-Fiqh",
-      "Ijāzāt in classical Fiqh texts",
+      "Memorization of the Qurʾān at Darul Qurʾān wa Sunnah (USA)",
+      "ʿĀlimiyyah program at Jamia Binoria Al-ʿĀlamiyyah, Pakistan",
+      "Currently pursuing Takhaṣṣuṣ fī al-Iftāʾ (postgraduate specialization in Islamic law)",
     ],
     biography:
-      "Mawlānā Arqam began his journey of Islamic scholarship at a young age and went on to complete a rigorous traditional ʿĀlim course with a focus on Ḥanafī Fiqh. He studied under senior scholars and received personal Ijāzāt in several classical texts of jurisprudence. His deep engagement with the principles of Fiqh allows him to not only convey rulings but help students understand the reasoning behind them. He has dedicated his career to teaching and has trained numerous students in the intricacies of Ḥanafī jurisprudence. At Ṭaḥāwiyya Institute, Mawlānā Arqam oversees the Fiqh curriculum and ensures students develop both knowledge and analytical thinking.",
+      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyya Institute and is involved in various religious services and initiatives.",
     courses: ["FQH 101"],
   },
   {
@@ -61,14 +61,14 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Islamic Theology",
     summary:
-      "Mawlānā Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
+      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
     education: [
-      "Traditional ʿĀlim course with focus on ʿAqīda",
-      "Advanced studies in Māturīdī Theology",
-      "Ijāza in al-ʿAqīda al-Ṭaḥāwiyya",
+      "ʿĀlimiyyah program at Darul Uloom Azaadville, South Africa",
+      "Specialization in the science of Qirāʾāt (modes of Qurʾānic recitation)",
+      "Currently advancing specialization in Fiqh and Islamic jurisprudence",
     ],
     biography:
-      "Mawlānā Rohan's passion for Islamic theology grew during his traditional studies, where he immersed himself in the works of classical Māturīdī scholars. He has spent years building a comprehensive understanding of creedal theology and its historical development. His ability to present complex theological concepts in a clear and relatable manner has made him a valued instructor. At Ṭaḥāwiyya Institute, Mawlānā Rohan leads the ʿAqīda track and ensures that students not only memorize creedal points but truly understand the reasoning behind them, building conviction that is both intellectually sound and spiritually grounded.",
+      "Mawlānā Rohan is a graduate of the rigorous ʿĀlimiyyah program from Darul Uloom Azaadville in South Africa — one of the most prominent and prestigious Islamic institutions in the world — where he completed extensive studies in the traditional Islamic sciences. He further specialized in the science of Qirāʾāt, mastering the various modes of Qurʾānic recitation, and is currently advancing his specialization in Fiqh and Islamic jurisprudence. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences, and also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he recently co-founded Ṭaḥāwiyya Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
     courses: ["AQD 101"],
   },
   {

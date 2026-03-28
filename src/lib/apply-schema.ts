@@ -3,7 +3,7 @@ import { z } from "zod";
 export const trackOptions = [
   { group: "Full Tracks", value: "madani", label: "Madani" },
   { group: "Full Tracks", value: "sric", label: "SRIC" },
-  { group: "Individual Courses", value: "fqh-101", label: "FQH 101 — Fiqh & Uṣūl al-Fiqh" },
+  { group: "Individual Courses", value: "fqh-101", label: "FQH 101 — Fiqh" },
   { group: "Individual Courses", value: "aqd-101", label: "AQD 101 — ʿAqīda & Islamic Theology" },
   { group: "Individual Courses", value: "had-101", label: "HAD 101 — Ḥadīth Sciences" },
   { group: "Individual Courses", value: "taf-101", label: "TAF 101 — Tafsīr & Qurʾānic Studies" },

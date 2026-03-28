@@ -352,7 +352,7 @@ export default function Apply() {
                           <option value="sric">SRIC</option>
                         </optgroup>
                         <optgroup label="Individual Courses">
-                          <option value="fqh-101">FQH 101 — Fiqh &amp; Uṣūl al-Fiqh</option>
+                          <option value="fqh-101">FQH 101 — Fiqh</option>
                           <option value="aqd-101">AQD 101 — ʿAqīda &amp; Islamic Theology</option>
                           <option value="had-101">HAD 101 — Ḥadīth Sciences</option>
                           <option value="taf-101">TAF 101 — Tafsīr &amp; Qurʾānic Studies</option>

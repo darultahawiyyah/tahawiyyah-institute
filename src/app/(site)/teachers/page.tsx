@@ -16,10 +16,10 @@ const fadeUpVariants = {
 const teachers = [
   {
     slug: "mawlana-arqam",
-    name: "Mawlānā Arqam",
-    title: "Instructor — Fiqh & Uṣūl al-Fiqh",
+    name: "Shaykh Arqam Masroor",
+    title: "Instructor — Fiqh",
     summary:
-      "Mawlānā Arqam specializes in Ḥanafī jurisprudence and its foundational principles, bringing years of study and teaching experience to the institute.",
+      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in Ḥanafī jurisprudence and currently pursuing a postgraduate specialization in Islamic law.",
   },
   {
     slug: "mawlana-fahim",
@@ -33,7 +33,7 @@ const teachers = [
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Islamic Theology",
     summary:
-      "Mawlānā Rohan is dedicated to making classical creedal texts accessible to contemporary students, grounding them in sound Islamic belief.",
+      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
   },
   {
     slug: "qari-nazrul",
@@ -78,7 +78,7 @@ export default function TeachersPage() {
         >
           <SectionHeader
             eyebrow="Our Faculty"
-            title="Meet Our Teachers"
+            title="Meet Our Faculty"
             description="Our instructors are dedicated scholars with years of study and teaching experience. Get to know the educators guiding your journey through the Ṭaḥāwiyya program."
           />
         </motion.div>

@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/program", label: "Program" },
   { href: "/curriculum", label: "Curriculum" },
-  { href: "/teachers", label: "Teachers" },
+  { href: "/teachers", label: "Faculty" },
   { href: "/schedule", label: "Schedule" },
   { href: "/contact", label: "Contact" },
 ];
