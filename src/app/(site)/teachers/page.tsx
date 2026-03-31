@@ -26,7 +26,7 @@ const teachers = [
     name: "Mawlānā Fahim",
     title: "Instructor — Ḥadīth Sciences",
     summary:
-      "Mawlānā Fahim brings rigorous training in ḥadīth authentication and the study of Prophetic traditions, helping students connect with the Sunna.",
+      "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
   },
   {
     slug: "mawlana-rohan",

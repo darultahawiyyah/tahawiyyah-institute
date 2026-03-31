@@ -46,14 +46,14 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Fahim",
     title: "Instructor — Ḥadīth Sciences",
     summary:
-      "Mawlānā Fahim brings rigorous training in ḥadīth authentication and the study of Prophetic traditions, helping students connect with the Sunna.",
+      "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
     education: [
-      "Traditional ʿĀlim course with specialization in Ḥadīth",
-      "Advanced studies in Muṣṭalaḥ al-Ḥadīth",
-      "Ijāzāt in the Six Books of Ḥadīth",
+      "Seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah",
+      "Studied under Muftī Rūḥul Amīn and Muftī Noʿmān",
+      "Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ (postgraduate specialization in Islamic jurisprudence and fatwā)",
     ],
     biography:
-      "Mawlānā Fahim developed an early passion for the Prophetic traditions and dedicated years to studying under scholars of ḥadīth. He specialized in Ḥadīth Sciences during his traditional studies and developed a deep expertise in the methodology of ḥadīth authentication. Beyond his formal education, he participated in private study circles where he received detailed Ijāzāt in the six canonical collections. His approach combines traditional methodology with an awareness of how ḥadīth scholarship connects to contemporary Muslim life. At Ṭaḥāwiyya Institute, Mawlānā Fahim leads the Ḥadīth Sciences track and helps students develop a meaningful relationship with the Sunna.",
+      "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences, including Qurʾān, Ḥadīth, Fiqh, and Arabic. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Rūḥul Amīn and Muftī Noʿmān, benefiting from their depth of knowledge and experience. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training further refined his ability to address contemporary issues through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
     courses: ["HAD 101"],
   },
   {
