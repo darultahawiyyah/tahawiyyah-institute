@@ -19,16 +19,11 @@ export const semester1Courses: CourseData[] = [
     fullName: "Fiqh",
     instructor: "Mawlānā Arqam",
     instructorSlug: "mawlana-arqam",
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course provides a thorough grounding in Islamic jurisprudence according to the Ḥanafī school. Students will begin with the fundamentals of purification, prayer, and fasting before progressing to more advanced topics such as Zakāt, Ḥajj, transactions, and family law. Alongside practical rulings, students will study the principles of jurisprudence (Uṣūl al-Fiqh) to understand how scholars derive rulings from the primary sources, developing the analytical skills needed to engage with the tradition critically and faithfully.",
-    texts: [
-      "al-Fiqh al-Muyassar",
-      "Mukhtaṣar al-Qudūrī",
-      "Uṣūl al-Shāshī",
-      "Bidāyat al-Mujtahid",
-    ],
+    texts: ["TBA"],
   },
   {
     slug: "aqd-101",
@@ -37,15 +32,11 @@ export const semester1Courses: CourseData[] = [
     fullName: "ʿAqīda & Islamic Theology",
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course covers the foundations of Islamic creed and theology, guiding students through the classical texts that define orthodox Sunnī belief. Beginning with the attributes of Allāh and the pillars of faith, the course advances into topics such as prophethood, eschatology, and contemporary issues in creed. Students will learn not just what to believe, but why — engaging with the intellectual tradition to develop a deeply rooted conviction that is both spiritually grounded and intellectually sound.",
-    texts: [
-      "al-ʿAqīda al-Wāsiṭiyya",
-      "Sharḥ al-ʿAqīda al-Ṭaḥāwiyya",
-      "al-Fiqh al-Akbar",
-    ],
+    texts: ["TBA"],
   },
   {
     slug: "had-101",
@@ -54,17 +45,11 @@ export const semester1Courses: CourseData[] = [
     fullName: "Ḥadīth Sciences",
     instructor: "Mawlānā Fahim",
     instructorSlug: "mawlana-fahim",
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course introduces students to the Prophetic traditions and the sciences surrounding their preservation and authentication. Students will study selected ḥadīth from the major collections, learning both the content of the narrations and the methodology used to verify them. Topics include ḥadīth terminology (Muṣṭalaḥ al-Ḥadīth), chains of transmission, narrator criticism, and the classification of ḥadīth. By the end of the program, students will be equipped to evaluate narrations and engage meaningfully with the Sunna.",
-    texts: [
-      "Riyāḍ al-Ṣāliḥīn (selections)",
-      "Nukhbat al-Fikar",
-      "al-Bayqūniyya",
-      "Bulūgh al-Marām",
-      "al-Arbaʿīn al-Nawawiyya",
-    ],
+    texts: ["TBA"],
   },
   {
     slug: "taf-101",
@@ -73,15 +58,11 @@ export const semester1Courses: CourseData[] = [
     fullName: "Tafsīr & Qurʾānic Studies",
     instructor: null,
     instructorSlug: null,
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course takes students on a guided journey through the exegesis of the Qurʾān, drawing on classical commentaries to illuminate the meaning and context of the divine text. Students will study selected sūras and learn the methodology of Tafsīr, including the reasons of revelation (Asbāb al-Nuzūl), the sciences of the Qurʾān (ʿUlūm al-Qurʾān), and thematic analysis. The goal is to help students develop a personal, reflective relationship with the Qurʾān that goes beyond surface-level reading.",
-    texts: [
-      "Tafsīr al-Saʿdī (selected ajzāʾ)",
-      "Tafsīr al-Jalālayn (selected sūras)",
-      "ʿUlūm al-Qurʾān",
-    ],
+    texts: ["TBA"],
   },
   {
     slug: "taj-101",
@@ -90,11 +71,11 @@ export const semester1Courses: CourseData[] = [
     fullName: "Tajwīd & Qurʾānic Recitation",
     instructor: "Qāriʾ Nazrul",
     instructorSlug: "qari-nazrul",
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course covers the rules and practical application of proper Qurʾānic recitation. Students will learn the articulation points of each letter (Makhārij al-Ḥurūf), the characteristics of letters, and the rules governing elongation, nasalization, stopping, and more. The course progresses from foundational rules to mastery-level recitation, with the goal of preparing students for accurate and beautiful recitation of the Qurʾān. Regular guided recitation sessions provide hands-on practice and personalized feedback.",
-    texts: ["al-Jazariyya", "al-Muqaddima"],
+    texts: ["TBA"],
   },
   {
     slug: "arb-101",
@@ -103,15 +84,10 @@ export const semester1Courses: CourseData[] = [
     fullName: "Arabic Language & Grammar",
     instructor: null,
     instructorSlug: null,
-    location: "Madani Masjid & SRIC",
+    location: "TBA",
     schedule: "TBA",
     description:
       "This course builds a strong foundation in classical Arabic grammar (Naḥw) and morphology (Ṣarf), the essential tools for accessing Islamic texts in their original language. Students will start with the basics of sentence structure and word forms before advancing into grammatical analysis (Iʿrāb), complex sentence constructions, and rhetorical devices (Balāgha). By the end of the program, students should be able to pick up a classical Islamic text and begin reading it with confidence and independence.",
-    texts: [
-      "al-Ājurrūmiyya",
-      "al-Bināʾ wa-al-Asās",
-      "Qaṭr al-Nadā",
-      "Alfiyyat Ibn Mālik (selections)",
-    ],
+    texts: ["TBA"],
   },
 ];
