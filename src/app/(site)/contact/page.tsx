@@ -389,7 +389,7 @@ export default function Contact() {
                 ; we'll follow up by email.
               </AccordionItem>
               <AccordionItem title="Is the program online?">
-                Yes, our program is fully online, with classes held Monday and Wednesday evenings.
+                Yes, our program is fully online. Class days and times are TBA.
               </AccordionItem>
               <AccordionItem title="What if I'm not sure yet?">
                 Apply and note your situation; we'll guide you.

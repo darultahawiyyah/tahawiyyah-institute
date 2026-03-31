@@ -81,7 +81,7 @@ export default function Schedule() {
                       <div>
                         <p className="text-sm font-medium text-muted">Days</p>
                         <p className="text-lg font-semibold text-text">
-                          Monday &amp; Wednesday
+                          TBA
                         </p>
                       </div>
                     </div>
@@ -90,7 +90,7 @@ export default function Schedule() {
                       <div>
                         <p className="text-sm font-medium text-muted">Time</p>
                         <p className="text-lg font-semibold text-text">
-                          7:10 PM – 9:00 PM
+                          TBA
                         </p>
                       </div>
                     </div>
@@ -128,7 +128,7 @@ export default function Schedule() {
                       <div>
                         <p className="text-sm font-medium text-muted">Days</p>
                         <p className="text-lg font-semibold text-text">
-                          Monday &amp; Wednesday
+                          TBA
                         </p>
                       </div>
                     </div>
@@ -137,7 +137,7 @@ export default function Schedule() {
                       <div>
                         <p className="text-sm font-medium text-muted">Time</p>
                         <p className="text-lg font-semibold text-text">
-                          7:10 PM – 9:00 PM
+                          TBA
                         </p>
                       </div>
                     </div>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Schedule",
   description:
-    "View our online class schedule. Classes held Monday & Wednesday evenings via virtual sessions.",
+    "View our online class schedule. Class days and times are TBA.",
   openGraph: {
     title: "Schedule - Tahawiyyah Institute",
     description:

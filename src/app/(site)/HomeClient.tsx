@@ -121,7 +121,7 @@ export default function Home() {
                         <Clock className="h-4 w-4 flex-shrink-0 text-gold" />
                         <span className="text-xs font-medium text-muted sm:text-sm">Schedule:</span>
                       </div>
-                      <span className="text-sm text-text sm:ml-0">Mondays &amp; Wednesdays, 7:10 PM – 9:00 PM</span>
+                      <span className="text-sm text-text sm:ml-0">TBA</span>
                     </div>
                   </div>
                 </CardContent>
