@@ -76,14 +76,14 @@ const teachersData: TeacherData[] = [
     name: "Qāriʾ Nazrul",
     title: "Instructor — Tajwīd & Qurʾānic Recitation",
     summary:
-      "Qāriʾ Nazrul brings expertise in the rules and application of Tajwīd, guiding students toward accurate and beautiful recitation of the Qurʾān.",
+      "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān who completed the ʿĀlimiyyah program, studied Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله), and currently serves as Religious Director at Shelter Rock Islamic Center.",
     education: [
-      "Formal certification in Qurʾānic recitation and Tajwīd",
-      "Ijāza in Ḥafṣ ʿan ʿĀṣim via the recognized chain of transmission",
-      "Advanced study of Makhārij al-Ḥurūf and recitation characteristics",
+      "ʿĀlimiyyah program — studied under Muftī Ibrāhīm Salājee, Qāriʾ ʿAbdullāh Motara, and Muftī Aḥmad ʿAlī",
+      "Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله)",
+      "Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tāsir Miah at Darul Ilm Birmingham",
     ],
     biography:
-      "Qāriʾ Nazrul has devoted his life to the recitation and transmission of the Qurʾān. Having studied under accomplished scholars of Tajwīd, he received his Ijāza through a verified sanad connecting to the authentic tradition of Qurʾānic recitation. His patient and methodical teaching style makes the rules of Tajwīd accessible to students at all levels. At Ṭaḥāwiyya Institute, Qāriʾ Nazrul teaches Tajwīd & Qurʾānic Recitation, ensuring students develop the correct articulation points and recitation characteristics needed for accurate and beautiful tilāwa.",
+      "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān, known for his deep commitment to the preservation and transmission of the sacred sciences. He completed the ʿĀlimiyyah program, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under some of the most senior scholars of our time. Among his teachers were esteemed figures such as Muftī Ibrāhīm Salājee, Qāriʾ ʿAbdullāh Motara, and Muftī Aḥmad ʿAlī. He studied Qirāʾāt under the renowned Qāriʾ Ismāʿīl Essack (رحمه الله), gaining a strong foundation in the precise and authentic modes of Qurʾānic recitation. In addition to his studies, Qāriʾ Nazrul pursued advanced training in Islamic jurisprudence, completing the Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tāsir Miah at Darul Ilm Birmingham. Upon completing his studies, he returned to the United States to serve his community with dedication and sincerity. He currently serves as the Religious Director at Shelter Rock Islamic Center, where he plays a vital role in guiding and educating the community. For many years, he has been actively teaching the sciences of Qirāʾāt, including Tajwīd, Sabʿah (the seven modes of recitation), and Thalāthah Qirāʾāt. Through his teaching, he continues to nurture a deep love and reverence for the Qurʾān in his students, ensuring that its recitation is preserved with precision, beauty, and authenticity.",
     courses: ["TAJ 101"],
   },
   {

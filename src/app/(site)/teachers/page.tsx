@@ -40,7 +40,7 @@ const teachers = [
     name: "Qāriʾ Nazrul",
     title: "Instructor — Tajwīd & Qurʾānic Recitation",
     summary:
-      "Qāriʾ Nazrul brings expertise in the rules and application of Tajwīd, guiding students toward accurate and beautiful recitation of the Qurʾān.",
+      "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān who completed the ʿĀlimiyyah program, studied Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله), and currently serves as Religious Director at Shelter Rock Islamic Center.",
   },
   {
     slug: "bint-instructor-1",
