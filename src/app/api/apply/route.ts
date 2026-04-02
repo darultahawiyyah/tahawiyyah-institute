@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { applySchema, trackOptions } from "@/lib/apply-schema";
+import { applySchema, individualCourseOptions } from "@/lib/apply-schema";
 import nodemailer from "nodemailer";
 
-// SMTP configuration for direct email sending
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: parseInt(process.env.SMTP_PORT || "587"),
@@ -13,11 +12,20 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .replace(/\n/g, "<br>");
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Server-side validation
     const validationResult = applySchema.safeParse(body);
     if (!validationResult.success) {
       return NextResponse.json(
@@ -28,21 +36,28 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data;
 
-    // Format email subject
-    const subject = `[Tahawiyyah Institute] New Application - ${data.firstName} ${data.lastName}`;
+    const trackLabel =
+      data.trackType === "madani"
+        ? "Madani Track (All Courses)"
+        : "Individual Courses";
 
-    // Format preferred track
-    const trackText =
-      trackOptions.find((o) => o.value === data.preferredTrack)?.label ??
-      data.preferredTrack;
+    const coursesLabel =
+      data.trackType === "madani"
+        ? "All courses (Madani Track)"
+        : (data.selectedCourses ?? [])
+            .map(
+              (v) =>
+                individualCourseOptions.find((o) => o.value === v)?.label ?? v
+            )
+            .join(", ");
 
-    // HTML email body
+    const subject = `[Tahawiyyah Institute] New Application — ${data.firstName} ${data.lastName}`;
+
     const htmlBody = `
       <!DOCTYPE html>
       <html>
         <head>
           <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>New Application</title>
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -55,42 +70,41 @@ export async function POST(request: NextRequest) {
               <h2 style="color: #374151; font-size: 18px; font-weight: 600; margin-top: 0; margin-bottom: 16px; border-bottom: 2px solid #f3f4f6; padding-bottom: 8px;">
                 Applicant Information
               </h2>
-
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; width: 140px;">Name:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">${data.firstName} ${data.lastName}</td>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; width: 160px;">Name:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</td>
                 </tr>
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Email:</td>
-                  <td style="padding: 8px 0; color: #1f2937;"><a href="mailto:${data.email}" style="color: #d4af37; text-decoration: none;">${data.email}</a></td>
+                  <td style="padding: 8px 0; color: #1f2937;"><a href="mailto:${escapeHtml(data.email)}" style="color: #d4af37;">${escapeHtml(data.email)}</a></td>
                 </tr>
                 ${data.phone ? `
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Phone:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">${data.phone}</td>
-                </tr>
-                ` : ""}
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.phone)}</td>
+                </tr>` : ""}
                 <tr>
-                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Preferred Track:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">${trackText}</td>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Track:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(trackLabel)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Courses:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(coursesLabel)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Payment Confirmed:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">Yes — applicant confirmed payment sent</td>
                 </tr>
                 ${data.notes ? `
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Notes:</td>
-                  <td style="padding: 8px 0; color: #1f2937; white-space: pre-wrap;">${data.notes
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;")
-                    .replace(/'/g, "&#x27;")
-                    .replace(/\n/g, "<br>")}</td>
-                </tr>
-                ` : ""}
+                  <td style="padding: 8px 0; color: #1f2937; white-space: pre-wrap;">${escapeHtml(data.notes)}</td>
+                </tr>` : ""}
               </table>
             </div>
 
-            <p style="color: #6b7280; font-size: 14px; margin-top: 24px; margin-bottom: 0;">
+            <p style="color: #6b7280; font-size: 14px; margin: 0;">
               This email was sent from the Tahawiyyah Institute application form.
             </p>
           </div>
@@ -98,20 +112,19 @@ export async function POST(request: NextRequest) {
       </html>
     `;
 
-    // Plain text version
     const textBody = `
 New Application Received
 
-Applicant Information:
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
-${data.phone ? `Phone: ${data.phone}\n` : ""}Preferred Track: ${trackText}
+${data.phone ? `Phone: ${data.phone}\n` : ""}Track: ${trackLabel}
+Courses: ${coursesLabel}
+Payment Confirmed: Yes
 ${data.notes ? `Notes: ${data.notes}\n` : ""}
 
 This email was sent from the Tahawiyyah Institute application form.
     `.trim();
 
-    // Send email using SMTP
     if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
       try {
         await transporter.sendMail({
@@ -126,30 +139,20 @@ This email was sent from the Tahawiyyah Institute application form.
       } catch (smtpError) {
         console.error("SMTP error:", smtpError);
         return NextResponse.json(
-          {
-            ok: false,
-            error: "Failed to send email. Please check your SMTP configuration.",
-          },
+          { ok: false, error: "Failed to send email. Please check your SMTP configuration." },
           { status: 500 }
         );
       }
     }
 
-    // If SMTP is not configured
     return NextResponse.json(
-      {
-        ok: false,
-        error: "Email service not configured. Please set SMTP credentials in your .env.local file.",
-      },
+      { ok: false, error: "Email service not configured. Please set SMTP credentials in your .env.local file." },
       { status: 500 }
     );
   } catch (error) {
     console.error("Application submission error:", error);
     return NextResponse.json(
-      {
-        ok: false,
-        error: "An unexpected error occurred. Please try again later.",
-      },
+      { ok: false, error: "An unexpected error occurred. Please try again later." },
       { status: 500 }
     );
   }

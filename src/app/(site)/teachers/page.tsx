@@ -16,10 +16,17 @@ const fadeUpVariants = {
 const teachers = [
   {
     slug: "mawlana-arqam",
-    name: "Shaykh Arqam Masroor",
-    title: "Instructor — Fiqh",
+    name: "Mawlānā Arqam Masroor",
+    title: "Instructor — Ṣarf & Qurʾān",
     summary:
-      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in Ḥanafī jurisprudence and currently pursuing a postgraduate specialization in Islamic law.",
+      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in classical Arabic sciences and Qurʾānic studies, and currently pursuing a postgraduate specialization in Islamic law.",
+  },
+  {
+    slug: "mawlana-abdurrahman-khan",
+    name: "Mawlānā Abdurraḥmān Khān",
+    title: "Instructor — Naḥw & Fiqh",
+    summary:
+      "Mawlānā Abdurraḥmān Khān is a scholar specializing in classical Arabic grammar (Naḥw) and Islamic jurisprudence (Fiqh), dedicated to nurturing students in the foundational sciences of the Islamic tradition.",
   },
   {
     slug: "mawlana-fahim",
@@ -31,37 +38,16 @@ const teachers = [
   {
     slug: "mawlana-rohan",
     name: "Mawlānā Rohan",
-    title: "Instructor — ʿAqīda & Islamic Theology",
+    title: "Instructor — ʿAqīda & Tajwīd",
     summary:
       "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
   },
   {
     slug: "qari-nazrul",
     name: "Qāriʾ Nazrul",
-    title: "Instructor — Tajwīd & Qurʾānic Recitation",
+    title: "Instructor — Qirāʾāt",
     summary:
       "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān who completed the ʿĀlimiyyah program, studied Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله), and currently serves as Religious Director at Shelter Rock Islamic Center.",
-  },
-  {
-    slug: "bint-instructor-1",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Tafsīr & Qurʾānic Studies",
-    summary:
-      "Biography coming soon.",
-  },
-  {
-    slug: "bint-instructor-2",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Tajwīd & Qurʾānic Recitation",
-    summary:
-      "Biography coming soon.",
-  },
-  {
-    slug: "bint-instructor-3",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Arabic Language & Grammar",
-    summary:
-      "Biography coming soon.",
   },
 ];
 

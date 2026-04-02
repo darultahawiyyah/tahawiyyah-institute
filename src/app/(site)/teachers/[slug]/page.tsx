@@ -8,7 +8,6 @@ import { Container } from "@/components/ui/Container";
 import { Card, CardContent } from "@/components/ui/Card";
 import { ButtonLink } from "@/components/ui/Button";
 import { Divider } from "@/components/ui/Divider";
-import { cn } from "@/lib/cn";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -28,18 +27,33 @@ interface TeacherData {
 const teachersData: TeacherData[] = [
   {
     slug: "mawlana-arqam",
-    name: "Shaykh Arqam Masroor",
-    title: "Instructor — Fiqh",
+    name: "Mawlānā Arqam Masroor",
+    title: "Instructor — Ṣarf & Qurʾān",
     summary:
-      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in Ḥanafī jurisprudence and currently pursuing a postgraduate specialization in Islamic law.",
+      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York, specializing in classical Arabic sciences and Qurʾānic studies, and currently pursuing a postgraduate specialization in Islamic law.",
     education: [
       "Memorization of the Qurʾān at Darul Qurʾān wa Sunnah (USA)",
       "ʿĀlimiyyah program at Jamia Binoria Al-ʿĀlamiyyah, Pakistan",
       "Currently pursuing Takhaṣṣuṣ fī al-Iftāʾ (postgraduate specialization in Islamic law)",
     ],
     biography:
-      "Shaykh Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyya Institute and is involved in various religious services and initiatives.",
-    courses: ["FQH 101"],
+      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyya Institute and is involved in various religious services and initiatives.",
+    courses: ["SAR 101 — Ṣarf", "TAF 101 — Qurʾān & Tafsīr"],
+  },
+  {
+    slug: "mawlana-abdurrahman-khan",
+    name: "Mawlānā Abdurraḥmān Khān",
+    title: "Instructor — Naḥw & Fiqh",
+    summary:
+      "Mawlānā Abdurraḥmān Khān is a scholar specializing in classical Arabic grammar (Naḥw) and Islamic jurisprudence (Fiqh), dedicated to nurturing students in the foundational sciences of the Islamic tradition.",
+    education: [
+      "ʿĀlimiyyah program in the traditional Islamic sciences",
+      "Specialization in Naḥw (classical Arabic grammar)",
+      "Advanced studies in Ḥanafī jurisprudence and Fiqh",
+    ],
+    biography:
+      "Mawlānā Abdurraḥmān Khān is a dedicated scholar and educator specializing in the traditional Islamic sciences of Naḥw (classical Arabic grammar) and Fiqh (Islamic jurisprudence). He completed the ʿĀlimiyyah program under qualified scholars, receiving a thorough training in the core sciences of the Islamic tradition. His particular focus on the grammatical sciences reflects his commitment to equipping students with the tools needed to engage directly with classical Arabic texts. Alongside his expertise in language, Mawlānā Abdurraḥmān brings a clear and methodical approach to teaching Fiqh, drawing on the Ḥanafī tradition to help students understand Islamic law in a structured and accessible way. He is dedicated to nurturing the next generation of students in the authentic transmission of Islamic knowledge.",
+    courses: ["FQH 101 — Fiqh", "ARB 101 — Naḥw"],
   },
   {
     slug: "mawlana-fahim",
@@ -54,12 +68,12 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences, including Qurʾān, Ḥadīth, Fiqh, and Arabic. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Rūḥul Amīn and Muftī Noʿmān, benefiting from their depth of knowledge and experience. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training further refined his ability to address contemporary issues through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
-    courses: ["HAD 101"],
+    courses: ["HAD 101 — Ḥadīth Sciences"],
   },
   {
     slug: "mawlana-rohan",
     name: "Mawlānā Rohan",
-    title: "Instructor — ʿAqīda & Islamic Theology",
+    title: "Instructor — ʿAqīda & Tajwīd",
     summary:
       "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
     education: [
@@ -69,12 +83,12 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Rohan is a graduate of the rigorous ʿĀlimiyyah program from Darul Uloom Azaadville in South Africa — one of the most prominent and prestigious Islamic institutions in the world — where he completed extensive studies in the traditional Islamic sciences. He further specialized in the science of Qirāʾāt, mastering the various modes of Qurʾānic recitation, and is currently advancing his specialization in Fiqh and Islamic jurisprudence. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences, and also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he recently co-founded Ṭaḥāwiyya Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
-    courses: ["AQD 101"],
+    courses: ["AQD 101 — ʿAqīda & Islamic Theology", "TAJ 101 — Tajwīd & Qurʾānic Recitation"],
   },
   {
     slug: "qari-nazrul",
     name: "Qāriʾ Nazrul",
-    title: "Instructor — Tajwīd & Qurʾānic Recitation",
+    title: "Instructor — Qirāʾāt",
     summary:
       "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān who completed the ʿĀlimiyyah program, studied Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله), and currently serves as Religious Director at Shelter Rock Islamic Center.",
     education: [
@@ -83,47 +97,8 @@ const teachersData: TeacherData[] = [
       "Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tāsir Miah at Darul Ilm Birmingham",
     ],
     biography:
-      "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān, known for his deep commitment to the preservation and transmission of the sacred sciences. He completed the ʿĀlimiyyah program, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under some of the most senior scholars of our time. Among his teachers were esteemed figures such as Muftī Ibrāhīm Salājee, Qāriʾ ʿAbdullāh Motara, and Muftī Aḥmad ʿAlī. He studied Qirāʾāt under the renowned Qāriʾ Ismāʿīl Essack (رحمه الله), gaining a strong foundation in the precise and authentic modes of Qurʾānic recitation. In addition to his studies, Qāriʾ Nazrul pursued advanced training in Islamic jurisprudence, completing the Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tāsir Miah at Darul Ilm Birmingham. Upon completing his studies, he returned to the United States to serve his community with dedication and sincerity. He currently serves as the Religious Director at Shelter Rock Islamic Center, where he plays a vital role in guiding and educating the community. For many years, he has been actively teaching the sciences of Qirāʾāt, including Tajwīd, Sabʿah (the seven modes of recitation), and Thalāthah Qirāʾāt. Through his teaching, he continues to nurture a deep love and reverence for the Qurʾān in his students, ensuring that its recitation is preserved with precision, beauty, and authenticity.",
-    courses: ["TAJ 101"],
-  },
-  {
-    slug: "bint-instructor-1",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Tafsīr & Qurʾānic Studies",
-    summary:
-      "Biography coming soon.",
-    education: [
-      "Details coming soon",
-    ],
-    biography:
-      "Full biography coming soon. This instructor will be teaching Tafsīr and Qurʾānic Studies at Ṭaḥāwiyya Institute.",
-    courses: ["TAF 101"],
-  },
-  {
-    slug: "bint-instructor-2",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Tajwīd & Qurʾānic Recitation",
-    summary:
-      "Biography coming soon.",
-    education: [
-      "Details coming soon",
-    ],
-    biography:
-      "Full biography coming soon. This instructor will be teaching Tajwīd and Qurʾānic Recitation at Ṭaḥāwiyya Institute.",
-    courses: ["TAJ 101"],
-  },
-  {
-    slug: "bint-instructor-3",
-    name: "Ustādha Bint — TBD",
-    title: "Instructor — Arabic Language & Grammar",
-    summary:
-      "Biography coming soon.",
-    education: [
-      "Details coming soon",
-    ],
-    biography:
-      "Full biography coming soon. This instructor will be teaching Arabic Language and Grammar at Ṭaḥāwiyya Institute.",
-    courses: ["ARB 101"],
+      "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān, known for his deep commitment to the preservation and transmission of the sacred sciences. He completed the ʿĀlimiyyah program, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under some of the most senior scholars of our time. Among his teachers were esteemed figures such as Muftī Ibrāhīm Salājee, Qāriʾ ʿAbdullāh Motara, and Muftī Aḥmad ʿAlī. He studied Qirāʾāt under the renowned Qāriʾ Ismāʿīl Essack (رحمه الله), gaining a strong foundation in the precise and authentic modes of Qurʾānic recitation. In addition to his studies, Qāriʾ Nazrul pursued advanced training in Islamic jurisprudence, completing the Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tāsir Miah at Darul Ilm Birmingham. Upon completing his studies, he returned to the United States to serve his community with dedication and sincerity. He currently serves as the Religious Director at Shelter Rock Islamic Center, where he plays a vital role in guiding and educating the community. For many years, he has been actively teaching the sciences of Qirāʾāt, including Tajwīd, Sabʿah (the seven modes of recitation), and Thalāthah Qirāʾāt.",
+    courses: ["Qirāʾāt — Advanced (coming soon)"],
   },
 ];
 
@@ -175,7 +150,6 @@ export default function TeacherBiographyPage({
           className="mb-12"
         >
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-            {/* Large Avatar */}
             <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-surface2 text-3xl font-semibold text-gold border-2 border-border">
               {teacher.name
                 .split(" ")
@@ -194,9 +168,8 @@ export default function TeacherBiographyPage({
         </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Main Content — Left Column */}
+          {/* Main Content */}
           <div className="space-y-10 lg:col-span-2">
-            {/* Biography */}
             <motion.section
               variants={fadeUpVariants}
               initial="hidden"
@@ -211,9 +184,8 @@ export default function TeacherBiographyPage({
             </motion.section>
           </div>
 
-          {/* Sidebar — Right Column */}
+          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Education */}
             <motion.div
               variants={fadeUpVariants}
               initial="hidden"
@@ -238,7 +210,6 @@ export default function TeacherBiographyPage({
               </Card>
             </motion.div>
 
-            {/* Courses Taught */}
             <motion.div
               variants={fadeUpVariants}
               initial="hidden"
@@ -247,9 +218,7 @@ export default function TeacherBiographyPage({
             >
               <Card>
                 <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold text-text">
-                    Courses Taught
-                  </h3>
+                  <h3 className="text-lg font-semibold text-text">Courses Taught</h3>
                   <ul className="mt-3 space-y-2">
                     {teacher.courses.map((item, i) => (
                       <li

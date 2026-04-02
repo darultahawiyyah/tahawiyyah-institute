@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/curriculum", label: "Curriculum" },
   { href: "/teachers", label: "Faculty" },
   { href: "/schedule", label: "Schedule" },
+  { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
 ];
 
