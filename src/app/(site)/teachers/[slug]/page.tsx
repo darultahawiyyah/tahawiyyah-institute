@@ -5,7 +5,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { Card, CardContent } from "@/components/ui/Card";
 import { ButtonLink } from "@/components/ui/Button";
 import { Divider } from "@/components/ui/Divider";
 
@@ -169,73 +168,19 @@ export default function TeacherBiographyPage({
           </div>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {/* Main Content */}
-          <div className="space-y-10 lg:col-span-2">
-            <motion.section
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h2 className="text-2xl font-semibold text-text">Biography</h2>
-              <Divider />
-              <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-                {teacher.biography}
-              </p>
-            </motion.section>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            <motion.div
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.35 }}
-            >
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold text-text">Education</h3>
-                  <ul className="mt-3 space-y-2">
-                    {teacher.education.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-muted"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUpVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold text-text">Courses Taught</h3>
-                  <ul className="mt-3 space-y-2">
-                    {teacher.courses.map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm leading-relaxed text-muted"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+        <div className="max-w-2xl">
+          <motion.section
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="text-2xl font-semibold text-text">Biography</h2>
+            <Divider />
+            <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+              {teacher.biography}
+            </p>
+          </motion.section>
         </div>
 
         {/* Back Link */}
