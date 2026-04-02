@@ -26,7 +26,7 @@ const teachers = [
     name: "Mawlānā Abdurraḥmān Khān",
     title: "Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyah Institute.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyahh Institute.",
   },
   {
     slug: "mawlana-fahim",
@@ -40,7 +40,7 @@ const teachers = [
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Tajwīd",
     summary:
-      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
+      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyyah Institute.",
   },
   {
     slug: "qari-nazrul",
@@ -65,7 +65,7 @@ export default function TeachersPage() {
           <SectionHeader
             eyebrow="Our Faculty"
             title="Meet Our Faculty"
-            description="Our instructors are dedicated scholars with years of study and teaching experience. Get to know the educators guiding your journey through the Ṭaḥāwiyya program."
+            description="Our instructors are dedicated scholars with years of study and teaching experience. Get to know the educators guiding your journey through the Ṭaḥāwiyyah program."
           />
         </motion.div>
 

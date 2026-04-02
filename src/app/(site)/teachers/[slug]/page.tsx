@@ -36,7 +36,7 @@ const teachersData: TeacherData[] = [
       "Currently pursuing Takhaṣṣuṣ fī al-Iftāʾ (postgraduate specialization in Islamic law)",
     ],
     biography:
-      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyya Institute and is involved in various religious services and initiatives.",
+      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyyah Institute and is involved in various religious services and initiatives.",
     courses: ["SAR 101 — Ṣarf", "TAF 101 — Qurʾān & Tafsīr"],
   },
   {
@@ -44,7 +44,7 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Abdurraḥmān Khān",
     title: "Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyah Institute.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyahh Institute.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
       "ʿĀlimiyyah program at Jamia Qurania Academy; completed at Darul Uloom New York",
@@ -53,8 +53,8 @@ const teachersData: TeacherData[] = [
       "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York",
     ],
     biography:
-      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah ʿĀlimiyyah Program program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah Program training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York. At Ṭaḥāwiyya Institute, he manages the administration, logistics, and communications, coordinating the day-to-day operations of the program.",
-    courses: ["Administration, Logistics & Communications — Ṭaḥāwiyya Institute"],
+      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah ʿĀlimiyyah Program program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah Program training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York. At Ṭaḥāwiyyah Institute, he manages the administration, logistics, and communications, coordinating the day-to-day operations of the program.",
+    courses: ["Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
   },
   {
     slug: "mawlana-fahim",
@@ -76,14 +76,14 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Tajwīd",
     summary:
-      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyya Institute.",
+      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyyah Institute.",
     education: [
       "ʿĀlimiyyah program at Darul Uloom Azaadville, South Africa",
       "Specialization in the science of Qirāʾāt (modes of Qurʾānic recitation)",
       "Currently advancing specialization in Fiqh and Islamic jurisprudence",
     ],
     biography:
-      "Mawlānā Rohan is a graduate of the rigorous ʿĀlimiyyah program from Darul Uloom Azaadville in South Africa — one of the most prominent and prestigious Islamic institutions in the world — where he completed extensive studies in the traditional Islamic sciences. He further specialized in the science of Qirāʾāt, mastering the various modes of Qurʾānic recitation, and is currently advancing his specialization in Fiqh and Islamic jurisprudence. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences, and also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he recently co-founded Ṭaḥāwiyya Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
+      "Mawlānā Rohan is a graduate of the rigorous ʿĀlimiyyah program from Darul Uloom Azaadville in South Africa — one of the most prominent and prestigious Islamic institutions in the world — where he completed extensive studies in the traditional Islamic sciences. He further specialized in the science of Qirāʾāt, mastering the various modes of Qurʾānic recitation, and is currently advancing his specialization in Fiqh and Islamic jurisprudence. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences, and also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he recently co-founded Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
     courses: ["AQD 101 — ʿAqīda & Islamic Theology", "TAJ 101 — Tajwīd & Qurʾānic Recitation"],
   },
   {

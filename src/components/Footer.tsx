@@ -40,7 +40,7 @@ export function Footer() {
                   href="/"
                   className="flex items-baseline gap-1 text-xl font-semibold text-text transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
                 >
-                  <span>Tahawiyyah</span>
+                  <span>Ṭaḥāwiyyah</span>
                   <span className="text-gold">Institute</span>
                 </Link>
               </div>
@@ -97,7 +97,7 @@ export function Footer() {
           <div className="mt-12 space-y-4 md:mt-16">
             <Divider />
             <p className="text-center text-sm text-muted">
-              © {new Date().getFullYear()} Tahawiyyah Institute. All rights
+              © {new Date().getFullYear()} Ṭaḥāwiyyah Institute. All rights
               reserved.
             </p>
           </div>

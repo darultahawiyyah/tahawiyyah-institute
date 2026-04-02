@@ -26,7 +26,7 @@ const events: {
   //   date: "April 24, 2026",
   //   time: "7:00 PM – 9:00 PM",
   //   location: "Madani Masjid",
-  //   description: "Meet the faculty and learn about the Ṭaḥāwiyya Institute program.",
+  //   description: "Meet the faculty and learn about the Ṭaḥāwiyyah Institute program.",
   // },
 ];
 // ─────────────────────────────────────────────────────────────────────────────

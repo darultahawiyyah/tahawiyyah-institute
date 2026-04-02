@@ -73,7 +73,7 @@ export function Navbar() {
               priority
             />
             <div className="flex items-baseline gap-1 text-xl font-semibold text-text">
-              <span>Tahawiyyah</span>
+              <span>Ṭaḥāwiyyah</span>
               <span className="text-gold">Institute</span>
             </div>
           </Link>
