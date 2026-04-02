@@ -45,14 +45,16 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Abdurraḥmān Khān",
     title: "Instructor — Naḥw & Fiqh",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar specializing in classical Arabic grammar (Naḥw) and Islamic jurisprudence (Fiqh), dedicated to nurturing students in the foundational sciences of the Islamic tradition.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed the ʿĀlimiyyah program and graduated with a Master's in Islamic Sciences from Jamia Binoria. He is currently pursuing postgraduate specialization in Fiqh and Iftāʾ at Darul Uloom New York.",
     education: [
-      "ʿĀlimiyyah program in the traditional Islamic sciences",
-      "Specialization in Naḥw (classical Arabic grammar)",
-      "Advanced studies in Ḥanafī jurisprudence and Fiqh",
+      "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
+      "ʿĀlimiyyah program at Jamia Qurania Academy and Darul Uloom New York",
+      "Master's in Islamic Sciences, Jamia Binoria (graduated August 2025)",
+      "B.A. in Computer Science, CUNY Queens College — Cum Laude (January 2026)",
+      "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ at Darul Uloom New York",
     ],
     biography:
-      "Mawlānā Abdurraḥmān Khān is a dedicated scholar and educator specializing in the traditional Islamic sciences of Naḥw (classical Arabic grammar) and Fiqh (Islamic jurisprudence). He completed the ʿĀlimiyyah program under qualified scholars, receiving a thorough training in the core sciences of the Islamic tradition. His particular focus on the grammatical sciences reflects his commitment to equipping students with the tools needed to engage directly with classical Arabic texts. Alongside his expertise in language, Mawlānā Abdurraḥmān brings a clear and methodical approach to teaching Fiqh, drawing on the Ḥanafī tradition to help students understand Islamic law in a structured and accessible way. He is dedicated to nurturing the next generation of students in the authentic transmission of Islamic knowledge.",
+      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah seminary program — beginning at Jamia Qurania Academy and completing his advanced studies in Ḥadīth and related sciences at Darul Uloom New York — graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his seminary training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs at Darul Uloom New York.",
     courses: ["FQH 101 — Fiqh", "ARB 101 — Naḥw"],
   },
   {

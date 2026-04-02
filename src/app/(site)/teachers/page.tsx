@@ -26,7 +26,7 @@ const teachers = [
     name: "Mawlānā Abdurraḥmān Khān",
     title: "Instructor — Naḥw & Fiqh",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar specializing in classical Arabic grammar (Naḥw) and Islamic jurisprudence (Fiqh), dedicated to nurturing students in the foundational sciences of the Islamic tradition.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed the ʿĀlimiyyah program and graduated with a Master's in Islamic Sciences from Jamia Binoria. He is currently pursuing postgraduate specialization in Fiqh and Iftāʾ at Darul Uloom New York.",
   },
   {
     slug: "mawlana-fahim",
