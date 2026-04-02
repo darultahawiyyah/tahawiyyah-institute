@@ -39,6 +39,8 @@ interface FormState {
   lastName: string;
   email: string;
   phone: string;
+  gender: "male" | "female" | "";
+  previousStudies: string;
   notes: string;
   trackType: TrackType;
   selectedCourses: string[];
@@ -50,6 +52,8 @@ const initialState: FormState = {
   lastName: "",
   email: "",
   phone: "",
+  gender: "",
+  previousStudies: "",
   notes: "",
   trackType: "",
   selectedCourses: [],
@@ -69,6 +73,9 @@ function validateStep1(data: FormState): FieldError {
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
     errors.email = "Please enter a valid email address";
   }
+  if (!data.phone.trim()) errors.phone = "Phone number is required";
+  if (!data.gender) errors.gender = "Please select a gender";
+  if (!data.previousStudies.trim()) errors.previousStudies = "Please describe your previous Islamic studies";
   return errors;
 }
 
@@ -149,7 +156,9 @@ export default function Apply() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          phone: formData.phone || undefined,
+          phone: formData.phone,
+          gender: formData.gender,
+          previousStudies: formData.previousStudies,
           trackType: formData.trackType,
           selectedCourses:
             formData.trackType === "individual" ? formData.selectedCourses : undefined,
@@ -523,15 +532,77 @@ export default function Apply() {
                         {/* Phone */}
                         <div>
                           <label htmlFor="phone" className="mb-2 block text-sm font-medium text-text">
-                            Phone
+                            Phone <span className="text-red-500">*</span>
                           </label>
                           <input
                             id="phone"
                             type="tel"
                             value={formData.phone}
                             onChange={(e) => update("phone", e.target.value)}
-                            className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-text transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg"
+                            className={cn(
+                              "w-full rounded-xl border border-border bg-surface px-4 py-3 text-text transition-colors",
+                              "focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg",
+                              errors.phone && "border-red-500/50"
+                            )}
                           />
+                          {errors.phone && (
+                            <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                          )}
+                        </div>
+
+                        {/* Gender */}
+                        <div>
+                          <p className="mb-2 block text-sm font-medium text-text">
+                            Gender <span className="text-red-500">*</span>
+                          </p>
+                          <div className="flex gap-3">
+                            {[
+                              { value: "male", label: "Brother" },
+                              { value: "female", label: "Sister" },
+                            ].map((opt) => (
+                              <button
+                                key={opt.value}
+                                type="button"
+                                onClick={() => update("gender", opt.value)}
+                                className={cn(
+                                  "flex-1 rounded-xl border-2 py-3 text-sm font-medium transition-all",
+                                  formData.gender === opt.value
+                                    ? "border-gold bg-gold/5 text-text"
+                                    : "border-border bg-surface text-muted hover:border-gold/40",
+                                  errors.gender && !formData.gender && "border-red-500/50"
+                                )}
+                              >
+                                {opt.label}
+                              </button>
+                            ))}
+                          </div>
+                          {errors.gender && (
+                            <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
+                          )}
+                        </div>
+
+                        {/* Previous Studies */}
+                        <div>
+                          <label htmlFor="previousStudies" className="mb-2 block text-sm font-medium text-text">
+                            Previous Islamic Studies <span className="text-red-500">*</span>
+                          </label>
+                          <p className="mb-2 text-xs text-muted">
+                            Describe any prior Qurʾān, Arabic, or Islamic education you have received.
+                          </p>
+                          <textarea
+                            id="previousStudies"
+                            rows={3}
+                            value={formData.previousStudies}
+                            onChange={(e) => update("previousStudies", e.target.value)}
+                            className={cn(
+                              "w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 text-text transition-colors",
+                              "focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg",
+                              errors.previousStudies && "border-red-500/50"
+                            )}
+                          />
+                          {errors.previousStudies && (
+                            <p className="mt-1 text-sm text-red-500">{errors.previousStudies}</p>
+                          )}
                         </div>
 
                         {/* Notes */}
@@ -697,19 +768,19 @@ export default function Apply() {
                         {/* Summary */}
                         <div className="rounded-xl border border-border bg-surface2 p-4 space-y-2 text-sm">
                           <h4 className="font-semibold text-text mb-3">Application Summary</h4>
-                          <div className="grid grid-cols-[120px_1fr] gap-y-2">
+                          <div className="grid grid-cols-[140px_1fr] gap-y-2">
                             <span className="text-muted">Name</span>
                             <span className="text-text font-medium">
                               {formData.firstName} {formData.lastName}
                             </span>
                             <span className="text-muted">Email</span>
                             <span className="text-text font-medium break-all">{formData.email}</span>
-                            {formData.phone && (
-                              <>
-                                <span className="text-muted">Phone</span>
-                                <span className="text-text font-medium">{formData.phone}</span>
-                              </>
-                            )}
+                            <span className="text-muted">Phone</span>
+                            <span className="text-text font-medium">{formData.phone}</span>
+                            <span className="text-muted">Gender</span>
+                            <span className="text-text font-medium capitalize">
+                              {formData.gender === "male" ? "Brother" : "Sister"}
+                            </span>
                             <span className="text-muted">Courses</span>
                             <span className="text-text font-medium">{coursesLabel}</span>
                           </div>

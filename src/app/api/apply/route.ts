@@ -36,6 +36,8 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data;
 
+    const genderLabel = data.gender === "male" ? "Brother" : "Sister";
+
     const trackLabel =
       data.trackType === "madani"
         ? "Madani Track (All Courses)"
@@ -79,11 +81,18 @@ export async function POST(request: NextRequest) {
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Email:</td>
                   <td style="padding: 8px 0; color: #1f2937;"><a href="mailto:${escapeHtml(data.email)}" style="color: #d4af37;">${escapeHtml(data.email)}</a></td>
                 </tr>
-                ${data.phone ? `
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Phone:</td>
                   <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.phone)}</td>
-                </tr>` : ""}
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Gender:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(genderLabel)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Previous Studies:</td>
+                  <td style="padding: 8px 0; color: #1f2937; white-space: pre-wrap;">${escapeHtml(data.previousStudies)}</td>
+                </tr>
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Track:</td>
                   <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(trackLabel)}</td>
@@ -117,7 +126,10 @@ New Application Received
 
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
-${data.phone ? `Phone: ${data.phone}\n` : ""}Track: ${trackLabel}
+Phone: ${data.phone}
+Gender: ${genderLabel}
+Previous Studies: ${data.previousStudies}
+Track: ${trackLabel}
 Courses: ${coursesLabel}
 Payment Confirmed: Yes
 ${data.notes ? `Notes: ${data.notes}\n` : ""}
