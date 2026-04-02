@@ -44,7 +44,7 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Abdurraḥmān Khān",
     title: "Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyya Institute.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyah Institute.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
       "ʿĀlimiyyah program at Jamia Qurania Academy; completed at Darul Uloom New York",
