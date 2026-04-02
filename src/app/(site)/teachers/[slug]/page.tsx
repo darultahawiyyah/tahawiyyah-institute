@@ -43,24 +43,24 @@ const teachersData: TeacherData[] = [
   {
     slug: "mawlana-abdurrahman-khan",
     name: "Mawlānā Abdurraḥmān Khān",
-    title: "Instructor — Naḥw & Fiqh",
+    title: "Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed the ʿĀlimiyyah program and graduated with a Master's in Islamic Sciences from Jamia Binoria. He is currently pursuing postgraduate specialization in Fiqh and Iftāʾ at Darul Uloom New York.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyya Institute.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
-      "ʿĀlimiyyah program at Jamia Qurania Academy and Darul Uloom New York",
+      "ʿĀlimiyyah program at Jamia Qurania Academy; completed at Darul Uloom New York",
       "Master's in Islamic Sciences, Jamia Binoria (graduated August 2025)",
       "B.A. in Computer Science, CUNY Queens College — Cum Laude (January 2026)",
-      "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ at Darul Uloom New York",
+      "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York",
     ],
     biography:
-      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah seminary program — beginning at Jamia Qurania Academy and completing his advanced studies in Ḥadīth and related sciences at Darul Uloom New York — graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his seminary training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs at Darul Uloom New York.",
-    courses: ["FQH 101 — Fiqh", "ARB 101 — Naḥw"],
+      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah seminary program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his seminary training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York. At Ṭaḥāwiyya Institute, he manages the administration, logistics, and communications, coordinating the day-to-day operations of the program.",
+    courses: ["Administration, Logistics & Communications — Ṭaḥāwiyya Institute"],
   },
   {
     slug: "mawlana-fahim",
     name: "Mawlānā Fahim",
-    title: "Instructor — Ḥadīth Sciences",
+    title: "Instructor — Fiqh, Ḥadīth & Naḥw",
     summary:
       "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
     education: [
@@ -70,7 +70,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences, including Qurʾān, Ḥadīth, Fiqh, and Arabic. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Rūḥul Amīn and Muftī Noʿmān, benefiting from their depth of knowledge and experience. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training further refined his ability to address contemporary issues through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
-    courses: ["HAD 101 — Ḥadīth Sciences"],
+    courses: ["FQH 101 — Fiqh", "HAD 101 — Ḥadīth Sciences", "ARB 101 — Naḥw"],
   },
   {
     slug: "mawlana-rohan",

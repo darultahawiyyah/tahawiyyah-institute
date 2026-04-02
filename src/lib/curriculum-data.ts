@@ -17,8 +17,8 @@ export const semester1Courses: CourseData[] = [
     code: "FQH 101",
     name: "Fiqh",
     fullName: "Fiqh",
-    instructor: "Mawlānā Abdurraḥmān Khān",
-    instructorSlug: "mawlana-abdurrahman-khan",
+    instructor: "Mawlānā Fahim",
+    instructorSlug: "mawlana-fahim",
     location: "TBA",
     schedule: "TBA",
     description:
@@ -69,8 +69,8 @@ export const semester1Courses: CourseData[] = [
     code: "ARB 101",
     name: "Naḥw",
     fullName: "Naḥw (Classical Arabic Grammar)",
-    instructor: "Mawlānā Abdurraḥmān Khān",
-    instructorSlug: "mawlana-abdurrahman-khan",
+    instructor: "Mawlānā Fahim",
+    instructorSlug: "mawlana-fahim",
     location: "TBA",
     schedule: "TBA",
     description:

@@ -24,14 +24,14 @@ const teachers = [
   {
     slug: "mawlana-abdurrahman-khan",
     name: "Mawlānā Abdurraḥmān Khān",
-    title: "Instructor — Naḥw & Fiqh",
+    title: "Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed the ʿĀlimiyyah program and graduated with a Master's in Islamic Sciences from Jamia Binoria. He is currently pursuing postgraduate specialization in Fiqh and Iftāʾ at Darul Uloom New York.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyya Institute.",
   },
   {
     slug: "mawlana-fahim",
     name: "Mawlānā Fahim",
-    title: "Instructor — Ḥadīth Sciences",
+    title: "Instructor — Fiqh, Ḥadīth & Naḥw",
     summary:
       "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
   },
