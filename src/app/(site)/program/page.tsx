@@ -43,7 +43,7 @@ const outcomes = [
     icon: BookOpen,
     title: "Comprehensive Knowledge",
     description:
-      "Master the fundamentals of Fiqh, ʿAqīda, Tafsīr, Tajwīd, and Arabic with confidence and depth across all four semesters.",
+      "Master the fundamentals of Fiqh, ʿAqīdah, Tafsīr, Tajwīd, and Arabic with confidence and depth across all four semesters.",
   },
   {
     icon: CheckCircle2,
@@ -184,7 +184,7 @@ export default function Program() {
               <CardContent className="pt-6">
                 <ul className="space-y-5">
                   {[
-                    "Develop a comprehensive understanding of core Islamic sciences including Fiqh, ʿAqīda, Tafsīr, Tajwīd, and Arabic",
+                    "Develop a comprehensive understanding of core Islamic sciences including Fiqh, ʿAqīdah, Tafsīr, Tajwīd, and Arabic",
                     "Build a strong foundation in traditional Islamic scholarship and methodology",
                     "Cultivate the ability to read and understand classical Islamic texts",
                     "Gain practical skills in applying Islamic knowledge to contemporary contexts",
@@ -235,7 +235,7 @@ export default function Program() {
             {[
               { icon: Calendar, label: "Duration", value: "2 Years" },
               { icon: BookOpen, label: "Semesters", value: "4" },
-              { icon: GraduationCap, label: "Core Subjects", value: "Fiqh · ʿAqīda · Tafsīr · Tajwīd · Arabic" },
+              { icon: GraduationCap, label: "Core Subjects", value: "Fiqh · ʿAqīdah · Tafsīr · Tajwīd · Arabic" },
               { icon: FileText, label: "Assessments", value: "End of every semester" },
             ].map((stat, index) => (
               <motion.div key={index} variants={fadeUpVariants}>
@@ -328,7 +328,7 @@ export default function Program() {
                     <Award className="h-6 w-6 text-gold" />
                   </div>
                   <CardTitle className="font-display text-2xl text-gold">
-                    Ijāza Opportunity
+                    Ijāzah Opportunity
                   </CardTitle>
                 </div>
               </CardHeader>
@@ -336,11 +336,11 @@ export default function Program() {
                 <p className="max-w-prose text-base leading-relaxed text-muted md:text-lg">
                   Students who successfully complete the program and meet all
                   academic and recitation standards may be eligible to receive an{" "}
-                  <strong className="text-text">Ijāza in Qurʾān Recitation</strong>.
+                  <strong className="text-text">Ijāzah in Qurʾān Recitation</strong>.
                   This traditional certification is granted contingent upon
                   demonstrating mastery of Tajwīd rules, accurate memorization, and
                   meeting the rigorous standards set by our qualified instructors.
-                  The Ijāza represents a recognized chain of transmission (sanad)
+                  The Ijāzah represents a recognized chain of transmission (sanad)
                   connecting you to the authentic tradition of Qurʾānic recitation.
                 </p>
               </CardContent>

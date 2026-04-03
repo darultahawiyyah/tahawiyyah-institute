@@ -53,7 +53,7 @@ const highlights = [
     number: "01",
     title: "Comprehensive Curriculum",
     description:
-      "Covering Fiqh, ʿAqīda, Tajwīd, Arabic, Ṣarf, and Tafsīr across four structured semesters — each building on the last.",
+      "Covering Fiqh, ʿAqīdah, Tajwīd, Arabic, Ṣarf, and Tafsīr across four structured semesters — each building on the last.",
   },
   {
     icon: Users,
@@ -191,7 +191,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs text-muted">Certification</p>
-                      <p className="text-sm font-medium text-text">Ijāza opportunity upon completion</p>
+                      <p className="text-sm font-medium text-text">Ijāzah opportunity upon completion</p>
                     </div>
                   </div>
 
@@ -342,60 +342,36 @@ export default function Home() {
             <SectionHeader
               eyebrow="Academic Structure"
               title="Curriculum Preview"
-              description="Four semesters covering essential Islamic sciences with progressive depth and complexity."
+              description="A structured 2-year program covering essential Islamic sciences with progressive depth and complexity."
             />
           </motion.div>
 
           <motion.div
-            className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+            className="mt-12 max-w-sm"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
+            variants={fadeUpVariants}
+            transition={{ duration: 0.5 }}
           >
-            {[
-              {
-                num: "1",
-                title: "Semester 1",
-                badges: ["Fiqh", "ʿAqīda", "Tajwīd", "Arabic", "Ṣarf", "Tafsīr"],
-              },
-              {
-                num: "2",
-                title: "Semester 2",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Tajwīd", "Arabic"],
-              },
-              {
-                num: "3",
-                title: "Semester 3",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Arabic", "Tajwīd"],
-              },
-              {
-                num: "4",
-                title: "Semester 4",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Arabic", "Tajwīd"],
-              },
-            ].map((semester, index) => (
-              <motion.div key={index} variants={fadeUpVariants}>
-                <Card className="h-full relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
-                  <span className="absolute right-4 top-4 font-display text-6xl font-bold text-gold/6 select-none pointer-events-none leading-none">
-                    {semester.num}
-                  </span>
-                  <CardHeader>
-                    <CardTitle className="font-display text-lg">{semester.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {semester.badges.map((badge, badgeIndex) => (
-                        <Badge key={badgeIndex} variant="default">
-                          {badge}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+            <Card className="relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
+              <span className="absolute right-4 top-4 font-display text-6xl font-bold text-gold/6 select-none pointer-events-none leading-none">
+                1
+              </span>
+              <CardHeader>
+                <CardTitle className="font-display text-lg">Semester 1</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {["Fiqh", "ʿAqīdah", "Tajwīd", "Arabic", "Ṣarf", "Tafsīr"].map((badge) => (
+                    <Badge key={badge} variant="default">
+                      {badge}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
 
           <motion.div

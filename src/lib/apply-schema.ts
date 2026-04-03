@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const individualCourseOptions = [
   { value: "fqh-101", label: "FQH 101 — Introduction to Islamic Jurisprudence (Fiqh)" },
-  { value: "aqd-101", label: "AQD 101 — Foundations of Islamic Theology (ʿAqīda)" },
+  { value: "aqd-101", label: "AQD 101 — Foundations of Islamic Theology (ʿAqīdah)" },
   { value: "taj-101", label: "TAJ 101 — Principles of Qurʾānic Recitation (Tajwīd)" },
   { value: "arb-101", label: "ARB 101 — Classical Arabic Grammar (Naḥw)" },
   { value: "sar-101", label: "SAR 101 — Foundations of Arabic Morphology (Ṣarf)" },

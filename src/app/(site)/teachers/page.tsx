@@ -32,11 +32,11 @@ const teachers = [
   },
   {
     slug: "mawlana-abdurrahman-khan",
-    name: "Mawlānā Abdurraḥmān Khān",
+    name: "Mawlānā Abdurrahman Khan",
     title: "Instructor — Naḥw & Fiqh | Administration",
     courses: ["FQH 101", "ARB 101"],
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Naḥw and Fiqh at Ṭaḥāwiyyah Institute.",
+      "Mawlānā Abdurrahman Khan is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Naḥw and Fiqh at Ṭaḥāwiyyah Institute.",
   },
   {
     slug: "mawlana-fahim",
