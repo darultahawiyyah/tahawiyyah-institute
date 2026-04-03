@@ -9,9 +9,9 @@
   --muted: #6B6045;
   --brand: #F5E8C4;
   --brand2: #EDD49A;
-  --gold: #C5973F;
-  --gold2: #A07A2A;
-  --border: rgba(197, 151, 63, 0.18);
+  --gold: #D4AF37;
+  --gold2: #B8960C;
+  --border: rgba(212, 175, 55, 0.20);
 }
 
 @theme {
@@ -26,8 +26,8 @@
   --color-gold2: var(--gold2);
   --color-border: var(--border);
 
-  --shadow-soft: 0 10px 30px rgba(197, 151, 63, 0.10);
-  --shadow-card: 0 4px 20px rgba(197, 151, 63, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 10px 30px rgba(212, 175, 55, 0.12);
+  --shadow-card: 0 4px 20px rgba(212, 175, 55, 0.10), 0 1px 4px rgba(0, 0, 0, 0.04);
 
   /* Display font — Playfair Display for headings */
   --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
@@ -51,8 +51,8 @@ body::before {
   height: 60%;
   background: radial-gradient(
     ellipse at top left,
-    rgba(197, 151, 63, 0.07) 0%,
-    rgba(197, 151, 63, 0.02) 50%,
+    rgba(212, 175, 55, 0.08) 0%,
+    rgba(212, 175, 55, 0.02) 50%,
     transparent 70%
   );
   pointer-events: none;
@@ -69,7 +69,7 @@ body::after {
   height: 50%;
   background: radial-gradient(
     ellipse at bottom right,
-    rgba(197, 151, 63, 0.05) 0%,
+    rgba(212, 175, 55, 0.06) 0%,
     transparent 70%
   );
   pointer-events: none;
