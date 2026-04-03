@@ -16,7 +16,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-[rgba(247,245,240,0.85)] backdrop-blur-md" role="contentinfo">
+    <footer className="border-t border-border bg-[rgba(255,255,255,0.92)] backdrop-blur-md" role="contentinfo">
       <Container>
         <div className="py-12 md:py-16">
           {/* Main Footer Content */}
