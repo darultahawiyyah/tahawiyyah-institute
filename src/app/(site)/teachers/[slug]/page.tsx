@@ -36,15 +36,15 @@ const teachersData: TeacherData[] = [
       "Currently pursuing Takhaṣṣuṣ fī al-Iftāʾ (postgraduate specialization in Islamic law)",
     ],
     biography:
-      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, completing the ʿĀlimiyyah program, and is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a postgraduate specialization in Islamic law. He serves as a local Imām at Elmhurst Islamic Center and an instructor at Darul Qurʾān wa Sunnah. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyyah Institute and is involved in various religious services and initiatives.",
-    courses: ["SAR 101 — Ṣarf", "TAF 101 — Qurʾān & Tafsīr"],
+      "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, one of the most distinguished institutions of Islamic learning in the world, where he completed the ʿĀlimiyyah program under accomplished scholars of the traditional sciences. He is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a rigorous postgraduate specialization in Islamic law, deepening his command of jurisprudence and its application to contemporary questions. He serves as a local Imām at Elmhurst Islamic Center and as an instructor at Darul Qurʾān wa Sunnah, where he continues to transmit the sacred sciences to the next generation. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for students balancing demanding academic and professional lives.",
+    courses: ["SAR 101 — Foundations of Arabic Morphology (Ṣarf)", "TAF 101 — Introduction to Qurʾānic Exegesis (Tafsīr)"],
   },
   {
     slug: "mawlana-abdurrahman-khan",
     name: "Mawlānā Abdurraḥmān Khān",
-    title: "Administration & Logistics",
+    title: "Instructor — Naḥw & Fiqh | Administration & Logistics",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyahh Institute.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Naḥw and Fiqh at Ṭaḥāwiyyah Institute and oversees the administration, logistics, and communications of the program.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
       "ʿĀlimiyyah program at Jamia Qurania Academy; completed at Darul Uloom New York",
@@ -53,13 +53,13 @@ const teachersData: TeacherData[] = [
       "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York",
     ],
     biography:
-      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah ʿĀlimiyyah Program program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah Program training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ) under senior muftīs Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York. At Ṭaḥāwiyyah Institute, he manages the administration, logistics, and communications, coordinating the day-to-day operations of the program.",
-    courses: ["Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
+      "Mawlānā Abdurraḥmān Khān was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ) under senior scholars Muftī Mīzānur Raḥmān and Muftī Manzūr at Darul Uloom New York. At Ṭaḥāwiyyah Institute, Mawlānā Abdurraḥmān serves both as an instructor — teaching Classical Arabic Grammar (Naḥw) and Introduction to Islamic Jurisprudence (Fiqh) — and as the primary administrator, managing the logistics and communications that keep the program running smoothly.",
+    courses: ["FQH 101 — Introduction to Islamic Jurisprudence (Fiqh)", "ARB 101 — Classical Arabic Grammar (Naḥw)", "Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
   },
   {
     slug: "mawlana-fahim",
     name: "Mawlānā Fahim",
-    title: "Instructor — Fiqh, Ḥadīth & Naḥw",
+    title: "Instructor & Scholar in Residence",
     summary:
       "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
     education: [
@@ -68,23 +68,23 @@ const teachersData: TeacherData[] = [
       "Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ (postgraduate specialization in Islamic jurisprudence and fatwā)",
     ],
     biography:
-      "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences, including Qurʾān, Ḥadīth, Fiqh, and Arabic. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Rūḥul Amīn and Muftī Noʿmān, benefiting from their depth of knowledge and experience. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training further refined his ability to address contemporary issues through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
-    courses: ["FQH 101 — Fiqh", "HAD 101 — Ḥadīth Sciences", "ARB 101 — Naḥw"],
+      "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under the guidance of esteemed scholars. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Rūḥul Amīn and Muftī Noʿmān, benefiting greatly from their depth of knowledge and years of experience in the tradition. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training refined his ability to engage contemporary questions through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
+    courses: ["Courses — Upcoming Semesters"],
   },
   {
     slug: "mawlana-rohan",
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Tajwīd",
     summary:
-      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyyah Institute.",
+      "Mawlānā Rohan is a graduate of Jāmiʿah Nuʿmāniyyah in South Africa, where he studied under the renowned Mawlānā Faḍlur Raḥmān Aẓmī, and also studied the sciences of Qirāʾāt under Qāriʾ ʿAbdullāh Motara. He currently serves as Imām and Resident Scholar at Shelter Rock Islamic Center and is a co-founder of Ṭaḥāwiyyah Institute.",
     education: [
-      "ʿĀlimiyyah program at Darul Uloom Azaadville, South Africa",
-      "Specialization in the science of Qirāʾāt (modes of Qurʾānic recitation)",
+      "ʿĀlimiyyah program at Jāmiʿah Nuʿmāniyyah, South Africa — under the tutelage of Mawlānā Faḍlur Raḥmān Aẓmī",
+      "Sciences of Qirāʾāt under Qāriʾ ʿAbdullāh Motara",
       "Currently advancing specialization in Fiqh and Islamic jurisprudence",
     ],
     biography:
-      "Mawlānā Rohan is a graduate of the rigorous ʿĀlimiyyah program from Darul Uloom Azaadville in South Africa — one of the most prominent and prestigious Islamic institutions in the world — where he completed extensive studies in the traditional Islamic sciences. He further specialized in the science of Qirāʾāt, mastering the various modes of Qurʾānic recitation, and is currently advancing his specialization in Fiqh and Islamic jurisprudence. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences, and also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he recently co-founded Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
-    courses: ["AQD 101 — ʿAqīda & Islamic Theology", "TAJ 101 — Tajwīd & Qurʾānic Recitation"],
+      "Mawlānā Rohan is a graduate of the ʿĀlimiyyah program from Jāmiʿah Nuʿmāniyyah in South Africa, a distinguished institution of traditional Islamic learning, where he had the privilege of studying under the renowned Mawlānā Faḍlur Raḥmān Aẓmī — a senior scholar and expert in the Ḥadīth sciences who has benefited students across the world. Under his tutelage, Mawlānā Rohan received a thorough grounding in the classical Islamic disciplines, including Qurʾān, Ḥadīth, Fiqh, ʿAqīda, and Arabic. He further studied the sciences of Qirāʾāt — the various authenticated modes of Qurʾānic recitation — under Qāriʾ ʿAbdullāh Motara, a master of the recitational arts, deepening his connection to the living oral tradition of the Qurʾān. He is currently advancing his specialization in Fiqh and Islamic jurisprudence, continuing his lifelong commitment to scholarship and growth. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences and provides spiritual guidance to the community. He also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he co-founded Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
+    courses: ["AQD 101 — Foundations of Islamic Theology (ʿAqīda)", "TAJ 101 — Principles of Qurʾānic Recitation (Tajwīd)"],
   },
   {
     slug: "qari-nazrul",
@@ -116,8 +116,9 @@ export default function TeacherBiographyPage({
   }
 
   return (
-    <div className="min-h-screen bg-bg py-16 md:py-24">
-      <Container>
+    <div className="relative min-h-screen bg-bg py-16 md:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,115,85,0.08)_0%,transparent_60%)] pointer-events-none" />
+      <Container className="relative">
         {/* Breadcrumb */}
         <motion.nav
           variants={fadeUpVariants}
@@ -151,7 +152,7 @@ export default function TeacherBiographyPage({
           className="mb-12"
         >
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-surface2 text-3xl font-semibold text-gold border-2 border-border">
+            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold/20 to-gold2/30 text-3xl font-semibold text-gold border-2 border-gold/20 shadow-md">
               {teacher.name
                 .split(" ")
                 .filter((n) => n !== "—" && n !== "TBD")
@@ -168,19 +169,62 @@ export default function TeacherBiographyPage({
           </div>
         </motion.div>
 
-        <div className="max-w-2xl">
-          <motion.section
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h2 className="text-2xl font-semibold text-text">Biography</h2>
-            <Divider />
-            <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-              {teacher.biography}
-            </p>
-          </motion.section>
+        <div className="grid gap-12 lg:grid-cols-3">
+          {/* Main Bio */}
+          <div className="lg:col-span-2 space-y-10">
+            <motion.section
+              variants={fadeUpVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h2 className="text-2xl font-semibold text-text">Biography</h2>
+              <Divider />
+              <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+                {teacher.biography}
+              </p>
+            </motion.section>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Education */}
+            <motion.section
+              variants={fadeUpVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="rounded-2xl border border-gold/20 bg-surface p-6 shadow-soft ring-1 ring-gold/10"
+            >
+              <h3 className="text-base font-semibold text-text mb-4">Education</h3>
+              <ul className="space-y-3">
+                {teacher.education.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    <span className="text-sm leading-relaxed text-muted">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+
+            {/* Courses */}
+            <motion.section
+              variants={fadeUpVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="rounded-2xl border border-border bg-surface2 p-6"
+            >
+              <h3 className="text-base font-semibold text-text mb-4">Courses</h3>
+              <ul className="space-y-2">
+                {teacher.courses.map((course, i) => (
+                  <li key={i} className="text-sm text-muted leading-relaxed">
+                    {course}
+                  </li>
+                ))}
+              </ul>
+            </motion.section>
+          </div>
         </div>
 
         {/* Back Link */}

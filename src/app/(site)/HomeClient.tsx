@@ -44,8 +44,9 @@ export default function Home() {
     <div className="min-h-screen bg-bg pb-20 md:pb-0">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden border-b border-border bg-bg pb-16 md:py-24">
-        {/* Subtle radial glow behind right card */}
-        <div className="absolute right-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 translate-x-1/4 rounded-full bg-gold/5 blur-3xl" />
+        {/* Radial glows */}
+        <div className="absolute right-0 top-1/2 h-[700px] w-[700px] -translate-y-1/2 translate-x-1/4 rounded-full bg-gold/8 blur-3xl" />
+        <div className="absolute left-1/4 bottom-0 h-[400px] w-[400px] translate-y-1/2 rounded-full bg-brand/30 blur-3xl" />
 
         <Container className="pt-4 md:pt-0">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-stretch">
@@ -107,7 +108,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative flex h-full flex-col"
             >
-              <Card className="relative border-gold/20 shadow-lg ring-1 ring-gold/10">
+              <Card className="relative border-gold/30 shadow-xl ring-2 ring-gold/15">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/5 to-transparent pointer-events-none" />
                 <CardHeader>
                   <CardTitle className="text-gold">Next Start Date</CardTitle>
                   <CardDescription className="text-2xl font-semibold text-text">
@@ -143,7 +145,8 @@ export default function Home() {
       </section>
 
       {/* PROGRAM HIGHLIGHTS */}
-      <section className="border-b border-border bg-surface2 py-16 md:py-24">
+      <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.07)_0%,transparent_60%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -171,7 +174,7 @@ export default function Home() {
                 icon: BookOpen,
                 title: "Comprehensive Curriculum",
                 description:
-                  "Covering Fiqh, ʿAqīda, Ḥadīth, Tajwīd, Arabic, and Tafsīr across four structured semesters.",
+                  "Covering Fiqh, ʿAqīda, Tajwīd, Arabic, Ṣarf, and Tafsīr across four structured semesters.",
               },
               {
                 icon: Users,
@@ -188,8 +191,11 @@ export default function Home() {
             ].map((highlight, index) => (
               <motion.div key={index} variants={fadeUpVariants}>
                 <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="h-1.5 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                   <CardHeader>
-                    <highlight.icon className="mb-4 h-8 w-8 text-gold" />
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 ring-1 ring-gold/20">
+                      <highlight.icon className="h-6 w-6 text-gold" />
+                    </div>
                     <CardTitle>{highlight.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -253,7 +259,8 @@ export default function Home() {
       </section>
 
       {/* CURRICULUM PREVIEW */}
-      <section className="border-b border-border bg-surface2 py-16 md:py-24">
+      <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,115,85,0.07)_0%,transparent_60%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -279,19 +286,19 @@ export default function Home() {
             {[
               {
                 title: "Semester 1",
-                badges: ["Fiqh", "ʿAqīda", "Ḥadīth", "Tajwīd", "Arabic"],
+                badges: ["Fiqh", "ʿAqīda", "Tajwīd", "Arabic", "Ṣarf", "Tafsīr"],
               },
               {
                 title: "Semester 2",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Tajwīd", "Arabic", "Ḥadīth"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Tajwīd", "Arabic"],
               },
               {
                 title: "Semester 3",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Ḥadīth", "Arabic", "Tajwīd"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Arabic", "Tajwīd"],
               },
               {
                 title: "Semester 4",
-                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Ḥadīth", "Arabic", "Tajwīd"],
+                badges: ["Fiqh", "ʿAqīda", "Tafsīr", "Arabic", "Tajwīd"],
               },
             ].map((semester, index) => (
               <motion.div key={index} variants={fadeUpVariants}>
@@ -325,8 +332,9 @@ export default function Home() {
             variants={fadeUpVariants}
             transition={{ duration: 0.6 }}
           >
-            <Card className="bg-surface2">
-              <CardContent className="py-12 text-center md:py-16">
+            <Card className="relative overflow-hidden border-gold/20 bg-surface2 ring-1 ring-gold/10">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,115,85,0.06)_0%,transparent_70%)] pointer-events-none" />
+              <CardContent className="relative py-12 text-center md:py-16">
                 <h2 className="mb-4 text-2xl font-semibold text-text md:text-3xl">
                   Ready to Begin Your Journey?
                 </h2>

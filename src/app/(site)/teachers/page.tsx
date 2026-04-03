@@ -24,14 +24,14 @@ const teachers = [
   {
     slug: "mawlana-abdurrahman-khan",
     name: "Mawlānā Abdurraḥmān Khān",
-    title: "Administration & Logistics",
+    title: "Instructor — Naḥw & Fiqh | Administration",
     summary:
-      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He oversees the administration, logistics, and communications of Ṭaḥāwiyyahh Institute.",
+      "Mawlānā Abdurraḥmān Khān is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Naḥw and Fiqh at Ṭaḥāwiyyah Institute and oversees its administration and logistics.",
   },
   {
     slug: "mawlana-fahim",
     name: "Mawlānā Fahim",
-    title: "Instructor — Fiqh, Ḥadīth & Naḥw",
+    title: "Instructor & Scholar in Residence",
     summary:
       "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
   },
@@ -40,7 +40,7 @@ const teachers = [
     name: "Mawlānā Rohan",
     title: "Instructor — ʿAqīda & Tajwīd",
     summary:
-      "Mawlānā Rohan is a graduate of Darul Uloom Azaadville in South Africa, currently serving as Imām and Resident Scholar at Shelter Rock Islamic Center and co-founder of Ṭaḥāwiyyah Institute.",
+      "Mawlānā Rohan is a graduate of Jāmiʿah Nuʿmāniyyah in South Africa, where he studied under Mawlānā Faḍlur Raḥmān Aẓmī, and studied the sciences of Qirāʾāt under Qāriʾ ʿAbdullāh Motara. He currently serves as Imām and Resident Scholar at Shelter Rock Islamic Center.",
   },
   {
     slug: "qari-nazrul",
@@ -83,13 +83,13 @@ export default function TeachersPage() {
                 href={`/teachers/${teacher.slug}`}
                 className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
               >
-                <Card className="h-full transition-shadow duration-300 group-hover:shadow-soft">
+                <Card className="h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
                   {/* Decorative top accent */}
-                  <div className="h-1.5 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
+                  <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                   <CardHeader>
                     <div className="flex items-center gap-4">
                       {/* Avatar placeholder */}
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-surface2 text-xl font-semibold text-gold">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold/20 to-gold2/30 text-xl font-semibold text-gold border border-gold/20">
                         {teacher.name
                           .split(" ")
                           .filter((n) => n !== "—" && n !== "TBD")

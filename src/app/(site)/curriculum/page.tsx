@@ -47,7 +47,8 @@ export default function Curriculum() {
       </section>
 
       {/* SEMESTER 1 SUBJECTS */}
-      <section className="border-b border-border bg-bg py-16 md:py-24">
+      <section className="relative border-b border-border bg-bg py-16 md:py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.06)_0%,transparent_60%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -75,7 +76,7 @@ export default function Curriculum() {
                   className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
                 >
                   <Card className="h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="h-1 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
+                    <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                     <CardContent className="pt-5 space-y-4">
                       {/* Code + Title */}
                       <div>
