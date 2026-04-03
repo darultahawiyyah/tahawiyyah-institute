@@ -38,10 +38,10 @@ export function Footer() {
                 </Link>
                 <Link
                   href="/"
-                  className="flex items-baseline gap-1 text-xl font-semibold text-text transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+                  className="flex items-baseline gap-1 transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
                 >
-                  <span>Ṭaḥāwiyyah</span>
-                  <span className="text-gold">Institute</span>
+                  <span className="font-display text-xl font-semibold text-text">Ṭaḥāwiyyah</span>
+                  <span className="font-display text-xl font-semibold text-gold">Institute</span>
                 </Link>
               </div>
               <p className="max-w-prose text-sm leading-relaxed text-muted text-center md:text-left">

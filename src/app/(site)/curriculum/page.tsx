@@ -3,13 +3,14 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MapPin, Clock, User } from "lucide-react";
+import { User, Clock, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Card, CardContent } from "@/components/ui/Card";
 import { semester1Courses } from "@/lib/curriculum-data";
 
 const fadeUpVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -24,9 +25,11 @@ const staggerContainer = {
 export default function Curriculum() {
   return (
     <div className="min-h-screen bg-bg pb-20 md:pb-0">
+
       {/* HEADER */}
-      <section className="border-b border-border bg-bg pb-12 md:py-16">
-        <Container className="pt-4 md:pt-0">
+      <section className="relative border-b border-border bg-bg pb-12 md:py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,115,85,0.08)_0%,transparent_60%)] pointer-events-none" />
+        <Container className="relative pt-4 md:pt-0">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -35,20 +38,28 @@ export default function Curriculum() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gold">
+              Academic Program
+            </p>
+            <h1 className="font-display text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
               Curriculum
             </h1>
-            <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
+            <div className="mt-3 flex items-center gap-3">
+              <div className="h-px w-10 bg-gradient-to-r from-gold to-gold/20" />
+              <div className="h-1.5 w-1.5 rounded-full bg-gold/50" />
+              <div className="h-px w-10 bg-gradient-to-l from-gold to-gold/20" />
+            </div>
+            <p className="mt-5 max-w-prose text-base leading-relaxed text-muted md:text-lg">
               A comprehensive program covering essential Islamic sciences with
-              progressive depth and increasing complexity.
+              progressive depth and increasing complexity across four semesters.
             </p>
           </motion.div>
         </Container>
       </section>
 
-      {/* SEMESTER 1 SUBJECTS */}
+      {/* SEMESTER 1 */}
       <section className="relative border-b border-border bg-bg py-16 md:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.06)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.05)_0%,transparent_60%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -57,13 +68,15 @@ export default function Curriculum() {
             variants={fadeUpVariants}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="mb-8 text-2xl font-semibold text-text md:text-3xl">
-              Semester 1
-            </h2>
+            <SectionHeader
+              eyebrow="Year 1"
+              title="Semester 1"
+              description="Six core subjects taught by expert scholars — online and in person."
+            />
           </motion.div>
 
           <motion.div
-            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
@@ -75,37 +88,37 @@ export default function Curriculum() {
                   href={`/curriculum/${course.slug}`}
                   className="group block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
                 >
-                  <Card className="h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                  <Card className="h-full overflow-hidden transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
                     <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                     <CardContent className="pt-5 space-y-4">
-                      {/* Code + Title */}
-                      <div>
-                        <span className="text-xs font-semibold uppercase tracking-wide text-gold">
-                          {course.code}
-                        </span>
-                        <h3 className="mt-1 text-lg font-semibold text-text group-hover:text-gold transition-colors">
-                          {course.fullName}
-                        </h3>
+                      {/* Code badge */}
+                      <div className="inline-flex items-center rounded-full border border-gold/25 bg-gold/8 px-3 py-1 text-xs font-bold uppercase tracking-widest text-gold">
+                        {course.code}
                       </div>
 
+                      {/* Title */}
+                      <h3 className="font-display text-xl font-semibold text-text group-hover:text-gold transition-colors leading-snug">
+                        {course.fullName}
+                      </h3>
+
                       {/* Description preview */}
-                      <p className="text-sm leading-relaxed text-muted line-clamp-3">
+                      <p className="text-sm leading-relaxed text-muted line-clamp-2">
                         {course.description}
                       </p>
 
-                      {/* Meta info */}
-                      <div className="space-y-2 pt-1">
-                        <div className="flex items-center gap-2 text-sm text-muted">
-                          <User className="h-4 w-4 shrink-0 text-gold" />
+                      {/* Meta */}
+                      <div className="space-y-2 pt-1 border-t border-border">
+                        <div className="flex items-center gap-2 text-xs text-muted pt-2">
+                          <User className="h-3.5 w-3.5 shrink-0 text-gold" />
                           <span>{course.instructor ?? "Instructor TBD"}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted">
-                          <MapPin className="h-4 w-4 shrink-0 text-gold" />
-                          <span>{course.location}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted">
-                          <Clock className="h-4 w-4 shrink-0 text-gold" />
+                        <div className="flex items-center gap-2 text-xs text-muted">
+                          <Clock className="h-3.5 w-3.5 shrink-0 text-gold" />
                           <span>{course.schedule}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-xs text-muted">
+                          <MapPin className="h-3.5 w-3.5 shrink-0 text-gold" />
+                          <span>{course.location}</span>
                         </div>
                       </div>
 
@@ -132,7 +145,7 @@ export default function Curriculum() {
       </section>
 
       {/* ASSESSMENT NOTE */}
-      <section className="border-b border-border bg-bg py-16 md:py-24">
+      <section className="border-b border-border bg-surface2 py-16 md:py-24">
         <Container>
           <motion.div
             initial="hidden"
@@ -140,11 +153,12 @@ export default function Curriculum() {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUpVariants}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+            className="max-w-3xl"
           >
-            <Card className="bg-surface2">
+            <Card className="border-gold/20 ring-1 ring-gold/10">
+              <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
               <CardContent className="pt-6">
-                <p className="max-w-prose text-base leading-relaxed text-muted md:text-lg">
+                <p className="text-base leading-relaxed text-muted md:text-lg">
                   <strong className="text-text">Assessment:</strong> Exams are
                   conducted at the end of every semester to evaluate student
                   progress and ensure mastery of the material. Successful

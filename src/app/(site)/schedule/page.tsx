@@ -122,12 +122,17 @@ export default function Schedule() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gold">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gold">
               Semester 1
             </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
               Schedule
             </h1>
+            <div className="mt-3 flex items-center gap-3">
+              <div className="h-px w-10 bg-gradient-to-r from-gold to-gold/20" />
+              <div className="h-1.5 w-1.5 rounded-full bg-gold/50" />
+              <div className="h-px w-10 bg-gradient-to-l from-gold to-gold/20" />
+            </div>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
               Classes run Monday, Tuesday, and Friday mornings. In-person sessions are held at Madani Masjid; online sessions are conducted via a virtual platform.
             </p>

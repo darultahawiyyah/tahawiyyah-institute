@@ -22,27 +22,18 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   React.useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isMobileMenuOpen) {
-        closeMobileMenu();
-      }
+      if (e.key === "Escape" && isMobileMenuOpen) closeMobileMenu();
     };
-
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isMobileMenuOpen]);
 
   React.useEffect(() => {
-    // Close mobile menu when route changes
     closeMobileMenu();
   }, [pathname]);
 
@@ -53,7 +44,7 @@ export function Navbar() {
           "sticky top-0 z-50 h-[72px] backdrop-blur-md",
           isMobileMenuOpen
             ? "bg-[rgba(247,245,240,0.97)]"
-            : "bg-[rgba(247,245,240,0.85)] border-b border-border"
+            : "bg-[rgba(247,245,240,0.90)] border-b border-border"
         )}
         role="navigation"
         aria-label="Main navigation"
@@ -72,14 +63,14 @@ export function Navbar() {
               className="h-10 md:h-12 w-auto object-contain"
               priority
             />
-            <div className="flex items-baseline gap-1 text-xl font-semibold text-text">
-              <span>Ṭaḥāwiyyah</span>
-              <span className="text-gold">Institute</span>
+            <div className="flex items-baseline gap-1">
+              <span className="font-display text-xl font-semibold text-text">Ṭaḥāwiyyah</span>
+              <span className="font-display text-xl font-semibold text-gold">Institute</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-7 md:flex">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -94,7 +85,7 @@ export function Navbar() {
                     "hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
                     isActive
                       ? "text-gold border-b-2 border-gold pb-1"
-                      : "text-text"
+                      : "text-muted hover:text-text"
                   )}
                 >
                   {link.label}
@@ -115,24 +106,9 @@ export function Navbar() {
             aria-controls="mobile-menu"
             aria-label="Toggle mobile menu"
           >
-            <span
-              className={cn(
-                "h-0.5 w-6 bg-text transition-all duration-300",
-                isMobileMenuOpen && "translate-y-2 rotate-45"
-              )}
-            />
-            <span
-              className={cn(
-                "h-0.5 w-6 bg-text transition-all duration-300",
-                isMobileMenuOpen && "opacity-0"
-              )}
-            />
-            <span
-              className={cn(
-                "h-0.5 w-6 bg-text transition-all duration-300",
-                isMobileMenuOpen && "-translate-y-2 -rotate-45"
-              )}
-            />
+            <span className={cn("h-0.5 w-6 bg-text transition-all duration-300", isMobileMenuOpen && "translate-y-2 rotate-45")} />
+            <span className={cn("h-0.5 w-6 bg-text transition-all duration-300", isMobileMenuOpen && "opacity-0")} />
+            <span className={cn("h-0.5 w-6 bg-text transition-all duration-300", isMobileMenuOpen && "-translate-y-2 -rotate-45")} />
           </button>
         </Container>
       </nav>
@@ -142,9 +118,7 @@ export function Navbar() {
         id="mobile-menu"
         className={cn(
           "fixed left-0 right-0 top-0 bottom-0 z-[60] md:hidden overflow-y-auto",
-          isMobileMenuOpen
-            ? "block"
-            : "hidden"
+          isMobileMenuOpen ? "block" : "hidden"
         )}
         role="dialog"
         aria-modal="true"
@@ -153,9 +127,7 @@ export function Navbar() {
       >
         <div className="relative px-4 md:px-6 py-6">
           <div className="rounded-2xl border border-border bg-surface p-6 shadow-soft mt-6 mb-6">
-            <h2 id="mobile-menu-title" className="sr-only">
-              Mobile navigation menu
-            </h2>
+            <h2 id="mobile-menu-title" className="sr-only">Mobile navigation menu</h2>
             <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
               {navLinks.map((link) => {
                 const isActive =
@@ -178,13 +150,7 @@ export function Navbar() {
                 );
               })}
               <div className="pt-2">
-                <ButtonLink
-                  href="/apply"
-                  variant="primary"
-                  size="md"
-                  onClick={closeMobileMenu}
-                  className="w-full"
-                >
+                <ButtonLink href="/apply" variant="primary" size="md" onClick={closeMobileMenu} className="w-full">
                   Apply Now
                 </ButtonLink>
               </div>
