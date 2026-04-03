@@ -35,6 +35,7 @@ const scheduleData = [
       {
         time: "8:00–8:50 AM",
         courseCode: "FQH 101",
+        courseSlug: "fqh-101",
         courseName: "Introduction to Islamic Jurisprudence (Fiqh)",
         instructor: "Mawlānā Abdurraḥmān Khān",
         instructorSlug: "mawlana-abdurrahman-khan",
@@ -44,6 +45,7 @@ const scheduleData = [
       {
         time: "8:55–9:45 AM",
         courseCode: "ARB 101",
+        courseSlug: "arb-101",
         courseName: "Classical Arabic Grammar (Naḥw)",
         instructor: "Mawlānā Abdurraḥmān Khān",
         instructorSlug: "mawlana-abdurrahman-khan",
@@ -59,6 +61,7 @@ const scheduleData = [
       {
         time: "8:00–8:50 AM",
         courseCode: "TAF 101",
+        courseSlug: "taf-101",
         courseName: "Introduction to Qurʾānic Exegesis (Tafsīr)",
         instructor: "Mawlānā Arqam Masroor",
         instructorSlug: "mawlana-arqam",
@@ -68,6 +71,7 @@ const scheduleData = [
       {
         time: "8:55–9:45 AM",
         courseCode: "TAJ 101",
+        courseSlug: "taj-101",
         courseName: "Principles of Qurʾānic Recitation (Tajwīd)",
         instructor: "Mawlānā Rohan",
         instructorSlug: "mawlana-rohan",
@@ -83,6 +87,7 @@ const scheduleData = [
       {
         time: "8:00–8:50 AM",
         courseCode: "SAR 101",
+        courseSlug: "sar-101",
         courseName: "Foundations of Arabic Morphology (Ṣarf)",
         instructor: "Mawlānā Arqam Masroor",
         instructorSlug: "mawlana-arqam",
@@ -92,6 +97,7 @@ const scheduleData = [
       {
         time: "8:55–9:45 AM",
         courseCode: "AQD 101",
+        courseSlug: "aqd-101",
         courseName: "Foundations of Islamic Theology (ʿAqīda)",
         instructor: "Mawlānā Rohan",
         instructorSlug: "mawlana-rohan",
@@ -167,10 +173,12 @@ export default function Schedule() {
                 {/* Sessions */}
                 <div className="ml-0 md:ml-14 grid gap-4 sm:grid-cols-2">
                   {day.sessions.map((session, idx) => (
-                    <Card
+                    <Link
                       key={idx}
-                      className="transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                      href={`/curriculum/${session.courseSlug}`}
+                      className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
                     >
+                    <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group-hover:border-gold/30">
                       <div className="h-1.5 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                       <CardContent className="pt-5 space-y-3">
                         {/* Time */}
@@ -184,7 +192,7 @@ export default function Schedule() {
                           <span className="text-xs font-semibold uppercase tracking-wide text-muted">
                             {session.courseCode}
                           </span>
-                          <p className="mt-0.5 text-base font-semibold text-text leading-snug">
+                          <p className="mt-0.5 text-base font-semibold text-text leading-snug group-hover:text-gold transition-colors">
                             {session.courseName}
                           </p>
                         </div>
@@ -192,12 +200,9 @@ export default function Schedule() {
                         {/* Instructor */}
                         <div className="flex items-center gap-2">
                           <User className="h-4 w-4 text-gold shrink-0" />
-                          <Link
-                            href={`/teachers/${session.instructorSlug}`}
-                            className="text-sm text-muted transition-colors hover:text-gold"
-                          >
+                          <span className="text-sm text-muted">
                             {session.instructor}
-                          </Link>
+                          </span>
                         </div>
 
                         {/* Location badge */}
@@ -213,6 +218,7 @@ export default function Schedule() {
                         </div>
                       </CardContent>
                     </Card>
+                    </Link>
                   ))}
                 </div>
               </motion.div>
