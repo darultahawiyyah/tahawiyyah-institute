@@ -22,8 +22,13 @@ export const semester1Courses: CourseData[] = [
     location: "Online",
     schedule: "Monday 8:00–8:50 AM",
     description:
-      "This course provides a thorough grounding in Islamic jurisprudence according to the Ḥanafī school. Students will begin with the fundamentals of purification, prayer, and fasting before progressing to more advanced topics such as Zakāt, Ḥajj, transactions, and family law. Alongside practical rulings, students will study the principles of jurisprudence (Uṣūl al-Fiqh) to understand how scholars derive rulings from the primary sources, developing the analytical skills needed to engage with the tradition critically and faithfully.",
-    texts: ["TBA"],
+      "This course offers a comprehensive introduction to Fiqh through the lens of the Ḥanafī madhhab, one of the most widely followed schools of Islamic jurisprudence. Students will explore the historical origins and development of the Ḥanafī tradition, tracing its roots back to the great Imām, Abū Ḥanīfah (رحمه الله), and examining how the madhhab was preserved, systematized, and transmitted through generations of scholars. The course will cover key figures, foundational texts, and the process of canonization within the madhhab, providing insight into how authoritative positions were established and upheld. Students will also be introduced to the methodology (uṣūl) of the Ḥanafī school — how legal rulings are derived from the Qurʾān, Sunnah, consensus, and reasoned principles. In addition, the course will highlight the importance of adhering to a madhhab in maintaining consistency, scholarly integrity, and a structured approach to practicing Islam. By the end of the course, students will gain a clear understanding of how the Ḥanafī madhhab functions, its intellectual framework, and its enduring relevance in the lives of Muslims today.",
+    texts: [
+      "المدخل المصل الي فقه الحنفي",
+      "المدخل الي تاريخ التشريع الاسلامي",
+      "تاريخ التشريع الاسلامي",
+      "التقليد في نظر الشريعة",
+    ],
   },
   {
     slug: "aqd-101",
