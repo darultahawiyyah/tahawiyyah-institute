@@ -33,17 +33,17 @@ const scheduleData = [
     dayAbbr: "Mon",
     sessions: [
       {
-        time: "8:00–8:50 AM",
+        time: "8:00–8:50 PM",
         courseCode: "FQH 101",
         courseSlug: "fqh-101",
-        courseName: "Introduction to Islamic Jurisprudence (Fiqh)",
+        courseName: "Ḥanafī Jurisprudence and Legal Methodology",
         instructor: "Mawlānā Abdurrahman Khan",
         instructorSlug: "mawlana-abdurrahman-khan",
         location: "Online",
         isOnline: true,
       },
       {
-        time: "8:55–9:45 AM",
+        time: "8:55–9:45 PM",
         courseCode: "ARB 101",
         courseSlug: "arb-101",
         courseName: "Classical Arabic Grammar (Naḥw)",
@@ -59,17 +59,17 @@ const scheduleData = [
     dayAbbr: "Tue",
     sessions: [
       {
-        time: "8:00–8:50 AM",
+        time: "8:00–8:50 PM",
         courseCode: "TAF 101",
         courseSlug: "taf-101",
-        courseName: "Introduction to Qurʾānic Exegesis (Tafsīr)",
+        courseName: "Classical Tafsīr and Qurʾānic Sciences",
         instructor: "Mawlānā Arqam Masroor",
         instructorSlug: "mawlana-arqam",
         location: "Online",
         isOnline: true,
       },
       {
-        time: "8:55–9:45 AM",
+        time: "8:55–9:45 PM",
         courseCode: "TAJ 101",
         courseSlug: "taj-101",
         courseName: "Principles of Qurʾānic Recitation (Tajwīd)",
@@ -85,7 +85,7 @@ const scheduleData = [
     dayAbbr: "Fri",
     sessions: [
       {
-        time: "8:00–8:50 AM",
+        time: "8:00–8:50 PM",
         courseCode: "SAR 101",
         courseSlug: "sar-101",
         courseName: "Foundations of Arabic Morphology (Ṣarf)",
@@ -95,7 +95,7 @@ const scheduleData = [
         isOnline: false,
       },
       {
-        time: "8:55–9:45 AM",
+        time: "8:55–9:45 PM",
         courseCode: "AQD 101",
         courseSlug: "aqd-101",
         courseName: "Foundations of Islamic Theology (ʿAqīdah)",
@@ -134,7 +134,7 @@ export default function Schedule() {
               <div className="h-px w-10 bg-gradient-to-l from-gold to-gold/20" />
             </div>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-              Classes run Monday, Tuesday, and Friday mornings. In-person sessions are held at Madani Masjid; online sessions are conducted via a virtual platform.
+              Classes run Monday, Tuesday, and Friday evenings. In-person sessions are held at Madani Masjid; online sessions are conducted via a virtual platform.
             </p>
           </motion.div>
         </Container>

@@ -173,7 +173,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs text-muted">Schedule</p>
-                      <p className="text-sm font-medium text-text">Mon · Tue · Fri mornings</p>
+                      <p className="text-sm font-medium text-text">Mon · Tue · Fri evenings</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs text-muted">Certification</p>
-                      <p className="text-sm font-medium text-text">Ijāzah opportunity upon completion</p>
+                      <p className="text-sm font-medium text-text">Certificate opportunity upon completion</p>
                     </div>
                   </div>
 
