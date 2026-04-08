@@ -10,6 +10,8 @@ import {
   ArrowLeft,
   BookOpen,
   CreditCard,
+  HandHeart,
+  X,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
@@ -103,6 +105,37 @@ export default function Apply() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = React.useState("");
+
+  // Financial Aid modal state
+  const [showFinancialAid, setShowFinancialAid] = React.useState(false);
+  const [aidForm, setAidForm] = React.useState({
+    name: "",
+    reason: "",
+    employment: "" as "fulltime" | "parttime" | "nojob" | "",
+  });
+  const [aidErrors, setAidErrors] = React.useState<FieldError>({});
+  const [aidSubmitted, setAidSubmitted] = React.useState(false);
+
+  const updateAid = (field: string, value: string) => {
+    setAidForm((prev) => ({ ...prev, [field]: value }));
+    setAidErrors((prev) => { const next = { ...prev }; delete next[field]; return next; });
+  };
+
+  const submitAid = () => {
+    const errs: FieldError = {};
+    if (!aidForm.name.trim()) errs.name = "Name is required";
+    if (!aidForm.reason.trim()) errs.reason = "Please provide a reason";
+    if (!aidForm.employment) errs.employment = "Please select an option";
+    if (Object.keys(errs).length > 0) { setAidErrors(errs); return; }
+    setAidSubmitted(true);
+  };
+
+  const closeAidModal = () => {
+    setShowFinancialAid(false);
+    setAidSubmitted(false);
+    setAidForm({ name: "", reason: "", employment: "" });
+    setAidErrors({});
+  };
 
   const update = (field: keyof FormState, value: unknown) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -808,6 +841,22 @@ export default function Apply() {
                           </div>
                         </div>
 
+                        {/* Financial Aid */}
+                        <div className="rounded-xl border border-border bg-surface p-4 flex items-center justify-between gap-4">
+                          <div>
+                            <p className="text-sm font-semibold text-text">Need Financial Aid?</p>
+                            <p className="text-xs text-muted mt-0.5">Apply for assistance with tuition fees.</p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => setShowFinancialAid(true)}
+                            className="flex shrink-0 items-center gap-2 rounded-lg border border-gold/40 bg-gold/5 px-4 py-2 text-sm font-medium text-gold transition-colors hover:bg-gold/10"
+                          >
+                            <HandHeart className="h-4 w-4" />
+                            Financial Aid
+                          </button>
+                        </div>
+
                         {/* Confirm checkbox */}
                         <div>
                           <button
@@ -890,6 +939,155 @@ export default function Apply() {
           </div>
         </Container>
       </section>
+
+      {/* FINANCIAL AID MODAL */}
+      <AnimatePresence>
+        {showFinancialAid && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+            onClick={(e) => { if (e.target === e.currentTarget) closeAidModal(); }}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 16 }}
+              transition={{ duration: 0.2 }}
+              className="w-full max-w-md rounded-2xl border border-border bg-bg shadow-2xl"
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between border-b border-border px-6 py-4">
+                <div className="flex items-center gap-2">
+                  <HandHeart className="h-5 w-5 text-gold" />
+                  <h2 className="text-lg font-semibold text-text">Financial Aid Application</h2>
+                </div>
+                <button
+                  type="button"
+                  onClick={closeAidModal}
+                  className="rounded-lg p-1.5 text-muted transition-colors hover:bg-surface hover:text-text"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+
+              <div className="px-6 py-5">
+                {aidSubmitted ? (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="py-4 text-center space-y-3"
+                  >
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10">
+                      <CheckCircle2 className="h-7 w-7 text-green-500" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-text">Application Received</h3>
+                    <p className="text-sm text-muted leading-relaxed">
+                      JazakAllahu khayran. We will reach out to you inshallah for further details.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={closeAidModal}
+                      className="mt-2 rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                    >
+                      Close
+                    </button>
+                  </motion.div>
+                ) : (
+                  <div className="space-y-5">
+                    <p className="text-sm text-muted leading-relaxed">
+                      Fill out the form below and we will review your request and get back to you inshallah.
+                    </p>
+
+                    {/* Name */}
+                    <div>
+                      <label className="mb-1.5 block text-sm font-medium text-text">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        value={aidForm.name}
+                        onChange={(e) => updateAid("name", e.target.value)}
+                        className={cn(
+                          "w-full rounded-xl border border-border bg-surface px-4 py-3 text-text transition-colors",
+                          "focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg",
+                          aidErrors.name && "border-red-500/50"
+                        )}
+                      />
+                      {aidErrors.name && <p className="mt-1 text-sm text-red-500">{aidErrors.name}</p>}
+                    </div>
+
+                    {/* Reason */}
+                    <div>
+                      <label className="mb-1.5 block text-sm font-medium text-text">
+                        Reason for Requiring Financial Aid <span className="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={aidForm.reason}
+                        onChange={(e) => updateAid("reason", e.target.value)}
+                        className={cn(
+                          "w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 text-text transition-colors",
+                          "focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-bg",
+                          aidErrors.reason && "border-red-500/50"
+                        )}
+                      />
+                      {aidErrors.reason && <p className="mt-1 text-sm text-red-500">{aidErrors.reason}</p>}
+                    </div>
+
+                    {/* Employment Status */}
+                    <div>
+                      <p className="mb-2 text-sm font-medium text-text">
+                        Current Occupation <span className="text-red-500">*</span>
+                      </p>
+                      <div className="space-y-2">
+                        {[
+                          { value: "fulltime", label: "Full-time Job" },
+                          { value: "parttime", label: "Part-time Job" },
+                          { value: "nojob", label: "Not Currently Employed" },
+                        ].map((opt) => (
+                          <button
+                            key={opt.value}
+                            type="button"
+                            onClick={() => updateAid("employment", opt.value)}
+                            className={cn(
+                              "w-full rounded-xl border-2 px-4 py-3 text-left text-sm font-medium transition-all",
+                              aidForm.employment === opt.value
+                                ? "border-gold bg-gold/5 text-text"
+                                : "border-border bg-surface text-muted hover:border-gold/40",
+                              aidErrors.employment && !aidForm.employment && "border-red-500/50"
+                            )}
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={cn(
+                                  "h-4 w-4 rounded-full border-2 flex-shrink-0 transition-colors",
+                                  aidForm.employment === opt.value ? "border-gold bg-gold" : "border-border"
+                                )}
+                              />
+                              {opt.label}
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                      {aidErrors.employment && <p className="mt-1 text-sm text-red-500">{aidErrors.employment}</p>}
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={submitAid}
+                      className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                    >
+                      Submit Application
+                    </button>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
