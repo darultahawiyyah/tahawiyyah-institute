@@ -38,7 +38,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
     location: "In Person — Madani Masjid",
-    schedule: "Friday 8:55–9:45 PM",
+    schedule: "Saturday 8:55–9:45 PM",
     description:
       "This course covers the foundations of Islamic creed and theology, guiding students through the classical texts that define orthodox Sunnī belief. Beginning with the attributes of Allāh and the pillars of faith, the course advances into topics such as prophethood, eschatology, and contemporary issues in creed. Students will learn not just what to believe, but why — engaging with the intellectual tradition to develop a deeply rooted conviction that is both spiritually grounded and intellectually sound.",
     texts: ["TBA"],
@@ -51,7 +51,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
     location: "Online",
-    schedule: "Tuesday 8:55–9:45 PM",
+    schedule: "Saturday 2:10–3:00 PM",
     description:
       "This course covers the rules and practical application of proper Qurʾānic recitation. Students will learn the articulation points of each letter (Makhārij al-Ḥurūf), the characteristics of letters, and the rules governing elongation, nasalization, stopping, and more. The course progresses from foundational rules to mastery-level recitation, with the goal of preparing students for accurate and beautiful recitation of the Qurʾān. Regular guided recitation sessions provide hands-on practice and personalized feedback.",
     texts: ["TBA"],
@@ -77,7 +77,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
     location: "In Person — Madani Masjid",
-    schedule: "Friday 8:00–8:50 PM",
+    schedule: "Saturday 8:00–8:50 PM",
     description:
       "This course introduces students to the science of Arabic morphology (Ṣarf), which governs the internal structure and transformation of Arabic words. Students will learn the patterns of verb conjugation, noun derivation, and word formation that are essential for reading and understanding classical Arabic texts. A firm grounding in Ṣarf complements the study of Naḥw and unlocks the ability to analyze unfamiliar words encountered in the Qurʾān, Ḥadīth, and classical Islamic literature.",
     texts: ["TBA"],
@@ -90,7 +90,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
     location: "Online",
-    schedule: "Tuesday 8:00–8:50 PM",
+    schedule: "Saturday 3:05–3:55 PM",
     description:
       "This course takes students on a guided journey through the exegesis of the Qurʾān, drawing on classical commentaries to illuminate the meaning and context of the divine text. Students will study selected sūras and learn the methodology of Tafsīr, including the reasons of revelation (Asbāb al-Nuzūl), the sciences of the Qurʾān (ʿUlūm al-Qurʾān), and thematic analysis. The goal is to help students develop a personal, reflective relationship with the Qurʾān that goes beyond surface-level reading.",
     texts: ["TBA"],
