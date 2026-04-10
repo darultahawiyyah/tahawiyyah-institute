@@ -102,8 +102,8 @@ export async function POST(request: NextRequest) {
                   <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(coursesLabel)}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Payment Confirmed:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">Yes — applicant confirmed payment sent</td>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Price Acknowledged:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">Yes</td>
                 </tr>
                 ${data.notes ? `
                 <tr>
@@ -131,7 +131,7 @@ Gender: ${genderLabel}
 Previous Studies: ${data.previousStudies}
 Track: ${trackLabel}
 Courses: ${coursesLabel}
-Payment Confirmed: Yes
+Price Acknowledged: Yes
 ${data.notes ? `Notes: ${data.notes}\n` : ""}
 
 This email was sent from the Tahawiyyah Institute application form.

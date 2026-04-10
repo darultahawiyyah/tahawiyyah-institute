@@ -37,8 +37,8 @@ export const semester1Courses: CourseData[] = [
     fullName: "Foundations of Islamic Theology (ʿAqīdah)",
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
-    location: "In Person — TBD",
-    schedule: "Saturday 8:55–9:45 PM",
+    location: "Online",
+    schedule: "Tuesday 8:55–9:45 PM",
     description:
       "This course covers the foundations of Islamic creed and theology, guiding students through the classical texts that define orthodox Sunnī belief. Beginning with the attributes of Allāh and the pillars of faith, the course advances into topics such as prophethood, eschatology, and contemporary issues in creed. Students will learn not just what to believe, but why — engaging with the intellectual tradition to develop a deeply rooted conviction that is both spiritually grounded and intellectually sound.",
     texts: ["TBA"],
@@ -76,8 +76,8 @@ export const semester1Courses: CourseData[] = [
     fullName: "Foundations of Arabic Morphology (Ṣarf)",
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
-    location: "In Person — TBD",
-    schedule: "Saturday 8:00–8:50 PM",
+    location: "Online",
+    schedule: "Tuesday 8:00–8:50 PM",
     description:
       "This course introduces students to the foundational principles of Arabic morphology, focusing on word patterns, verb forms, and the structural development of Arabic words. The study will be guided through classical introductory texts including Āsān Ṣarf (collection), Miftāḥ al-Ṣarf, and ʿIlm al-Ṣīghah, enabling students to develop a clear understanding of verb conjugation, patterns (awzān), and the formation of nouns and verbs. The aim is to equip students with the tools necessary to analyze Arabic words and strengthen their ability to read and understand classical Islamic texts.",
     texts: ["Āsān Ṣarf (collection)", "Miftāḥ al-Ṣarf", "ʿIlm al-Ṣīghah"],

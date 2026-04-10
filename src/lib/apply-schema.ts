@@ -24,8 +24,8 @@ export const applySchema = z
     }),
     selectedCourses: z.array(z.string()).optional(),
     notes: z.string().optional(),
-    paymentConfirmed: z.literal(true, {
-      message: "Please confirm that you have sent payment",
+    priceAcknowledged: z.literal(true, {
+      message: "Please acknowledge the price to continue",
     }),
   })
   .superRefine((data, ctx) => {

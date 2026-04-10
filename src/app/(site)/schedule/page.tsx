@@ -60,9 +60,9 @@ const scheduleData = [
     sessions: [
       {
         time: "8:00–8:50 PM",
-        courseCode: "TAF 101",
-        courseSlug: "taf-101",
-        courseName: "Classical Tafsīr and Qurʾānic Sciences",
+        courseCode: "SAR 101",
+        courseSlug: "sar-101",
+        courseName: "Foundations of Arabic Morphology (Ṣarf)",
         instructor: "Mawlānā Arqam Masroor",
         instructorSlug: "mawlana-arqam",
         location: "Online",
@@ -70,9 +70,9 @@ const scheduleData = [
       },
       {
         time: "8:55–9:45 PM",
-        courseCode: "TAJ 101",
-        courseSlug: "taj-101",
-        courseName: "Principles of Qurʾānic Recitation (Tajwīd)",
+        courseCode: "AQD 101",
+        courseSlug: "aqd-101",
+        courseName: "Foundations of Islamic Theology (ʿAqīdah)",
         instructor: "Mawlānā Rohan",
         instructorSlug: "mawlana-rohan",
         location: "Online",
