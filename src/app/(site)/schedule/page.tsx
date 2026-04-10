@@ -91,7 +91,7 @@ const scheduleData = [
         courseName: "Principles of Qurʾānic Recitation (Tajwīd)",
         instructor: "Mawlānā Rohan",
         instructorSlug: "mawlana-rohan",
-        location: "Madani Masjid",
+        location: "TBD",
         isOnline: false,
       },
       {
@@ -101,7 +101,7 @@ const scheduleData = [
         courseName: "Classical Tafsīr and Qurʾānic Sciences",
         instructor: "Mawlānā Arqam Masroor",
         instructorSlug: "mawlana-arqam",
-        location: "Madani Masjid",
+        location: "TBD",
         isOnline: false,
       },
     ],
@@ -134,7 +134,7 @@ export default function Schedule() {
               <div className="h-px w-10 bg-gradient-to-l from-gold to-gold/20" />
             </div>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-              Classes run Monday, Tuesday, and Saturday. In-person sessions are held at Madani Masjid; online sessions are conducted via a virtual platform.
+              Classes run Monday, Tuesday, and Saturday. In-person session locations are TBD; online sessions are conducted via a virtual platform.
             </p>
           </motion.div>
         </Container>
@@ -264,12 +264,12 @@ export default function Schedule() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10">
                       <MapPin className="h-6 w-6 text-gold" />
                     </div>
-                    <CardTitle className="text-xl">Madani Masjid</CardTitle>
+                    <CardTitle className="text-xl">TBD</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted leading-relaxed">
-                    In-person classes on Saturdays are held at Madani Masjid.
+                    In-person class location to be determined.
                   </p>
                   <div className="rounded-lg border border-border bg-surface p-3">
                     <p className="text-xs text-muted">

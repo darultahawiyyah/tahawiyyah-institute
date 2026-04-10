@@ -306,7 +306,7 @@ export default function Apply() {
                 <div>
                   <p className="font-semibold text-green-700">Application submitted!</p>
                   <p className="mt-1 text-sm text-green-600">
-                    Thank you. We&apos;ll be in touch with you shortly to confirm your enrollment.
+                    JazakAllahu khayran. You will be contacted for further information regarding payment and class registration.
                   </p>
                 </div>
               </div>
@@ -451,7 +451,7 @@ export default function Apply() {
                       {
                         step: "3",
                         title: "Start Learning",
-                        description: "Once confirmed, you'll receive enrollment details and can begin on April 24.",
+                        description: "Once confirmed, you will be contacted with further details on payment and class registration.",
                       },
                     ].map((item) => (
                       <div key={item.step} className="flex gap-4">

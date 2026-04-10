@@ -37,7 +37,7 @@ export const semester1Courses: CourseData[] = [
     fullName: "Foundations of Islamic Theology (ʿAqīdah)",
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
-    location: "In Person — Madani Masjid",
+    location: "In Person — TBD",
     schedule: "Saturday 8:55–9:45 PM",
     description:
       "This course covers the foundations of Islamic creed and theology, guiding students through the classical texts that define orthodox Sunnī belief. Beginning with the attributes of Allāh and the pillars of faith, the course advances into topics such as prophethood, eschatology, and contemporary issues in creed. Students will learn not just what to believe, but why — engaging with the intellectual tradition to develop a deeply rooted conviction that is both spiritually grounded and intellectually sound.",
@@ -76,7 +76,7 @@ export const semester1Courses: CourseData[] = [
     fullName: "Foundations of Arabic Morphology (Ṣarf)",
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
-    location: "In Person — Madani Masjid",
+    location: "In Person — TBD",
     schedule: "Saturday 8:00–8:50 PM",
     description:
       "This course introduces students to the science of Arabic morphology (Ṣarf), which governs the internal structure and transformation of Arabic words. Students will learn the patterns of verb conjugation, noun derivation, and word formation that are essential for reading and understanding classical Arabic texts. A firm grounding in Ṣarf complements the study of Naḥw and unlocks the ability to analyze unfamiliar words encountered in the Qurʾān, Ḥadīth, and classical Islamic literature.",
