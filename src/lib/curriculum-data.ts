@@ -79,8 +79,8 @@ export const semester1Courses: CourseData[] = [
     location: "In Person — TBD",
     schedule: "Saturday 8:00–8:50 PM",
     description:
-      "This course introduces students to the science of Arabic morphology (Ṣarf), which governs the internal structure and transformation of Arabic words. Students will learn the patterns of verb conjugation, noun derivation, and word formation that are essential for reading and understanding classical Arabic texts. A firm grounding in Ṣarf complements the study of Naḥw and unlocks the ability to analyze unfamiliar words encountered in the Qurʾān, Ḥadīth, and classical Islamic literature.",
-    texts: ["TBA"],
+      "This course introduces students to the foundational principles of Arabic morphology, focusing on word patterns, verb forms, and the structural development of Arabic words. The study will be guided through classical introductory texts including Āsān Ṣarf (collection), Miftāḥ al-Ṣarf, and ʿIlm al-Ṣīghah, enabling students to develop a clear understanding of verb conjugation, patterns (awzān), and the formation of nouns and verbs. The aim is to equip students with the tools necessary to analyze Arabic words and strengthen their ability to read and understand classical Islamic texts.",
+    texts: ["Āsān Ṣarf (collection)", "Miftāḥ al-Ṣarf", "ʿIlm al-Ṣīghah"],
   },
   {
     slug: "taf-101",
@@ -92,7 +92,7 @@ export const semester1Courses: CourseData[] = [
     location: "Online",
     schedule: "Saturday 3:05–3:55 PM",
     description:
-      "This course takes students on a guided journey through the exegesis of the Qurʾān, drawing on classical commentaries to illuminate the meaning and context of the divine text. Students will study selected sūras and learn the methodology of Tafsīr, including the reasons of revelation (Asbāb al-Nuzūl), the sciences of the Qurʾān (ʿUlūm al-Qurʾān), and thematic analysis. The goal is to help students develop a personal, reflective relationship with the Qurʾān that goes beyond surface-level reading.",
-    texts: ["TBA"],
+      "This course helps students understand and reflect on the meanings of the Qurʾān. Selected verses will be studied with the help of well-known tafsīr works such as Rūḥ al-Maʿānī, Tafsīr Ibn Kathīr, Tafsīr Maẓharī, and Tafsīr al-Qurṭubī. The goal is to help students understand the message of the verses, learn the explanations of classical scholars, and develop a deeper connection with the Qurʾān than just the translation.",
+    texts: ["Rūḥ al-Maʿānī", "Tafsīr Ibn Kathīr", "Tafsīr Maẓharī", "Tafsīr al-Qurṭubī"],
   },
 ];
