@@ -19,15 +19,8 @@ import { Button } from "@/components/ui/Button";
 import { individualCourseOptions } from "@/lib/apply-schema";
 import { cn } from "@/lib/cn";
 
-// ─── UPDATE PAYMENT DETAILS HERE ─────────────────────────────────────────────
-const PAYMENT = {
-  method: "Zelle",
-  contact: "Darultahawiyyah@gmail.com",
-  madaniTrackFee: "$TBD",
-  perCourseFee: "$TBD",
-  note: "Please include your full name in the payment memo/note.",
-};
-// ─────────────────────────────────────────────────────────────────────────────
+const PER_COURSE_FEE = 50;
+const SEMESTER_FEE = 200;
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -45,8 +38,9 @@ interface FormState {
   previousStudies: string;
   notes: string;
   trackType: TrackType;
+  madaniSemester: "semester1" | "";
   selectedCourses: string[];
-  paymentConfirmed: boolean;
+  priceAcknowledged: boolean;
 }
 
 const initialState: FormState = {
@@ -58,8 +52,9 @@ const initialState: FormState = {
   previousStudies: "",
   notes: "",
   trackType: "",
+  madaniSemester: "",
   selectedCourses: [],
-  paymentConfirmed: false,
+  priceAcknowledged: false,
 };
 
 interface FieldError {
@@ -84,6 +79,9 @@ function validateStep1(data: FormState): FieldError {
 function validateStep2(data: FormState): FieldError {
   const errors: FieldError = {};
   if (!data.trackType) errors.trackType = "Please select a track";
+  if (data.trackType === "madani" && !data.madaniSemester) {
+    errors.madaniSemester = "Please select a semester";
+  }
   if (data.trackType === "individual" && data.selectedCourses.length === 0) {
     errors.selectedCourses = "Please select at least one course";
   }
@@ -92,8 +90,8 @@ function validateStep2(data: FormState): FieldError {
 
 function validateStep3(data: FormState): FieldError {
   const errors: FieldError = {};
-  if (!data.paymentConfirmed) {
-    errors.paymentConfirmed = "Please confirm that you have sent payment";
+  if (!data.priceAcknowledged) {
+    errors.priceAcknowledged = "Please acknowledge the price to continue";
   }
   return errors;
 }
@@ -196,7 +194,7 @@ export default function Apply() {
           selectedCourses:
             formData.trackType === "individual" ? formData.selectedCourses : undefined,
           notes: formData.notes || undefined,
-          paymentConfirmed: true,
+          priceAcknowledged: true,
         }),
       });
 
@@ -220,10 +218,15 @@ export default function Apply() {
 
   const coursesLabel =
     formData.trackType === "madani"
-      ? "Madani Track — All Courses"
+      ? "Madani Track — Semester 1"
       : formData.selectedCourses
           .map((v) => individualCourseOptions.find((o) => o.value === v)?.label ?? v)
           .join(", ");
+
+  const totalPrice =
+    formData.trackType === "madani"
+      ? SEMESTER_FEE
+      : formData.selectedCourses.length * PER_COURSE_FEE;
 
   return (
     <div className="min-h-screen bg-bg">
@@ -306,7 +309,7 @@ export default function Apply() {
                 <div>
                   <p className="font-semibold text-green-700">Application submitted!</p>
                   <p className="mt-1 text-sm text-green-600">
-                    JazakAllahu khayran. You will be contacted for further information regarding payment and class registration.
+                    JazakAllahu khayran. You will receive an email with further enrollment and payment information inshallah.
                   </p>
                 </div>
               </div>
@@ -385,48 +388,23 @@ export default function Apply() {
               {step === 3 && (
                 <div>
                   <h2 className="mb-4 text-2xl font-semibold text-text md:text-3xl">
-                    Complete Your Enrollment
+                    Review &amp; Submit
                   </h2>
                   <p className="mb-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-                    Send your payment via {PAYMENT.method} to confirm your spot.
-                    After sending, check the box below and submit your application.
+                    Review your application summary and acknowledge the tuition below. After submitting, you will receive an email with further enrollment and payment details.
                   </p>
-                  <div className="rounded-xl border border-gold/20 bg-gold/5 p-5 space-y-3">
-                    <div className="flex items-center gap-2">
+                  <div className="rounded-xl border border-gold/20 bg-gold/5 p-5 space-y-2 text-sm">
+                    <div className="flex items-center gap-2 mb-3">
                       <CreditCard className="h-5 w-5 text-gold" />
-                      <h4 className="font-semibold text-text">Payment Details</h4>
+                      <h4 className="font-semibold text-text">Tuition</h4>
                     </div>
-                    <div className="space-y-1.5 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-muted">Method</span>
-                        <span className="font-medium text-text">{PAYMENT.method}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted">Send to</span>
-                        <span className="font-medium text-text">{PAYMENT.contact}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-muted">Amount</span>
-                        <span className="font-medium text-text">
-                          {formData.trackType === "madani"
-                            ? PAYMENT.madaniTrackFee
-                            : PAYMENT.perCourseFee + " per course"}
-                        </span>
-                      </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted">Per course</span>
+                      <span className="font-medium text-text">${PER_COURSE_FEE}</span>
                     </div>
-                    <p className="text-xs text-muted border-t border-gold/20 pt-3">
-                      {PAYMENT.note}
-                    </p>
-                  </div>
-
-                  {/* Enrollment summary */}
-                  <div className="mt-4 rounded-xl border border-border bg-surface p-4">
-                    <div className="flex items-start gap-3">
-                      <BookOpen className="h-5 w-5 text-gold mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-sm font-semibold text-text mb-1">Enrollment Summary</p>
-                        <p className="text-sm text-muted">{coursesLabel}</p>
-                      </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted">Full semester (Madani Track)</span>
+                      <span className="font-medium text-text">${SEMESTER_FEE}</span>
                     </div>
                   </div>
                 </div>
@@ -678,7 +656,7 @@ export default function Apply() {
                               {
                                 value: "madani" as TrackType,
                                 label: "Madani Track",
-                                description: "All Courses — Full 2-year Program",
+                                description: "All Courses — Full Program",
                               },
                               {
                                 value: "individual" as TrackType,
@@ -686,37 +664,72 @@ export default function Apply() {
                                 description: "Choose specific courses",
                               },
                             ].map((opt) => (
-                              <button
-                                key={opt.value}
-                                type="button"
-                                onClick={() => {
-                                  update("trackType", opt.value);
-                                  if (opt.value === "madani") {
-                                    update("selectedCourses", []);
-                                  }
-                                }}
-                                className={cn(
-                                  "w-full rounded-xl border-2 p-4 text-left transition-all",
-                                  formData.trackType === opt.value
-                                    ? "border-gold bg-gold/5"
-                                    : "border-border bg-surface hover:border-gold/40"
-                                )}
-                              >
-                                <div className="flex items-center gap-3">
-                                  <div
-                                    className={cn(
-                                      "h-4 w-4 rounded-full border-2 flex-shrink-0 transition-colors",
-                                      formData.trackType === opt.value
-                                        ? "border-gold bg-gold"
-                                        : "border-border"
-                                    )}
-                                  />
-                                  <div>
-                                    <p className="font-semibold text-text">{opt.label}</p>
-                                    <p className="text-sm text-muted">{opt.description}</p>
+                              <div key={opt.value}>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    update("trackType", opt.value);
+                                    if (opt.value === "madani") {
+                                      update("selectedCourses", []);
+                                    } else {
+                                      update("madaniSemester", "");
+                                    }
+                                  }}
+                                  className={cn(
+                                    "w-full rounded-xl border-2 p-4 text-left transition-all",
+                                    formData.trackType === opt.value
+                                      ? "border-gold bg-gold/5"
+                                      : "border-border bg-surface hover:border-gold/40"
+                                  )}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    <div
+                                      className={cn(
+                                        "h-4 w-4 rounded-full border-2 flex-shrink-0 transition-colors",
+                                        formData.trackType === opt.value
+                                          ? "border-gold bg-gold"
+                                          : "border-border"
+                                      )}
+                                    />
+                                    <div>
+                                      <p className="font-semibold text-text">{opt.label}</p>
+                                      <p className="text-sm text-muted">{opt.description}</p>
+                                    </div>
                                   </div>
-                                </div>
-                              </button>
+                                </button>
+
+                                {/* Semester selector for Madani Track */}
+                                {opt.value === "madani" && formData.trackType === "madani" && (
+                                  <div className="mt-2 ml-4">
+                                    <p className="mb-2 text-xs font-medium text-muted uppercase tracking-wide">Select Semester</p>
+                                    <button
+                                      type="button"
+                                      onClick={() => update("madaniSemester", "semester1")}
+                                      className={cn(
+                                        "w-full rounded-xl border-2 px-4 py-3 text-left text-sm transition-all",
+                                        formData.madaniSemester === "semester1"
+                                          ? "border-gold bg-gold/5 font-medium text-text"
+                                          : "border-border bg-surface text-muted hover:border-gold/40"
+                                      )}
+                                    >
+                                      <div className="flex items-center gap-3">
+                                        <div
+                                          className={cn(
+                                            "h-4 w-4 rounded-full border-2 flex-shrink-0 transition-colors",
+                                            formData.madaniSemester === "semester1"
+                                              ? "border-gold bg-gold"
+                                              : "border-border"
+                                          )}
+                                        />
+                                        Semester 1
+                                      </div>
+                                    </button>
+                                    {errors.madaniSemester && (
+                                      <p className="mt-1 text-sm text-red-500">{errors.madaniSemester}</p>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                           {errors.trackType && (
@@ -798,10 +811,13 @@ export default function Apply() {
                     {/* ── STEP 3 ── */}
                     {step === 3 && (
                       <>
-                        {/* Summary */}
+                        {/* Application Summary */}
                         <div className="rounded-xl border border-border bg-surface2 p-4 space-y-2 text-sm">
-                          <h4 className="font-semibold text-text mb-3">Application Summary</h4>
-                          <div className="grid grid-cols-[140px_1fr] gap-y-2">
+                          <div className="flex items-center gap-2 mb-3">
+                            <BookOpen className="h-4 w-4 text-gold" />
+                            <h4 className="font-semibold text-text">Application Summary</h4>
+                          </div>
+                          <div className="grid grid-cols-[130px_1fr] gap-y-2">
                             <span className="text-muted">Name</span>
                             <span className="text-text font-medium">
                               {formData.firstName} {formData.lastName}
@@ -811,33 +827,36 @@ export default function Apply() {
                             <span className="text-muted">Phone</span>
                             <span className="text-text font-medium">{formData.phone}</span>
                             <span className="text-muted">Gender</span>
-                            <span className="text-text font-medium capitalize">
+                            <span className="text-text font-medium">
                               {formData.gender === "male" ? "Brother" : "Sister"}
                             </span>
-                            <span className="text-muted">Courses</span>
+                            <span className="text-muted">Enrollment</span>
                             <span className="text-text font-medium">{coursesLabel}</span>
                           </div>
                         </div>
 
-                        {/* Payment instructions */}
-                        <div className="rounded-xl border border-gold/20 bg-gold/5 p-5 space-y-3 text-sm">
-                          <p className="font-semibold text-text">
-                            Step 1 — Send Payment via {PAYMENT.method}
-                          </p>
-                          <div className="space-y-1">
-                            <p className="text-muted">
-                              Send to:{" "}
-                              <span className="font-medium text-text">{PAYMENT.contact}</span>
-                            </p>
-                            <p className="text-muted">
-                              Amount:{" "}
-                              <span className="font-medium text-text">
-                                {formData.trackType === "madani"
-                                  ? PAYMENT.madaniTrackFee
-                                  : `${PAYMENT.perCourseFee} × ${formData.selectedCourses.length} course${formData.selectedCourses.length !== 1 ? "s" : ""}`}
-                              </span>
-                            </p>
-                            <p className="text-xs text-muted pt-1">{PAYMENT.note}</p>
+                        {/* Price */}
+                        <div className="rounded-xl border border-gold/20 bg-gold/5 p-4 space-y-2 text-sm">
+                          <div className="flex items-center gap-2 mb-2">
+                            <CreditCard className="h-4 w-4 text-gold" />
+                            <h4 className="font-semibold text-text">Tuition</h4>
+                          </div>
+                          {formData.trackType === "madani" ? (
+                            <div className="flex justify-between">
+                              <span className="text-muted">Madani Track — Semester 1</span>
+                              <span className="font-semibold text-text">${SEMESTER_FEE}</span>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="flex justify-between">
+                                <span className="text-muted">{formData.selectedCourses.length} course{formData.selectedCourses.length !== 1 ? "s" : ""} × ${ PER_COURSE_FEE}</span>
+                                <span className="font-semibold text-text">${totalPrice}</span>
+                              </div>
+                            </>
+                          )}
+                          <div className="border-t border-gold/20 pt-2 flex justify-between font-semibold">
+                            <span className="text-text">Total</span>
+                            <span className="text-gold">${totalPrice}</span>
                           </div>
                         </div>
 
@@ -857,43 +876,39 @@ export default function Apply() {
                           </button>
                         </div>
 
-                        {/* Confirm checkbox */}
+                        {/* Price acknowledgment */}
                         <div>
                           <button
                             type="button"
-                            onClick={() => {
-                              update("paymentConfirmed", !formData.paymentConfirmed);
-                            }}
+                            onClick={() => update("priceAcknowledged", !formData.priceAcknowledged)}
                             className={cn(
                               "w-full rounded-xl border-2 p-4 text-left transition-all",
-                              formData.paymentConfirmed
+                              formData.priceAcknowledged
                                 ? "border-gold bg-gold/5"
                                 : "border-border bg-surface hover:border-gold/40",
-                              errors.paymentConfirmed && !formData.paymentConfirmed && "border-red-500/50"
+                              errors.priceAcknowledged && !formData.priceAcknowledged && "border-red-500/50"
                             )}
                           >
                             <div className="flex items-start gap-3">
                               <div
                                 className={cn(
                                   "mt-0.5 h-5 w-5 flex-shrink-0 rounded border-2 flex items-center justify-center transition-colors",
-                                  formData.paymentConfirmed ? "border-gold bg-gold" : "border-border"
+                                  formData.priceAcknowledged ? "border-gold bg-gold" : "border-border"
                                 )}
                               >
-                                {formData.paymentConfirmed && (
+                                {formData.priceAcknowledged && (
                                   <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                   </svg>
                                 )}
                               </div>
                               <p className="text-sm text-text leading-relaxed">
-                                I confirm that I have sent payment via {PAYMENT.method} for the
-                                selected course(s) and understand that enrollment is subject to
-                                confirmation.
+                                I acknowledge the tuition of <strong>${totalPrice}</strong> for the selected enrollment and understand that payment details will be sent via email.
                               </p>
                             </div>
                           </button>
-                          {errors.paymentConfirmed && (
-                            <p className="mt-2 text-sm text-red-500">{errors.paymentConfirmed}</p>
+                          {errors.priceAcknowledged && (
+                            <p className="mt-2 text-sm text-red-500">{errors.priceAcknowledged}</p>
                           )}
                         </div>
 
