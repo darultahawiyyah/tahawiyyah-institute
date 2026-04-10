@@ -40,12 +40,12 @@ export async function POST(request: NextRequest) {
 
     const trackLabel =
       data.trackType === "madani"
-        ? "Madani Track (All Courses)"
+        ? "Masjid Ḥanafiyyah Track (All Courses)"
         : "Individual Courses";
 
     const coursesLabel =
       data.trackType === "madani"
-        ? "All courses (Madani Track)"
+        ? "All courses (Masjid Ḥanafiyyah Track)"
         : (data.selectedCourses ?? [])
             .map(
               (v) =>

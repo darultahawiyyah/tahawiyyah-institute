@@ -218,7 +218,7 @@ export default function Apply() {
 
   const coursesLabel =
     formData.trackType === "madani"
-      ? "Madani Track — Semester 1"
+      ? "Masjid Ḥanafiyyah Track — Semester 1"
       : formData.selectedCourses
           .map((v) => individualCourseOptions.find((o) => o.value === v)?.label ?? v)
           .join(", ");
@@ -363,12 +363,12 @@ export default function Apply() {
                     Choose Your Track
                   </h2>
                   <p className="mb-6 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-                    Select the Madani Track to enroll in the full program, or
+                    Select the Masjid Ḥanafiyyah Track to enroll in the full program, or
                     choose individual courses that fit your schedule and goals.
                   </p>
                   <div className="space-y-4">
                     <div className="rounded-xl border border-border bg-surface p-4">
-                      <h4 className="font-semibold text-text mb-1">Madani Track (All Courses)</h4>
+                      <h4 className="font-semibold text-text mb-1">Masjid Ḥanafiyyah Track (All Courses)</h4>
                       <p className="text-sm text-muted">
                         The complete 2-year program covering all seven Islamic
                         sciences: Fiqh, ʿAqīda, Ḥadīth, Tajwīd, Naḥw, Ṣarf, and Qurʾān & Tafsīr.
@@ -403,7 +403,7 @@ export default function Apply() {
                       <span className="font-medium text-text">${PER_COURSE_FEE}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted">Full semester (Madani Track)</span>
+                      <span className="text-muted">Full semester (Masjid Ḥanafiyyah Track)</span>
                       <span className="font-medium text-text">${SEMESTER_FEE}</span>
                     </div>
                   </div>
@@ -655,7 +655,7 @@ export default function Apply() {
                             {[
                               {
                                 value: "madani" as TrackType,
-                                label: "Madani Track",
+                                label: "Masjid Ḥanafiyyah Track",
                                 description: "All Courses — Full Program",
                               },
                               {
@@ -698,7 +698,7 @@ export default function Apply() {
                                   </div>
                                 </button>
 
-                                {/* Semester selector for Madani Track */}
+                                {/* Semester selector for Masjid Ḥanafiyyah Track */}
                                 {opt.value === "madani" && formData.trackType === "madani" && (
                                   <div className="mt-2 ml-4">
                                     <p className="mb-2 text-xs font-medium text-muted uppercase tracking-wide">Select Semester</p>
@@ -843,7 +843,7 @@ export default function Apply() {
                           </div>
                           {formData.trackType === "madani" ? (
                             <div className="flex justify-between">
-                              <span className="text-muted">Madani Track — Semester 1</span>
+                              <span className="text-muted">Masjid Ḥanafiyyah Track — Semester 1</span>
                               <span className="font-semibold text-text">${SEMESTER_FEE}</span>
                             </div>
                           ) : (
