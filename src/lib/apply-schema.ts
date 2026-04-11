@@ -17,7 +17,6 @@ export const applySchema = z
     lastName: z.string().min(1, "Last name is required"),
     email: z.string().email("Please enter a valid email address"),
     phone: z.string().min(1, "Phone number is required"),
-    gender: z.enum(["male", "female"], { message: "Please select a gender" }),
     previousStudies: z.string().min(1, "Please describe your previous Islamic studies"),
     trackType: z.enum(["madani", "individual"], {
       message: "Please select a track",

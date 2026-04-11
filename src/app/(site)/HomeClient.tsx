@@ -173,7 +173,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs text-muted">Schedule</p>
-                      <p className="text-sm font-medium text-text">Mon · Tue · Fri evenings</p>
+                      <p className="text-sm font-medium text-text">Mon · Tue evenings · Sat afternoons</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

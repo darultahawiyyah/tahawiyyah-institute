@@ -34,7 +34,6 @@ interface FormState {
   lastName: string;
   email: string;
   phone: string;
-  gender: "male" | "female" | "";
   previousStudies: string;
   notes: string;
   trackType: TrackType;
@@ -48,7 +47,6 @@ const initialState: FormState = {
   lastName: "",
   email: "",
   phone: "",
-  gender: "",
   previousStudies: "",
   notes: "",
   trackType: "",
@@ -71,7 +69,6 @@ function validateStep1(data: FormState): FieldError {
     errors.email = "Please enter a valid email address";
   }
   if (!data.phone.trim()) errors.phone = "Phone number is required";
-  if (!data.gender) errors.gender = "Please select a gender";
   if (!data.previousStudies.trim()) errors.previousStudies = "Please describe your previous Islamic studies";
   return errors;
 }
@@ -190,7 +187,6 @@ export default function Apply() {
           lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
-          gender: formData.gender,
           previousStudies: formData.previousStudies,
           trackType: formData.trackType,
           selectedCourses:
@@ -568,35 +564,12 @@ export default function Apply() {
                           )}
                         </div>
 
-                        {/* Gender */}
-                        <div>
-                          <p className="mb-2 block text-sm font-medium text-text">
-                            Gender <span className="text-red-500">*</span>
+                        {/* Brothers only notice */}
+                        <div className="rounded-xl border border-gold/30 bg-gold/5 px-4 py-3">
+                          <p className="text-sm font-medium text-gold">Brothers Only — Semester 1</p>
+                          <p className="mt-1 text-xs text-muted leading-relaxed">
+                            Classes this semester are open to brothers only. We plan to offer sisters&apos; classes in the future inshallah.
                           </p>
-                          <div className="flex gap-3">
-                            {[
-                              { value: "male", label: "Brother" },
-                              { value: "female", label: "Sister" },
-                            ].map((opt) => (
-                              <button
-                                key={opt.value}
-                                type="button"
-                                onClick={() => update("gender", opt.value)}
-                                className={cn(
-                                  "flex-1 rounded-xl border-2 py-3 text-sm font-medium transition-all",
-                                  formData.gender === opt.value
-                                    ? "border-gold bg-gold/5 text-text"
-                                    : "border-border bg-surface text-muted hover:border-gold/40",
-                                  errors.gender && !formData.gender && "border-red-500/50"
-                                )}
-                              >
-                                {opt.label}
-                              </button>
-                            ))}
-                          </div>
-                          {errors.gender && (
-                            <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
-                          )}
                         </div>
 
                         {/* Previous Studies */}
@@ -833,10 +806,6 @@ export default function Apply() {
                             <span className="text-text font-medium break-all">{formData.email}</span>
                             <span className="text-muted">Phone</span>
                             <span className="text-text font-medium">{formData.phone}</span>
-                            <span className="text-muted">Gender</span>
-                            <span className="text-text font-medium">
-                              {formData.gender === "male" ? "Brother" : "Sister"}
-                            </span>
                             <span className="text-muted">Enrollment</span>
                             <span className="text-text font-medium">{coursesLabel}</span>
                           </div>

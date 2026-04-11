@@ -36,8 +36,6 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data;
 
-    const genderLabel = data.gender === "male" ? "Brother" : "Sister";
-
     const trackLabel =
       data.trackType === "madani"
         ? "Masjid Ḥanafiyyah Track (All Courses)"
@@ -84,10 +82,6 @@ export async function POST(request: NextRequest) {
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Phone:</td>
                   <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.phone)}</td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Gender:</td>
-                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(genderLabel)}</td>
                 </tr>
                 <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Previous Studies:</td>
@@ -148,7 +142,6 @@ New Application Received
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
 Phone: ${data.phone}
-Gender: ${genderLabel}
 Previous Studies: ${data.previousStudies}
 Track: ${trackLabel}
 Courses: ${coursesLabel}

@@ -51,7 +51,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
     location: "In Person — Masjid Ḥanafiyyah",
-    schedule: "Saturday 2:10–3:00 PM",
+    schedule: "Saturday 3:05–3:55 PM",
     description:
       "This course covers the rules and practical application of proper Qurʾānic recitation. Students will learn the articulation points of each letter (Makhārij al-Ḥurūf), the characteristics of letters, and the rules governing elongation, nasalization, stopping, and more. The course progresses from foundational rules to mastery-level recitation, with the goal of preparing students for accurate and beautiful recitation of the Qurʾān. Regular guided recitation sessions provide hands-on practice and personalized feedback.",
     texts: ["TBA"],
@@ -90,7 +90,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
     location: "In Person — Masjid Ḥanafiyyah",
-    schedule: "Saturday 3:05–3:55 PM",
+    schedule: "Saturday 2:10–3:00 PM",
     description:
       "This course helps students understand and reflect on the meanings of the Qurʾān. Selected verses will be studied with the help of well-known tafsīr works such as Rūḥ al-Maʿānī, Tafsīr Ibn Kathīr, Tafsīr Maẓharī, and Tafsīr al-Qurṭubī. The goal is to help students understand the message of the verses, learn the explanations of classical scholars, and develop a deeper connection with the Qurʾān than just the translation.",
     texts: ["Rūḥ al-Maʿānī", "Tafsīr Ibn Kathīr", "Tafsīr Maẓharī", "Tafsīr al-Qurṭubī"],
