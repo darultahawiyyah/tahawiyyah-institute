@@ -27,6 +27,11 @@ export const applySchema = z
     priceAcknowledged: z.literal(true, {
       message: "Please acknowledge the price to continue",
     }),
+    financialAid: z.object({
+      name: z.string().min(1),
+      reason: z.string().min(1),
+      employment: z.enum(["fulltime", "parttime", "nojob"]),
+    }).optional(),
   })
   .superRefine((data, ctx) => {
     if (

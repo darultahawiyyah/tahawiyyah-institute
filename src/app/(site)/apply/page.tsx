@@ -119,35 +119,22 @@ export default function Apply() {
     setAidErrors((prev) => { const next = { ...prev }; delete next[field]; return next; });
   };
 
-  const [aidSubmitting, setAidSubmitting] = React.useState(false);
-
-  const submitAid = async () => {
+  const submitAid = () => {
     const errs: FieldError = {};
     if (!aidForm.name.trim()) errs.name = "Name is required";
     if (!aidForm.reason.trim()) errs.reason = "Please provide a reason";
     if (!aidForm.employment) errs.employment = "Please select an option";
     if (Object.keys(errs).length > 0) { setAidErrors(errs); return; }
-
-    setAidSubmitting(true);
-    try {
-      await fetch("/api/financial-aid", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(aidForm),
-      });
-    } catch {
-      // still show success to the user even if network blips
-    } finally {
-      setAidSubmitting(false);
-      setAidSubmitted(true);
-    }
+    setAidSubmitted(true);
   };
 
   const closeAidModal = () => {
     setShowFinancialAid(false);
-    setAidSubmitted(false);
-    setAidForm({ name: "", reason: "", employment: "" });
-    setAidErrors({});
+    // only reset if they didn't submit — preserve data for main submission
+    if (!aidSubmitted) {
+      setAidForm({ name: "", reason: "", employment: "" });
+      setAidErrors({});
+    }
   };
 
   const update = (field: keyof FormState, value: unknown) => {
@@ -210,6 +197,11 @@ export default function Apply() {
             formData.trackType === "individual" ? formData.selectedCourses : undefined,
           notes: formData.notes || undefined,
           priceAcknowledged: true,
+          financialAid: aidSubmitted ? {
+            name: aidForm.name,
+            reason: aidForm.reason,
+            employment: aidForm.employment,
+          } : undefined,
         }),
       });
 
@@ -1107,15 +1099,9 @@ export default function Apply() {
                     <button
                       type="button"
                       onClick={submitAid}
-                      disabled={aidSubmitting}
-                      className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
+                      className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                     >
-                      {aidSubmitting ? (
-                        <span className="flex items-center justify-center gap-2">
-                          <Loader2 className="h-4 w-4 animate-spin" />
-                          Submitting...
-                        </span>
-                      ) : "Submit Application"}
+                      Submit
                     </button>
                   </div>
                 )}

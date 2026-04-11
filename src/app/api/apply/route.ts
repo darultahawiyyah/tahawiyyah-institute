@@ -113,6 +113,27 @@ export async function POST(request: NextRequest) {
               </table>
             </div>
 
+            ${data.financialAid ? `
+            <div style="background-color: #fffbeb; border-radius: 6px; padding: 20px; margin-bottom: 20px; border: 1px solid #fde68a;">
+              <h2 style="color: #374151; font-size: 18px; font-weight: 600; margin-top: 0; margin-bottom: 16px; border-bottom: 2px solid #fde68a; padding-bottom: 8px;">
+                Financial Aid Request
+              </h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; width: 160px;">Name:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.financialAid.name)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Reason:</td>
+                  <td style="padding: 8px 0; color: #1f2937; white-space: pre-wrap;">${escapeHtml(data.financialAid.reason)}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Employment:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${data.financialAid.employment === "fulltime" ? "Full-time Job" : data.financialAid.employment === "parttime" ? "Part-time Job" : "Not Currently Employed"}</td>
+                </tr>
+              </table>
+            </div>` : ""}
+
             <p style="color: #6b7280; font-size: 14px; margin: 0;">
               This email was sent from the Tahawiyyah Institute application form.
             </p>
@@ -132,8 +153,12 @@ Previous Studies: ${data.previousStudies}
 Track: ${trackLabel}
 Courses: ${coursesLabel}
 Price Acknowledged: Yes
-${data.notes ? `Notes: ${data.notes}\n` : ""}
-
+${data.notes ? `Notes: ${data.notes}\n` : ""}${data.financialAid ? `
+--- Financial Aid Request ---
+Name: ${data.financialAid.name}
+Reason: ${data.financialAid.reason}
+Employment: ${data.financialAid.employment === "fulltime" ? "Full-time Job" : data.financialAid.employment === "parttime" ? "Part-time Job" : "Not Currently Employed"}
+` : ""}
 This email was sent from the Tahawiyyah Institute application form.
     `.trim();
 
