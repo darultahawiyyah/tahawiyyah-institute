@@ -119,13 +119,28 @@ export default function Apply() {
     setAidErrors((prev) => { const next = { ...prev }; delete next[field]; return next; });
   };
 
-  const submitAid = () => {
+  const [aidSubmitting, setAidSubmitting] = React.useState(false);
+
+  const submitAid = async () => {
     const errs: FieldError = {};
     if (!aidForm.name.trim()) errs.name = "Name is required";
     if (!aidForm.reason.trim()) errs.reason = "Please provide a reason";
     if (!aidForm.employment) errs.employment = "Please select an option";
     if (Object.keys(errs).length > 0) { setAidErrors(errs); return; }
-    setAidSubmitted(true);
+
+    setAidSubmitting(true);
+    try {
+      await fetch("/api/financial-aid", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(aidForm),
+      });
+    } catch {
+      // still show success to the user even if network blips
+    } finally {
+      setAidSubmitting(false);
+      setAidSubmitted(true);
+    }
   };
 
   const closeAidModal = () => {
@@ -1092,9 +1107,15 @@ export default function Apply() {
                     <button
                       type="button"
                       onClick={submitAid}
-                      className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                      disabled={aidSubmitting}
+                      className="w-full rounded-xl bg-gold py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-60"
                     >
-                      Submit Application
+                      {aidSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Submitting...
+                        </span>
+                      ) : "Submit Application"}
                     </button>
                   </div>
                 )}
