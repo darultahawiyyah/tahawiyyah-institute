@@ -970,19 +970,19 @@ export default function Apply() {
                     animate={{ opacity: 1, y: 0 }}
                     className="py-4 text-center space-y-3"
                   >
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10">
-                      <CheckCircle2 className="h-7 w-7 text-green-500" />
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
+                      <CheckCircle2 className="h-7 w-7 text-gold" />
                     </div>
-                    <h3 className="text-lg font-semibold text-text">Application Received</h3>
+                    <h3 className="text-lg font-semibold text-text">Financial Aid Saved</h3>
                     <p className="text-sm text-muted leading-relaxed">
-                      JazakAllahu khayran. We will reach out to you inshallah for further details.
+                      Your financial aid information has been saved. Continue to finish your application.
                     </p>
                     <button
                       type="button"
                       onClick={closeAidModal}
                       className="mt-2 rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                     >
-                      Close
+                      Continue to Application
                     </button>
                   </motion.div>
                 ) : (
