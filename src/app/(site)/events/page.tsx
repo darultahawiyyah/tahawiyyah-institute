@@ -289,14 +289,14 @@ export default function EventsPage() {
                 viewport={{ once: true, margin: "-50px" }}
                 variants={fadeUpVariants}
                 transition={{ duration: 0.6 }}
-                className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4"
+                className="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2"
               >
                 {flyers.map((f, i) => (
                   <img
                     key={i}
                     src={f.src}
                     alt={f.alt}
-                    className="w-full rounded-xl border border-border shadow-md object-cover aspect-[3/4]"
+                    className="w-full rounded-xl border border-border shadow-md object-contain"
                   />
                 ))}
               </motion.div>
