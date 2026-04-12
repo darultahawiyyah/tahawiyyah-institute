@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   CheckCircle2,
@@ -571,6 +572,15 @@ export default function Apply() {
                             Classes this semester are open to brothers only. We plan to offer sisters&apos; classes in the future inshallah.
                           </p>
                         </div>
+
+                        {/* Sisters link */}
+                        <Link
+                          href="/events#sisters"
+                          className="flex items-center justify-between rounded-xl border border-border bg-surface px-4 py-3 text-sm transition-colors hover:border-gold/40 hover:bg-gold/5"
+                        >
+                          <span className="text-muted">Sister? Sign up for pre-registration</span>
+                          <ArrowRight className="h-4 w-4 text-gold shrink-0" />
+                        </Link>
 
                         {/* Previous Studies */}
                         <div>

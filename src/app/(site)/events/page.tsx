@@ -100,7 +100,7 @@ export default function EventsPage() {
       </section>
 
       {/* SISTERS' CLASSES — COMING SOON (moved above events list) */}
-      <section className="border-b border-border bg-surface2 py-16 md:py-24">
+      <section id="sisters" className="border-b border-border bg-surface2 py-16 md:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 max-w-5xl">
 
