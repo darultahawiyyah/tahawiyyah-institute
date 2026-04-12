@@ -5,6 +5,7 @@ import nodemailer from "nodemailer";
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(1, "Phone number is required"),
   previousStudies: z.string().min(1, "Please describe your previous studies"),
 });
 
@@ -64,6 +65,10 @@ export async function POST(request: NextRequest) {
                   <td style="padding: 8px 0; color: #1f2937;"><a href="mailto:${escapeHtml(data.email)}" style="color: #d4af37;">${escapeHtml(data.email)}</a></td>
                 </tr>
                 <tr>
+                  <td style="padding: 8px 0; font-weight: 600; color: #4b5563;">Phone:</td>
+                  <td style="padding: 8px 0; color: #1f2937;">${escapeHtml(data.phone)}</td>
+                </tr>
+                <tr>
                   <td style="padding: 8px 0; font-weight: 600; color: #4b5563; vertical-align: top;">Previous Studies:</td>
                   <td style="padding: 8px 0; color: #1f2937; white-space: pre-wrap;">${escapeHtml(data.previousStudies)}</td>
                 </tr>
@@ -82,6 +87,7 @@ Sisters' Class Pre-Registration
 
 Name: ${data.name}
 Email: ${data.email}
+Phone: ${data.phone}
 Previous Studies: ${data.previousStudies}
 
 This email was sent from the Tahawiyyah Institute sisters' interest form.

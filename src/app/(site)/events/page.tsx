@@ -33,7 +33,7 @@ const events: {
 interface FieldError { [key: string]: string }
 
 export default function EventsPage() {
-  const [form, setForm] = React.useState({ name: "", email: "", previousStudies: "" });
+  const [form, setForm] = React.useState({ name: "", email: "", phone: "", previousStudies: "" });
   const [errors, setErrors] = React.useState<FieldError>({});
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState<"idle" | "success" | "error">("idle");
@@ -51,6 +51,7 @@ export default function EventsPage() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       errs.email = "Please enter a valid email address";
     }
+    if (!form.phone.trim()) errs.phone = "Phone number is required";
     if (!form.previousStudies.trim()) errs.previousStudies = "Please describe your previous studies";
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
 
@@ -59,12 +60,12 @@ export default function EventsPage() {
       const res = await fetch("/api/sisters-interest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ name: form.name, email: form.email, phone: form.phone, previousStudies: form.previousStudies }),
       });
       const data = await res.json();
       if (data.ok) {
         setSubmitStatus("success");
-        setForm({ name: "", email: "", previousStudies: "" });
+        setForm({ name: "", email: "", phone: "", previousStudies: "" });
       } else {
         setSubmitStatus("error");
       }
@@ -98,68 +99,8 @@ export default function EventsPage() {
         </Container>
       </section>
 
-      {/* EVENTS LIST */}
+      {/* SISTERS' CLASSES — COMING SOON (moved above events list) */}
       <section className="border-b border-border bg-surface2 py-16 md:py-24">
-        <Container>
-          {events.length === 0 ? (
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUpVariants}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center justify-center py-20 text-center"
-            >
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/10 mb-6">
-                <Calendar className="h-10 w-10 text-gold/60" />
-              </div>
-              <h3 className="text-xl font-semibold text-text mb-3">
-                No Upcoming Events
-              </h3>
-              <p className="text-muted max-w-md text-base leading-relaxed">
-                Events will be posted here as they are scheduled. Check back soon
-                for upcoming classes and gatherings at masaajid in your area.
-              </p>
-            </motion.div>
-          ) : (
-            <div className="space-y-6 max-w-3xl">
-              {events.map((event, index) => (
-                <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                  variants={fadeUpVariants}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="rounded-2xl border border-border bg-surface p-6 shadow-sm"
-                >
-                  <h3 className="text-xl font-semibold text-text mb-3">
-                    {event.title}
-                  </h3>
-                  <div className="flex flex-col gap-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-muted">
-                      <Calendar className="h-4 w-4 text-gold flex-shrink-0" />
-                      <span>{event.date}{event.time ? ` · ${event.time}` : ""}</span>
-                    </div>
-                    {event.location && (
-                      <div className="flex items-center gap-2 text-sm text-muted">
-                        <MapPin className="h-4 w-4 text-gold flex-shrink-0" />
-                        <span>{event.location}</span>
-                      </div>
-                    )}
-                  </div>
-                  {event.description && (
-                    <p className="text-base leading-relaxed text-muted">{event.description}</p>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </Container>
-      </section>
-
-      {/* SISTERS' CLASSES — COMING SOON */}
-      <section className="bg-bg py-16 md:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 max-w-5xl">
 
@@ -272,6 +213,24 @@ export default function EventsPage() {
                       {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                     </div>
 
+                    {/* Phone */}
+                    <div>
+                      <label className="mb-1.5 block text-sm font-medium text-text">
+                        Phone Number <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        value={form.phone}
+                        onChange={(e) => update("phone", e.target.value)}
+                        className={cn(
+                          "w-full rounded-xl border border-border bg-bg px-4 py-3 text-text transition-colors",
+                          "focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-surface",
+                          errors.phone && "border-red-500/50"
+                        )}
+                      />
+                      {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
+                    </div>
+
                     {/* Previous Studies */}
                     <div>
                       <label className="mb-1.5 block text-sm font-medium text-text">
@@ -313,6 +272,67 @@ export default function EventsPage() {
           </div>
         </Container>
       </section>
+
+      {/* EVENTS LIST */}
+      <section className="border-b border-border bg-bg py-16 md:py-24">
+        <Container>
+          {events.length === 0 ? (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUpVariants}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center justify-center py-20 text-center"
+            >
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/10 mb-6">
+                <Calendar className="h-10 w-10 text-gold/60" />
+              </div>
+              <h3 className="text-xl font-semibold text-text mb-3">
+                No Upcoming Events
+              </h3>
+              <p className="text-muted max-w-md text-base leading-relaxed">
+                Events will be posted here as they are scheduled. Check back soon
+                for upcoming classes and gatherings at masaajid in your area.
+              </p>
+            </motion.div>
+          ) : (
+            <div className="space-y-6 max-w-3xl">
+              {events.map((event, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeUpVariants}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="rounded-2xl border border-border bg-surface p-6 shadow-sm"
+                >
+                  <h3 className="text-xl font-semibold text-text mb-3">
+                    {event.title}
+                  </h3>
+                  <div className="flex flex-col gap-2 mb-4">
+                    <div className="flex items-center gap-2 text-sm text-muted">
+                      <Calendar className="h-4 w-4 text-gold flex-shrink-0" />
+                      <span>{event.date}{event.time ? ` · ${event.time}` : ""}</span>
+                    </div>
+                    {event.location && (
+                      <div className="flex items-center gap-2 text-sm text-muted">
+                        <MapPin className="h-4 w-4 text-gold flex-shrink-0" />
+                        <span>{event.location}</span>
+                      </div>
+                    )}
+                  </div>
+                  {event.description && (
+                    <p className="text-base leading-relaxed text-muted">{event.description}</p>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </Container>
+      </section>
+
     </div>
   );
 }
