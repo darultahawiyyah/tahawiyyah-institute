@@ -163,7 +163,7 @@ export default function Home() {
                     Next Cohort
                   </p>
                   <CardTitle className="font-display text-3xl text-text">
-                    April 24, 2026
+                    April 27, 2026
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -413,7 +413,7 @@ export default function Home() {
                 </h2>
                 <p className="mb-8 mx-auto max-w-xl text-base leading-relaxed text-muted md:text-lg">
                   Join our next cohort and start your comprehensive Islamic studies
-                  program. Applications are now open for April 24, 2026.
+                  program. Applications are now open for April 27, 2026.
                 </p>
                 <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                   <ButtonLink href="/apply" variant="primary" size="lg">
