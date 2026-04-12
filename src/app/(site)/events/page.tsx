@@ -276,6 +276,22 @@ export default function EventsPage() {
       {/* EVENTS LIST */}
       <section className="border-b border-border bg-bg py-16 md:py-24">
         <Container>
+          {/* Flyer */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeUpVariants}
+            transition={{ duration: 0.6 }}
+            className="mb-12 max-w-2xl mx-auto"
+          >
+            <img
+              src="/PHOTO-2026-04-05-13-32-20.jpg"
+              alt="Event flyer"
+              className="w-full rounded-2xl border border-border shadow-lg"
+            />
+          </motion.div>
+
           {events.length === 0 ? (
             <motion.div
               initial="hidden"
@@ -283,7 +299,7 @@ export default function EventsPage() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
               transition={{ duration: 0.6 }}
-              className="flex flex-col items-center justify-center py-20 text-center"
+              className="flex flex-col items-center justify-center py-12 text-center"
             >
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/10 mb-6">
                 <Calendar className="h-10 w-10 text-gold/60" />
