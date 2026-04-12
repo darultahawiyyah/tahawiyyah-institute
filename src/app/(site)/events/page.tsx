@@ -276,21 +276,32 @@ export default function EventsPage() {
       {/* EVENTS LIST */}
       <section className="border-b border-border bg-bg py-16 md:py-24">
         <Container>
-          {/* Flyer */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUpVariants}
-            transition={{ duration: 0.6 }}
-            className="mb-12 max-w-2xl mx-auto"
-          >
-            <img
-              src="/PHOTO-2026-04-05-13-32-20.jpg"
-              alt="Event flyer"
-              className="w-full rounded-2xl border border-border shadow-lg"
-            />
-          </motion.div>
+          {/* ── ADD EVENT FLYERS HERE ── */}
+          {(() => {
+            const flyers = [
+              { src: "/PHOTO-2026-04-05-13-32-20.jpg", alt: "Event flyer" },
+              // { src: "/next-event.jpg", alt: "Next event" },
+            ];
+            return (
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeUpVariants}
+                transition={{ duration: 0.6 }}
+                className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4"
+              >
+                {flyers.map((f, i) => (
+                  <img
+                    key={i}
+                    src={f.src}
+                    alt={f.alt}
+                    className="w-full rounded-xl border border-border shadow-md object-cover aspect-[3/4]"
+                  />
+                ))}
+              </motion.div>
+            );
+          })()}
 
           {events.length === 0 ? (
             <motion.div
