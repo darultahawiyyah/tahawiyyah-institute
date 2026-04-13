@@ -44,7 +44,7 @@ const teachers = [
     title: "Instructor — Naḥw",
     courses: ["ARB 101"],
     summary:
-      "Mawlānā Ibraheem is an instructor at Ṭaḥāwiyyah Institute specializing in classical Arabic grammar (Naḥw).",
+      "Mawlānā Ibraheem completed his Ḥifẓ at Darul Uloom New York and his ʿĀlimiyyah at Darul Quran wa Sunnah, studying under distinguished scholars including Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad. He holds a degree in Cybersecurity from John Jay College and currently serves as a certified chaplain and Imam at Flushing Muslim Center.",
   },
   {
     slug: "mawlana-umair",
@@ -52,7 +52,7 @@ const teachers = [
     title: "Instructor",
     courses: [],
     summary:
-      "Mawlānā Umair is an instructor at Ṭaḥāwiyyah Institute.",
+      "Mawlānā Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
   },
   {
     slug: "mawlana-fahim",

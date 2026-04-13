@@ -106,12 +106,15 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Ibraheem",
     title: "Instructor — Naḥw",
     summary:
-      "Mawlānā Ibraheem is an instructor at Ṭaḥāwiyyah Institute specializing in classical Arabic grammar (Naḥw).",
+      "Mawlānā Ibraheem completed his Ḥifẓ at Darul Uloom New York and his ʿĀlimiyyah at Darul Quran wa Sunnah, studying under distinguished scholars including Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad. He holds a degree in Cybersecurity from John Jay College and currently serves as a certified chaplain and Imam at Flushing Muslim Center.",
     education: [
-      "ʿĀlimiyyah program — traditional Islamic sciences",
+      "Ḥifẓ al-Qurʾān at Darul Uloom New York",
+      "ʿĀlimiyyah program at Darul Quran wa Sunnah — studied under Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad",
+      "B.S. in Cybersecurity, John Jay College of Criminal Justice",
+      "Certified Chaplain",
     ],
     biography:
-      "Mawlānā Ibraheem is an instructor at Ṭaḥāwiyyah Institute specializing in classical Arabic grammar (Naḥw). He brings a focused and methodical approach to teaching the foundational principles of Arabic syntax, guiding students through the essential tools needed to engage with classical Islamic texts in their original language.",
+      "Mawlānā Ibraheem completed his Ḥifẓ of the Qurʾān at Darul Uloom New York, laying a strong foundation in the sacred sciences from an early stage. Driven by a deep commitment to Islamic scholarship and a desire to serve the dīn, he continued his studies at Darul Quran wa Sunnah, where he enrolled in and successfully completed the rigorous ʿĀlimiyyah program. Throughout his years of study, he had the privilege of benefiting from the guidance and mentorship of distinguished scholars in New York, including Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad, among others. His studies encompassed a wide range of traditional Islamic disciplines, including Fiqh, Tafsīr, Ḥadīth, Arabic language, and Uṣūl al-Fiqh, equipping him with a well-rounded and grounded understanding of the tradition. Following the completion of his religious education, Mawlānā Ibraheem broadened his academic and professional horizons by enrolling at John Jay College of Criminal Justice, where he earned a degree in Cybersecurity. This unique combination of traditional Islamic scholarship and contemporary academic training enables him to effectively navigate and address the challenges facing modern Muslim communities. He is currently a certified chaplain, providing spiritual care, counseling, and pastoral support in diverse settings. In addition, he serves as the Imam at Flushing Muslim Center, where he is actively engaged in community leadership, delivering sermons, teaching, and working closely with congregants to foster spiritual growth, education, and a strong sense of community.",
     courses: ["ARB 101 — Classical Arabic Grammar (Naḥw)"],
   },
   {
@@ -119,12 +122,14 @@ const teachersData: TeacherData[] = [
     name: "Mawlānā Umair",
     title: "Instructor",
     summary:
-      "Mawlānā Umair is an instructor at Ṭaḥāwiyyah Institute.",
+      "Mawlānā Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
     education: [
-      "ʿĀlimiyyah program — traditional Islamic sciences",
+      "Ḥifẓ al-Qurʾān at Darul Uloom New York",
+      "ʿĀlimiyyah program at Darul Uloom New York — studied under Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman",
+      "Takhaṣṣuṣ fī al-Iftāʾ at Darul Uloom New York — under Mufti Manzoor and Mufti Mahdi",
     ],
     biography:
-      "Mawlānā Umair is an instructor at Ṭaḥāwiyyah Institute, dedicated to transmitting the traditional Islamic sciences to the next generation of students.",
+      "Mawlānā Umair completed his Ḥifẓ of the Noble Qurʾān, as well as the rigorous ʿĀlimiyyah and specialized Iftāʾ programs, at Darul Uloom New York. His academic journey is marked by dedication, discipline, and a deep commitment to preserving and conveying the sacred sciences. From an early stage, he devoted himself to the memorization of the Qurʾān, followed by years of intensive study in the traditional Islamic sciences. During his ʿĀlimiyyah training, Mawlānā Umair studied under some of the most senior and respected scholars in New York, including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman. Under their guidance, he developed a strong foundation in disciplines such as Fiqh, Tafsīr, Ḥadīth, Arabic language, and Uṣūl al-Fiqh, equipping him with both depth and breadth in the Islamic scholarly tradition. Following the completion of his ʿĀlimiyyah degree, he advanced to specialize in Iftāʾ, where he trained under distinguished jurists such as Mufti Manzoor and Mufti Mahdi. Through this advanced training, he refined his ability to analyze complex legal matters, apply classical jurisprudential principles, and provide well-reasoned guidance on contemporary issues affecting the Muslim community. Currently, Mawlānā Umair serves as a dedicated Ḥifẓ teacher at Jamia Quraniah Academy, where he plays a pivotal role in shaping the next generation of Ḥuffāẓ. In this capacity, he not only focuses on the precise memorization and retention of the Qurʾān, but also instills in his students the values of sincerity, discipline, and a deep spiritual connection to the Book of Allah. Through his teaching, mentorship, and ongoing service, Mawlānā Umair continues to contribute meaningfully to the preservation of Qurʾānic tradition and the strengthening of Islamic scholarship in America, striving to cultivate individuals who embody both knowledge and character in their service to the dīn and the wider community.",
     courses: ["Courses — Upcoming Semesters"],
   },
 ];
