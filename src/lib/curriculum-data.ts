@@ -38,7 +38,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
     location: "Online",
-    schedule: "Tuesday 8:55–9:45 PM",
+    schedule: "Monday 8:55–9:45 PM",
     description:
       "This course covers the foundations of Islamic creed and theology, guiding students through the classical texts that define orthodox Sunnī belief. Beginning with the attributes of Allāh and the pillars of faith, the course advances into topics such as prophethood, eschatology, and contemporary issues in creed. Students will learn not just what to believe, but why — engaging with the intellectual tradition to develop a deeply rooted conviction that is both spiritually grounded and intellectually sound.",
     texts: ["TBA"],
@@ -51,7 +51,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Rohan",
     instructorSlug: "mawlana-rohan",
     location: "In Person — Masjid Ḥanafiyyah",
-    schedule: "Saturday 3:05–3:55 PM",
+    schedule: "Saturday 3:55–4:45 PM",
     description:
       "This course covers the rules and practical application of proper Qurʾānic recitation. Students will learn the articulation points of each letter (Makhārij al-Ḥurūf), the characteristics of letters, and the rules governing elongation, nasalization, stopping, and more. The course progresses from foundational rules to mastery-level recitation, with the goal of preparing students for accurate and beautiful recitation of the Qurʾān. Regular guided recitation sessions provide hands-on practice and personalized feedback.",
     texts: ["TBA"],
@@ -61,10 +61,10 @@ export const semester1Courses: CourseData[] = [
     code: "ARB 101",
     name: "Naḥw",
     fullName: "Classical Arabic Grammar (Naḥw)",
-    instructor: "Mawlānā Abdurrahman Khan",
-    instructorSlug: "mawlana-abdurrahman-khan",
+    instructor: "Mawlānā Ibraheem",
+    instructorSlug: "mawlana-ibraheem",
     location: "Online",
-    schedule: "Monday 8:55–9:45 PM",
+    schedule: "Tuesday 8:55–9:45 PM",
     description:
       "This course builds a strong foundation in classical Arabic grammar (Naḥw), the essential tool for accessing Islamic texts in their original language. Students will start with the basics of sentence structure before advancing into grammatical analysis (Iʿrāb), complex sentence constructions, and rhetorical devices. By the end of the course, students will have the grammatical foundation to begin reading classical Islamic texts with confidence and independence.",
     texts: ["TBA"],
@@ -90,7 +90,7 @@ export const semester1Courses: CourseData[] = [
     instructor: "Mawlānā Arqam Masroor",
     instructorSlug: "mawlana-arqam",
     location: "In Person — Masjid Ḥanafiyyah",
-    schedule: "Saturday 2:10–3:00 PM",
+    schedule: "Saturday 3:00–3:50 PM",
     description:
       "This course helps students understand and reflect on the meanings of the Qurʾān. Selected verses will be studied with the help of well-known tafsīr works such as Rūḥ al-Maʿānī, Tafsīr Ibn Kathīr, Tafsīr Maẓharī, and Tafsīr al-Qurṭubī. The goal is to help students understand the message of the verses, learn the explanations of classical scholars, and develop a deeper connection with the Qurʾān than just the translation.",
     texts: ["Rūḥ al-Maʿānī", "Tafsīr Ibn Kathīr", "Tafsīr Maẓharī", "Tafsīr al-Qurṭubī"],

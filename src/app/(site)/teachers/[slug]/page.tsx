@@ -42,9 +42,9 @@ const teachersData: TeacherData[] = [
   {
     slug: "mawlana-abdurrahman-khan",
     name: "Mawlānā Abdurrahman Khan",
-    title: "Instructor — Naḥw & Fiqh | Administration & Logistics",
+    title: "Instructor — Fiqh | Administration",
     summary:
-      "Mawlānā Abdurrahman Khan is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Naḥw and Fiqh at Ṭaḥāwiyyah Institute and oversees the administration, logistics, and communications of the program.",
+      "Mawlānā Abdurrahman Khan is a scholar from Queens, New York, who completed his ʿĀlimiyyah studies at Darul Uloom New York and graduated with a Master's in Islamic Sciences from Jamia Binoria. He teaches Fiqh at Ṭaḥāwiyyah Institute.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York (completed 2014)",
       "ʿĀlimiyyah program at Jamia Qurania Academy; completed at Darul Uloom New York",
@@ -53,8 +53,8 @@ const teachersData: TeacherData[] = [
       "Currently pursuing Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Mizanur Rahman and Muftī Manzoor at Darul Uloom New York",
     ],
     biography:
-      "Mawlānā Abdurrahman Khan was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ) under senior scholars Muftī Mizanur Rahman and Muftī Manzoor at Darul Uloom New York. At Ṭaḥāwiyyah Institute, Mawlānā Abdurrahman serves both as an instructor — teaching Classical Arabic Grammar (Naḥw) and Ḥanafī Jurisprudence and Legal Methodology — and as the primary administrator, managing the logistics and communications that keep the program running smoothly.",
-    courses: ["FQH 101 — Ḥanafī Jurisprudence and Legal Methodology", "ARB 101 — Classical Arabic Grammar (Naḥw)", "Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
+      "Mawlānā Abdurrahman Khan was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ) under senior scholars Muftī Mizanur Rahman and Muftī Manzoor at Darul Uloom New York. At Ṭaḥāwiyyah Institute, Mawlānā Abdurrahman serves as an instructor teaching Ḥanafī Jurisprudence and Legal Methodology, and as the primary administrator, managing the logistics and communications that keep the program running smoothly.",
+    courses: ["FQH 101 — Ḥanafī Jurisprudence and Legal Methodology", "Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
   },
   {
     slug: "mawlana-fahim",
@@ -100,6 +100,32 @@ const teachersData: TeacherData[] = [
     biography:
       "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān, known for his deep commitment to the preservation and transmission of the sacred sciences. He completed the ʿĀlimiyyah program, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under some of the most senior scholars of our time. Among his teachers were esteemed figures such as Muftī Ibrahim Salajee, Qāriʾ Abdullah Motara, and Muftī Ahmad Ali. He studied Qirāʾāt under the renowned Qāriʾ Ismail Essack (رحمه الله), gaining a strong foundation in the precise and authentic modes of Qurʾānic recitation. In addition to his studies, Qāriʾ Nazrul pursued advanced training in Islamic jurisprudence, completing the Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tasir Miah at Darul Ilm Birmingham. Upon completing his studies, he returned to the United States to serve his community with dedication and sincerity. He currently serves as the Religious Director at Shelter Rock Islamic Center, where he plays a vital role in guiding and educating the community. For many years, he has been actively teaching the sciences of Qirāʾāt, including Tajwīd, Sabʿah (the seven modes of recitation), and Thalāthah Qirāʾāt.",
     courses: ["Qirāʾāt — Advanced (coming soon)"],
+  },
+  {
+    slug: "mawlana-ibraheem",
+    name: "Mawlānā Ibraheem",
+    title: "Instructor — Naḥw",
+    summary:
+      "Mawlānā Ibraheem is an instructor at Ṭaḥāwiyyah Institute specializing in classical Arabic grammar (Naḥw).",
+    education: [
+      "ʿĀlimiyyah program — traditional Islamic sciences",
+    ],
+    biography:
+      "Mawlānā Ibraheem is an instructor at Ṭaḥāwiyyah Institute specializing in classical Arabic grammar (Naḥw). He brings a focused and methodical approach to teaching the foundational principles of Arabic syntax, guiding students through the essential tools needed to engage with classical Islamic texts in their original language.",
+    courses: ["ARB 101 — Classical Arabic Grammar (Naḥw)"],
+  },
+  {
+    slug: "mawlana-umair",
+    name: "Mawlānā Umair",
+    title: "Instructor",
+    summary:
+      "Mawlānā Umair is an instructor at Ṭaḥāwiyyah Institute.",
+    education: [
+      "ʿĀlimiyyah program — traditional Islamic sciences",
+    ],
+    biography:
+      "Mawlānā Umair is an instructor at Ṭaḥāwiyyah Institute, dedicated to transmitting the traditional Islamic sciences to the next generation of students.",
+    courses: ["Courses — Upcoming Semesters"],
   },
 ];
 
