@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/Button";
 import { individualCourseOptions } from "@/lib/apply-schema";
 import { cn } from "@/lib/cn";
 
-const PER_COURSE_FEE = 50;
+const PER_COURSE_FEE = 80;
 const SEMESTER_FEE = 200;
 
 const fadeUpVariants = {
