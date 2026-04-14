@@ -47,12 +47,12 @@ const teachers = [
       "Mawlānā Ibraheem completed his Ḥifẓ at Darul Uloom New York and his ʿĀlimiyyah at Darul Quran wa Sunnah, studying under distinguished scholars including Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad. He holds a degree in Cybersecurity from John Jay College and currently serves as a certified chaplain and Imam at Flushing Muslim Center.",
   },
   {
-    slug: "mawlana-umair",
-    name: "Mawlānā Umair",
-    title: "Instructor",
+    slug: "mufti-umair",
+    name: "Muftī Umair",
+    title: "Instructor — Ṣarf",
     courses: [],
     summary:
-      "Mawlānā Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
+      "Muftī Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
   },
   {
     slug: "mawlana-fahim",
@@ -144,23 +144,8 @@ export default function TeachersPage() {
                         <h3 className="font-display text-lg font-semibold text-text group-hover:text-gold transition-colors leading-snug">
                           {teacher.name}
                         </h3>
-                        <p className="mt-0.5 text-xs text-muted leading-snug">{teacher.title}</p>
                       </div>
                     </div>
-
-                    {/* Course badges */}
-                    {teacher.courses.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5">
-                        {teacher.courses.map((c) => (
-                          <span
-                            key={c}
-                            className="inline-flex items-center rounded-full border border-gold/25 bg-gold/8 px-2.5 py-0.5 text-xs font-medium text-gold"
-                          >
-                            {c}
-                          </span>
-                        ))}
-                      </div>
-                    )}
 
                     {/* Summary */}
                     <p className="text-sm leading-relaxed text-muted line-clamp-3">

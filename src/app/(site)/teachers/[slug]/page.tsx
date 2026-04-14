@@ -37,7 +37,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Arqam Masroor is an Islamic studies scholar and educator based in New York. He began his studies at Darul Qurʾān wa Sunnah in the United States, where he memorized the Qurʾān and commenced formal Islamic studies. He later continued his education in Pakistan at Jamia Binoria Al-ʿĀlamiyyah, one of the most distinguished institutions of Islamic learning in the world, where he completed the ʿĀlimiyyah program under accomplished scholars of the traditional sciences. He is currently pursuing Takhaṣṣuṣ fī al-Iftāʾ, a rigorous postgraduate specialization in Islamic law, deepening his command of jurisprudence and its application to contemporary questions. He serves as a local Imām at Elmhurst Islamic Center and as an instructor at Darul Qurʾān wa Sunnah, where he continues to transmit the sacred sciences to the next generation. In addition to his teaching and community work, he is a founder of Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for students balancing demanding academic and professional lives.",
-    courses: ["SAR 101 — Foundations of Arabic Morphology (Ṣarf)", "TAF 101 — Classical Tafsīr and Qurʾānic Sciences"],
+    courses: [],
   },
   {
     slug: "mawlana-abdurrahman-khan",
@@ -54,7 +54,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Abdurrahman Khan was born and raised in Flushing, Queens, New York. He memorized the Qurʾān at Darul Uloom New York, completing his Ḥifẓ in 2014. He then pursued the ʿĀlimiyyah program, beginning at Jamia Qurania Academy and completing his studies at Darul Uloom New York, graduating in August 2025 with a Master's in Islamic Sciences from Jamia Binoria. Alongside his ʿĀlimiyyah training, he earned a Bachelor of Arts in Computer Science from CUNY Queens College, graduating Cum Laude in January 2026. He is currently pursuing a postgraduate specialization in Islamic jurisprudence and Fatwā issuance (Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ) under senior scholars Muftī Mizanur Rahman and Muftī Manzoor at Darul Uloom New York. At Ṭaḥāwiyyah Institute, Mawlānā Abdurrahman serves as an instructor teaching Ḥanafī Jurisprudence and Legal Methodology, and as the primary administrator, managing the logistics and communications that keep the program running smoothly.",
-    courses: ["FQH 101 — Ḥanafī Jurisprudence and Legal Methodology", "Administration, Logistics & Communications — Ṭaḥāwiyyah Institute"],
+    courses: [],
   },
   {
     slug: "mawlana-fahim",
@@ -69,7 +69,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Fahim is a dedicated student of Islamic scholarship and a committed servant of the Muslim community. He completed the rigorous seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under the guidance of esteemed scholars. During his studies, he had the privilege of learning under respected senior scholars such as Muftī Ruhul Amin and Muftī Nouman, benefiting greatly from their depth of knowledge and years of experience in the tradition. Following his graduation, Mawlānā Fahim pursued an additional year of Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ, specializing in Islamic jurisprudence and the principles of issuing legal verdicts (fatāwā). This advanced training refined his ability to engage contemporary questions through the lens of classical scholarship. Currently, Mawlānā Fahim serves as a chaplain at Queens College, where he is actively engaged in supporting and nurturing the spiritual and intellectual growth of Muslim students. Through mentorship, counseling, and educational initiatives, he strives to guide the next generation with knowledge, wisdom, and a strong connection to their faith.",
-    courses: ["Courses — Upcoming Semesters"],
+    courses: [],
   },
   {
     slug: "mawlana-rohan",
@@ -84,7 +84,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Rohan is a graduate of the ʿĀlimiyyah program from Jami'ah Nu'maniyyah in South Africa, a distinguished institution of traditional Islamic learning, where he had the privilege of studying under the renowned Mawlānā Fadlur Rahman Azmi — a senior scholar and expert in the Ḥadīth sciences who has benefited students across the world. Under his tutelage, Mawlānā Rohan received a thorough grounding in the classical Islamic disciplines, including Qurʾān, Ḥadīth, Fiqh, ʿAqīdah, and Arabic. He further studied the sciences of Qirāʾāt — the various authenticated modes of Qurʾānic recitation — under Qāriʾ Abdullah Motara, a master of the recitational arts, deepening his connection to the living oral tradition of the Qurʾān. He is currently advancing his specialization in Fiqh and Islamic jurisprudence, continuing his lifelong commitment to scholarship and growth. He presently serves as the Imām and Resident Scholar at Shelter Rock Islamic Center, where he teaches advanced Islamic sciences and provides spiritual guidance to the community. He also serves as a high school Islamic teacher at Crescent School. Alongside his colleagues, he co-founded Ṭaḥāwiyyah Institute, an initiative dedicated to providing structured traditional Islamic education for brothers and sisters who are balancing their academic studies and professional careers.",
-    courses: ["AQD 101 — Foundations of Islamic Theology (ʿAqīdah)", "TAJ 101 — Principles of Qurʾānic Recitation (Tajwīd)"],
+    courses: [],
   },
   {
     slug: "qari-nazrul",
@@ -99,7 +99,7 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān, known for his deep commitment to the preservation and transmission of the sacred sciences. He completed the ʿĀlimiyyah program, where he studied the traditional Islamic sciences — including Qurʾān, Ḥadīth, Fiqh, and Arabic — under some of the most senior scholars of our time. Among his teachers were esteemed figures such as Muftī Ibrahim Salajee, Qāriʾ Abdullah Motara, and Muftī Ahmad Ali. He studied Qirāʾāt under the renowned Qāriʾ Ismail Essack (رحمه الله), gaining a strong foundation in the precise and authentic modes of Qurʾānic recitation. In addition to his studies, Qāriʾ Nazrul pursued advanced training in Islamic jurisprudence, completing the Takhaṣṣuṣ fī al-Fiqh wa-al-Iftāʾ under Muftī Tasir Miah at Darul Ilm Birmingham. Upon completing his studies, he returned to the United States to serve his community with dedication and sincerity. He currently serves as the Religious Director at Shelter Rock Islamic Center, where he plays a vital role in guiding and educating the community. For many years, he has been actively teaching the sciences of Qirāʾāt, including Tajwīd, Sabʿah (the seven modes of recitation), and Thalāthah Qirāʾāt.",
-    courses: ["Qirāʾāt — Advanced (coming soon)"],
+    courses: [],
   },
   {
     slug: "mawlana-ibraheem",
@@ -115,22 +115,22 @@ const teachersData: TeacherData[] = [
     ],
     biography:
       "Mawlānā Ibraheem completed his Ḥifẓ of the Qurʾān at Darul Uloom New York, laying a strong foundation in the sacred sciences from an early stage. Driven by a deep commitment to Islamic scholarship and a desire to serve the dīn, he continued his studies at Darul Quran wa Sunnah, where he enrolled in and successfully completed the rigorous ʿĀlimiyyah program. Throughout his years of study, he had the privilege of benefiting from the guidance and mentorship of distinguished scholars in New York, including Mufti Ruhul Amin, Mufti Nouman, and Mawlana Hammad, among others. His studies encompassed a wide range of traditional Islamic disciplines, including Fiqh, Tafsīr, Ḥadīth, Arabic language, and Uṣūl al-Fiqh, equipping him with a well-rounded and grounded understanding of the tradition. Following the completion of his religious education, Mawlānā Ibraheem broadened his academic and professional horizons by enrolling at John Jay College of Criminal Justice, where he earned a degree in Cybersecurity. This unique combination of traditional Islamic scholarship and contemporary academic training enables him to effectively navigate and address the challenges facing modern Muslim communities. He is currently a certified chaplain, providing spiritual care, counseling, and pastoral support in diverse settings. In addition, he serves as the Imam at Flushing Muslim Center, where he is actively engaged in community leadership, delivering sermons, teaching, and working closely with congregants to foster spiritual growth, education, and a strong sense of community.",
-    courses: ["ARB 101 — Classical Arabic Grammar (Naḥw)"],
+    courses: [],
   },
   {
-    slug: "mawlana-umair",
-    name: "Mawlānā Umair",
-    title: "Instructor",
+    slug: "mufti-umair",
+    name: "Muftī Umair",
+    title: "Instructor — Ṣarf",
     summary:
-      "Mawlānā Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
+      "Muftī Umair completed his Ḥifẓ, ʿĀlimiyyah, and Iftāʾ at Darul Uloom New York, studying under senior scholars including Mawlana Rafiq, Mawlana Abdurraheem, and Mawlana Azizurrahman, and specializing in Iftāʾ under Mufti Manzoor and Mufti Mahdi. He currently serves as a Ḥifẓ teacher at Jamia Quraniah Academy.",
     education: [
       "Ḥifẓ al-Qurʾān at Darul Uloom New York",
-      "ʿĀlimiyyah program at Darul Uloom New York — studied under Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman",
+      "ʿĀlimiyyah program at Darul Uloom New York — studied under Mawlana Rafiq, Mawlana Abdurraheem, and Mawlana Azizurrahman",
       "Takhaṣṣuṣ fī al-Iftāʾ at Darul Uloom New York — under Mufti Manzoor and Mufti Mahdi",
     ],
     biography:
-      "Mawlānā Umair completed his Ḥifẓ of the Noble Qurʾān, as well as the rigorous ʿĀlimiyyah and specialized Iftāʾ programs, at Darul Uloom New York. His academic journey is marked by dedication, discipline, and a deep commitment to preserving and conveying the sacred sciences. From an early stage, he devoted himself to the memorization of the Qurʾān, followed by years of intensive study in the traditional Islamic sciences. During his ʿĀlimiyyah training, Mawlānā Umair studied under some of the most senior and respected scholars in New York, including Mawlana Rafiq, Mawlana Abdurraheem, Mawlana Ahmedul Haqq, and Mawlana Azizurrahman. Under their guidance, he developed a strong foundation in disciplines such as Fiqh, Tafsīr, Ḥadīth, Arabic language, and Uṣūl al-Fiqh, equipping him with both depth and breadth in the Islamic scholarly tradition. Following the completion of his ʿĀlimiyyah degree, he advanced to specialize in Iftāʾ, where he trained under distinguished jurists such as Mufti Manzoor and Mufti Mahdi. Through this advanced training, he refined his ability to analyze complex legal matters, apply classical jurisprudential principles, and provide well-reasoned guidance on contemporary issues affecting the Muslim community. Currently, Mawlānā Umair serves as a dedicated Ḥifẓ teacher at Jamia Quraniah Academy, where he plays a pivotal role in shaping the next generation of Ḥuffāẓ. In this capacity, he not only focuses on the precise memorization and retention of the Qurʾān, but also instills in his students the values of sincerity, discipline, and a deep spiritual connection to the Book of Allah. Through his teaching, mentorship, and ongoing service, Mawlānā Umair continues to contribute meaningfully to the preservation of Qurʾānic tradition and the strengthening of Islamic scholarship in America, striving to cultivate individuals who embody both knowledge and character in their service to the dīn and the wider community.",
-    courses: ["Courses — Upcoming Semesters"],
+      "Muftī Umair completed his Ḥifẓ of the Noble Qurʾān, as well as the rigorous ʿĀlimiyyah and specialized Iftāʾ programs, at Darul Uloom New York. His academic journey is marked by dedication, discipline, and a deep commitment to preserving and conveying the sacred sciences. From an early stage, he devoted himself to the memorization of the Qurʾān, followed by years of intensive study in the traditional Islamic sciences. During his ʿĀlimiyyah training, Muftī Umair studied under some of the most senior and respected scholars in New York, including Mawlana Rafiq, Mawlana Abdurraheem, and Mawlana Azizurrahman. Under their guidance, he developed a strong foundation in disciplines such as Fiqh, Tafsīr, Ḥadīth, Arabic language, and Uṣūl al-Fiqh, equipping him with both depth and breadth in the Islamic scholarly tradition. Following the completion of his ʿĀlimiyyah degree, he advanced to specialize in Iftāʾ, where he trained under distinguished jurists such as Mufti Manzoor and Mufti Mahdi. Through this advanced training, he refined his ability to analyze complex legal matters, apply classical jurisprudential principles, and provide well-reasoned guidance on contemporary issues affecting the Muslim community. Currently, Muftī Umair serves as a dedicated Ḥifẓ teacher at Jamia Quraniah Academy, where he plays a pivotal role in shaping the next generation of Ḥuffāẓ. In this capacity, he not only focuses on the precise memorization and retention of the Qurʾān, but also instills in his students the values of sincerity, discipline, and a deep spiritual connection to the Book of Allah. Through his teaching, mentorship, and ongoing service, Muftī Umair continues to contribute meaningfully to the preservation of Qurʾānic tradition and the strengthening of Islamic scholarship in America, striving to cultivate individuals who embody both knowledge and character in their service to the dīn and the wider community.",
+    courses: [],
   },
 ];
 
