@@ -28,6 +28,7 @@ export const semester1Courses: CourseData[] = [
       "المدخل الي تاريخ التشريع الاسلامي",
       "تاريخ التشريع الاسلامي",
       "التقليد في نظر الشريعة",
+      "فقه اهل العراق و حديثهم",
     ],
   },
   {
@@ -67,7 +68,7 @@ export const semester1Courses: CourseData[] = [
     schedule: "Tuesday 8:55–9:45 PM",
     description:
       "This course builds a strong foundation in classical Arabic grammar (Naḥw), the essential tool for accessing Islamic texts in their original language. Students will start with the basics of sentence structure before advancing into grammatical analysis (Iʿrāb), complex sentence constructions, and rhetorical devices. By the end of the course, students will have the grammatical foundation to begin reading classical Islamic texts with confidence and independence.",
-    texts: ["TBA"],
+    texts: ["Ten Lessons", "Tasheel Nahw"],
   },
   {
     slug: "sar-101",
@@ -80,7 +81,7 @@ export const semester1Courses: CourseData[] = [
     schedule: "Tuesday 8:00–8:50 PM",
     description:
       "This course introduces students to the foundational principles of Arabic morphology, focusing on word patterns, verb forms, and the structural development of Arabic words. The study will be guided through classical introductory texts including Āsān Ṣarf (collection), Miftāḥ al-Ṣarf, and ʿIlm al-Ṣīghah, enabling students to develop a clear understanding of verb conjugation, patterns (awzān), and the formation of nouns and verbs. The aim is to equip students with the tools necessary to analyze Arabic words and strengthen their ability to read and understand classical Islamic texts.",
-    texts: ["Āsān Ṣarf (collection)", "Miftāḥ al-Ṣarf", "ʿIlm al-Ṣīghah"],
+    texts: ["Āsān Ṣarf (collection)", "Miftāḥ al-Ṣarf", "ʿIlm al-Ṣīghah", "Easy Morphology"],
   },
   {
     slug: "taf-101",

@@ -410,6 +410,11 @@ export default function Apply() {
                       <span className="text-muted">Full semester (Masjid Ḥanafiyyah Track)</span>
                       <span className="font-medium text-text">${SEMESTER_FEE}</span>
                     </div>
+                    <div className="border-t border-gold/20 pt-2 mt-2">
+                      <p className="text-muted leading-relaxed">
+                        <span className="font-medium text-text">Monthly payment plan available</span> — pay in 4 installments (e.g. 1 course = <span className="font-medium text-text">$20/month</span>). Details will be sent via email after enrollment.
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -843,6 +848,11 @@ export default function Apply() {
                           <div className="border-t border-gold/20 pt-2 flex justify-between font-semibold">
                             <span className="text-text">Total</span>
                             <span className="text-gold">${totalPrice}</span>
+                          </div>
+                          <div className="border-t border-gold/20 pt-2 mt-1">
+                            <p className="text-muted text-xs leading-relaxed">
+                              <span className="font-medium text-text">Monthly plan available:</span> ${Math.round(totalPrice / 4)}/month × 4 months
+                            </p>
                           </div>
                         </div>
 
