@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darul Tahawiyyah — Semester 1 Schedule</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #8B7355;
+      --gold-light: #c9a96e;
+      --gold-bg: #fdf8f0;
+      --text: #1a1612;
+      --muted: #6b6058;
+      --border: #e8dfd0;
+      --surface: #f7f2ea;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--text);
+      padding: 48px 52px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+    }
+
+    .header-left {}
+
+    .institute-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .institute-arabic {
+      font-size: 18px;
+      color: var(--gold);
+      font-family: 'EB Garamond', serif;
+      margin-top: 2px;
+      direction: rtl;
+    }
+
+    .doc-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .semester-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .timezone-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── DAY BLOCK ── */
+    .day-block {
+      margin-bottom: 32px;
+    }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .day-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--gold);
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .day-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .day-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+
+    /* ── SESSION CARDS ── */
+    .sessions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .session-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .session-bar {
+      height: 5px;
+      background: linear-gradient(to right, var(--gold), var(--gold-light));
+    }
+
+    .session-body {
+      padding: 16px 18px;
+    }
+
+    .session-time {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .clock-icon {
+      width: 14px;
+      height: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .time-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+
+    .course-code {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .course-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .meta-icon {
+      width: 13px;
+      height: 13px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .meta-text {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid rgba(139, 115, 85, 0.3);
+      background: rgba(139, 115, 85, 0.06);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 20px;
+      margin-top: 4px;
+    }
+
+    /* ── TEACHER SUMMARY ── */
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .teacher-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .teacher-table thead tr {
+      background: var(--gold-bg);
+    }
+
+    .teacher-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .teacher-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text);
+    }
+
+    .teacher-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .teacher-table tr:nth-child(even) td {
+      background: var(--surface);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid rgba(139,115,85,0.3);
+      background: rgba(139,115,85,0.06);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 7px;
+      border-radius: 20px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-note {
+      font-size: 10px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .footer-url {
+      font-size: 10px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    @media print {
+      body { padding: 32px 40px; }
+      .day-block { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="institute-name">Darul Tahawiyyah</div>
+      <div class="institute-arabic">دار الطحاوية</div>
+      <div class="doc-title">Weekly Class Schedule</div>
+    </div>
+    <div class="header-right">
+      <span class="semester-badge">Semester 1</span>
+      <div class="timezone-note">All times Eastern Time (ET)</div>
+    </div>
+  </div>
+
+  <!-- MONDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">MON</div>
+      <div class="day-name">Monday</div>
+      <div class="day-line"></div>
+    </div>
+    <div class="sessions">
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">8:00 – 8:50 PM</span>
+          </div>
+          <div class="course-code">FQH 101</div>
+          <div class="course-name">Ḥanafī Jurisprudence &amp; Legal Methodology</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Mawlānā Abdurrahman Khan</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+            Online
+          </span>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">8:55 – 9:45 PM</span>
+          </div>
+          <div class="course-code">AQD 101</div>
+          <div class="course-name">Foundations of Islamic Theology (ʿAqīdah)</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Mawlānā Rohan</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+            Online
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TUESDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">TUE</div>
+      <div class="day-name">Tuesday</div>
+      <div class="day-line"></div>
+    </div>
+    <div class="sessions">
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">8:00 – 8:50 PM</span>
+          </div>
+          <div class="course-code">SAR 101</div>
+          <div class="course-name">Foundations of Arabic Morphology (Ṣarf)</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Muftī Umair</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+            Online
+          </span>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">8:55 – 9:45 PM</span>
+          </div>
+          <div class="course-code">ARB 101</div>
+          <div class="course-name">Classical Arabic Grammar (Naḥw)</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Mawlānā Ibraheem</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"/></svg>
+            Online
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">SAT</div>
+      <div class="day-name">Saturday</div>
+      <div class="day-line"></div>
+    </div>
+    <div class="sessions">
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">3:00 – 3:50 PM</span>
+          </div>
+          <div class="course-code">TAF 101</div>
+          <div class="course-name">Classical Tafsīr and Qurʾānic Sciences</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Mawlānā Arqam Masroor</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            In Person — Masjid Ḥanafiyyah
+          </span>
+        </div>
+      </div>
+
+      <div class="session-card">
+        <div class="session-bar"></div>
+        <div class="session-body">
+          <div class="session-time">
+            <svg class="clock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="time-text">3:55 – 4:45 PM</span>
+          </div>
+          <div class="course-code">TAJ 101</div>
+          <div class="course-name">Principles of Qurʾānic Recitation (Tajwīd)</div>
+          <div class="meta-row">
+            <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="meta-text">Mawlānā Rohan</span>
+          </div>
+          <span class="location-badge">
+            <svg width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            In Person — Masjid Ḥanafiyyah
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TEACHER SUMMARY TABLE -->
+  <div class="section-title">Teacher Overview</div>
+  <table class="teacher-table">
+    <thead>
+      <tr>
+        <th>Teacher</th>
+        <th>Subject</th>
+        <th>Day &amp; Time</th>
+        <th>Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mawlānā Abdurrahman Khan</strong></td>
+        <td>FQH 101 — Ḥanafī Jurisprudence</td>
+        <td>Monday, 8:00–8:50 PM</td>
+        <td><span class="tag">Online</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mawlānā Rohan</strong></td>
+        <td>AQD 101 — ʿAqīdah</td>
+        <td>Monday, 8:55–9:45 PM</td>
+        <td><span class="tag">Online</span></td>
+      </tr>
+      <tr>
+        <td><strong>Muftī Umair</strong></td>
+        <td>SAR 101 — Ṣarf</td>
+        <td>Tuesday, 8:00–8:50 PM</td>
+        <td><span class="tag">Online</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mawlānā Ibraheem</strong></td>
+        <td>ARB 101 — Naḥw</td>
+        <td>Tuesday, 8:55–9:45 PM</td>
+        <td><span class="tag">Online</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mawlānā Arqam Masroor</strong></td>
+        <td>TAF 101 — Tafsīr &amp; Qurʾānic Sciences</td>
+        <td>Saturday, 3:00–3:50 PM</td>
+        <td><span class="tag">In Person</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mawlānā Rohan</strong></td>
+        <td>TAJ 101 — Tajwīd</td>
+        <td>Saturday, 3:55–4:45 PM</td>
+        <td><span class="tag">In Person</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-note">Schedule subject to change. Students will be notified of any updates.</span>
+    <span class="footer-url">darultahawiyyah.com</span>
+  </div>
+
+</body>
+</html>

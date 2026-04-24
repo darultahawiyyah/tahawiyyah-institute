@@ -412,7 +412,16 @@ export default function Apply() {
                     </div>
                     <div className="border-t border-gold/20 pt-2 mt-2">
                       <p className="text-muted leading-relaxed">
-                        <span className="font-medium text-text">Monthly payment plan available</span> — pay in 4 installments (e.g. 1 course = <span className="font-medium text-text">$20/month</span>). Details will be sent via email after enrollment.
+                        <span className="font-medium text-text">Monthly payment plan available</span> — pay in 4 installments (e.g. 1 course = <span className="font-medium text-text">$20/month</span>). Full payment must be completed within 4 months.
+                      </p>
+                    </div>
+                    <div className="border-t border-gold/20 pt-3 mt-1 space-y-1.5">
+                      <p className="text-xs font-semibold text-text uppercase tracking-wide">How to Pay</p>
+                      <p className="text-sm text-muted">
+                        Zelle to: <span className="font-medium text-text select-all">darultahawiyyah@gmail.com</span>
+                      </p>
+                      <p className="text-xs text-muted leading-relaxed">
+                        If paying in installments, include the installment number in the memo (e.g., <span className="font-medium text-text">Installment #1</span>, <span className="font-medium text-text">Installment #2</span>).
                       </p>
                     </div>
                   </div>
@@ -851,9 +860,21 @@ export default function Apply() {
                           </div>
                           <div className="border-t border-gold/20 pt-2 mt-1">
                             <p className="text-muted text-xs leading-relaxed">
-                              <span className="font-medium text-text">Monthly plan available:</span> ${Math.round(totalPrice / 4)}/month × 4 months
+                              <span className="font-medium text-text">Monthly plan available:</span> ${Math.round(totalPrice / 4)}/month × 4 months — full payment required within 4 months
                             </p>
                           </div>
+                        </div>
+
+                        {/* Zelle Payment Instructions */}
+                        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+                          <p className="font-semibold text-text">How to Pay</p>
+                          <p className="text-muted">
+                            Zelle to:{" "}
+                            <span className="font-semibold text-text select-all">darultahawiyyah@gmail.com</span>
+                          </p>
+                          <p className="text-xs text-muted leading-relaxed">
+                            If paying in installments, include the installment number in the Zelle memo (e.g., <span className="font-medium text-text">Installment #1</span>, <span className="font-medium text-text">Installment #2</span>, etc.). All installments must be paid in full within 4 months.
+                          </p>
                         </div>
 
                         {/* Financial Aid */}
