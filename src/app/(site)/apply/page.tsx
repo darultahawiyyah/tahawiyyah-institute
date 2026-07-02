@@ -582,19 +582,7 @@ export default function Apply() {
                         {/* Brothers only notice */}
                         <div className="rounded-xl border border-gold/30 bg-gold/5 px-4 py-3">
                           <p className="text-sm font-medium text-gold">Brothers Only — Semester 1</p>
-                          <p className="mt-1 text-xs text-muted leading-relaxed">
-                            Classes this semester are open to brothers only. We plan to offer sisters&apos; classes in the future inshallah.
-                          </p>
                         </div>
-
-                        {/* Sisters link */}
-                        <Link
-                          href="/events#sisters"
-                          className="flex items-center justify-between rounded-xl border border-border bg-surface px-4 py-3 text-sm transition-colors hover:border-gold/40 hover:bg-gold/5"
-                        >
-                          <span className="text-muted">Sister? Sign up for pre-registration</span>
-                          <ArrowRight className="h-4 w-4 text-gold shrink-0" />
-                        </Link>
 
                         {/* Previous Studies */}
                         <div>
