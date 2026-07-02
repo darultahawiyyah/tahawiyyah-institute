@@ -63,14 +63,6 @@ const teachers = [
       "Mawlānā Fahim completed the seven-year ʿĀlimiyyah program at Darul Qurʾān wa Sunnah and a postgraduate specialization in Fiqh and Iftāʾ, and currently serves as a chaplain at Queens College.",
   },
   {
-    slug: "mawlana-rohan",
-    name: "Mawlānā Rohan",
-    title: "Instructor — ʿAqīda & Tajwīd",
-    courses: ["AQD 101", "TAJ 101"],
-    summary:
-      "Mawlānā Rohan is a graduate of Jāmiʿah Nuʿmāniyyah in South Africa, where he studied under Mawlānā Faḍlur Raḥmān Aẓmī, and studied the sciences of Qirāʾāt under Qāriʾ ʿAbdullāh Motara. He currently serves as Imām and Resident Scholar at Shelter Rock Islamic Center.",
-  },
-  {
     slug: "qari-nazrul",
     name: "Qāriʾ Nazrul",
     title: "Instructor — Qirāʾāt",
