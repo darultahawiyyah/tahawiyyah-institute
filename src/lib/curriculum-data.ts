@@ -36,8 +36,8 @@ export const semester1Courses: CourseData[] = [
     code: "AQD 101",
     name: "ʿAqīdah",
     fullName: "Foundations of Islamic Theology (ʿAqīdah)",
-    instructor: null,
-    instructorSlug: null,
+    instructor: "Mawlānā Rohan",
+    instructorSlug: "mawlana-rohan",
     location: "Online",
     schedule: "Monday 8:55–9:45 PM",
     description:
@@ -49,8 +49,8 @@ export const semester1Courses: CourseData[] = [
     code: "TAJ 101",
     name: "Tajwīd",
     fullName: "Principles of Qurʾānic Recitation (Tajwīd)",
-    instructor: null,
-    instructorSlug: null,
+    instructor: "Mawlānā Rohan",
+    instructorSlug: "mawlana-rohan",
     location: "In Person — Masjid Ḥanafiyyah",
     schedule: "Saturday 3:55–4:45 PM",
     description:

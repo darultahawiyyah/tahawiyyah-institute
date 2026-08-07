@@ -70,6 +70,14 @@ const teachers = [
     summary:
       "Qāriʾ Nazrul is a distinguished scholar and teacher of the Qurʾān who completed the ʿĀlimiyyah program, studied Qirāʾāt under Qāriʾ Ismāʿīl Essack (رحمه الله), and currently serves as Religious Director at Shelter Rock Islamic Center.",
   },
+  {
+    slug: "mawlana-rohan",
+    name: "Mawlānā Rohan",
+    title: "Instructor — ʿAqīdah & Tajwīd",
+    courses: ["AQD 101", "TAJ 101"],
+    summary:
+      "Mawlānā Rohan is a graduate of Jami'ah Nu'maniyyah in South Africa, where he studied under the renowned Mawlānā Fadlur Rahman Azmi, and also studied the sciences of Qirāʾāt under Qāriʾ Abdullah Motara. He currently serves as Imām and Resident Scholar at Shelter Rock Islamic Center and is a co-founder of Ṭaḥāwiyyah Institute.",
+  },
 ];
 
 function Initials({ name }: { name: string }) {
