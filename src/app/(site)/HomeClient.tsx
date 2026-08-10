@@ -13,6 +13,7 @@ import {
   Star,
   GraduationCap,
   Scroll,
+  Video,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -46,6 +47,13 @@ const stats = [
   { value: "4", label: "Semesters" },
   { value: "5+", label: "Expert Scholars" },
 ];
+
+// ─── UPDATE NEXT EVENT ZOOM LINK HERE ──────────────────────────────────────
+const nextEvent = {
+  title: "Next Event — Details Coming Soon",
+  zoomUrl: "https://zoom.us/j/PLACEHOLDER",
+};
+// ─────────────────────────────────────────────────────────────────────────
 
 const highlights = [
   {
@@ -215,6 +223,48 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </Container>
+      </section>
+
+      {/* ── JOIN NEXT EVENT ──────────────────────────────────── */}
+      <section className="border-b border-border bg-bg py-12 md:py-16">
+        <Container>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUpVariants}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="relative overflow-hidden border-gold/25 bg-surface2 ring-1 ring-gold/15">
+              <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
+              <CardContent className="flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 ring-1 ring-gold/20">
+                    <Video className="h-6 w-6 text-gold" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gold">
+                      Join Us Live
+                    </p>
+                    <p className="mt-1 font-display text-xl font-semibold text-text">
+                      {nextEvent.title}
+                    </p>
+                  </div>
+                </div>
+                <ButtonLink
+                  href={nextEvent.zoomUrl}
+                  variant="primary"
+                  size="md"
+                  className="w-full sm:w-auto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Join on Zoom →
+                </ButtonLink>
+              </CardContent>
+            </Card>
+          </motion.div>
         </Container>
       </section>
 

@@ -104,10 +104,31 @@ export default function EventsPage() {
               </p>
             </motion.div>
           ) : (
-            <div className="space-y-6 max-w-3xl">
-              {events.map((event, index) => (
+            (() => {
+              const today = new Date();
+              today.setHours(0, 0, 0, 0);
+
+              const withDates = events.map((event) => ({
+                event,
+                parsedDate: new Date(event.date),
+              }));
+
+              const upcomingEvents = withDates
+                .filter(({ parsedDate }) => !isNaN(parsedDate.getTime()) && parsedDate >= today)
+                .sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+
+              const previousEvents = withDates
+                .filter(({ parsedDate }) => isNaN(parsedDate.getTime()) || parsedDate < today)
+                .sort((a, b) => b.parsedDate.getTime() - a.parsedDate.getTime());
+
+              const EventCard = ({
+                event,
+                index,
+              }: {
+                event: (typeof events)[number];
+                index: number;
+              }) => (
                 <motion.div
-                  key={index}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-50px" }}
@@ -134,8 +155,46 @@ export default function EventsPage() {
                     <p className="text-base leading-relaxed text-muted">{event.description}</p>
                   )}
                 </motion.div>
-              ))}
-            </div>
+              );
+
+              return (
+                <div className="max-w-3xl space-y-16">
+                  <div>
+                    <h2 className="text-2xl font-semibold text-text mb-6">
+                      Upcoming Events
+                    </h2>
+                    {upcomingEvents.length === 0 ? (
+                      <p className="text-muted text-base leading-relaxed">
+                        No upcoming events scheduled at this time.
+                      </p>
+                    ) : (
+                      <div className="space-y-6">
+                        {upcomingEvents.map(({ event }, index) => (
+                          <EventCard key={event.title + event.date} event={event} index={index} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div>
+                    <h2 className="text-2xl font-semibold text-text mb-6">
+                      Previous Events
+                    </h2>
+                    {previousEvents.length === 0 ? (
+                      <p className="text-muted text-base leading-relaxed">
+                        No previous events to show yet.
+                      </p>
+                    ) : (
+                      <div className="space-y-6">
+                        {previousEvents.map(({ event }, index) => (
+                          <EventCard key={event.title + event.date} event={event} index={index} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()
           )}
         </Container>
       </section>
