@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Video } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 const fadeUpVariants = {
@@ -17,13 +17,15 @@ const events: {
   time: string;
   location: string;
   description: string;
+  zoomUrl?: string;
 }[] = [
   {
     title: "His Blessed Footsteps — A Rabī' al-Awwal Sīrah Series",
     date: "August 20, 2026",
-    time: "After Maghrib",
+    time: "8:00 PM ET (After Maghrib)",
     location: "Zoom (Online)",
     description: "A 4-week Seerah program by Mawlānā Ibraheim on the life, character, and mission of Prophet Muhammad ﷺ. Held every Thursday after Maghrib on Zoom. Sessions: August 20, 27, September 3, and September 10.",
+    zoomUrl: "https://us06web.zoom.us/j/82146015727",
   },
   // Example (remove when real events are added):
   // {
@@ -161,6 +163,17 @@ export default function EventsPage() {
                   </div>
                   {event.description && (
                     <p className="text-base leading-relaxed text-muted">{event.description}</p>
+                  )}
+                  {event.zoomUrl && (
+                    <a
+                      href={event.zoomUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:underline"
+                    >
+                      <Video className="h-4 w-4" />
+                      Join on Zoom
+                    </a>
                   )}
                 </motion.div>
               );

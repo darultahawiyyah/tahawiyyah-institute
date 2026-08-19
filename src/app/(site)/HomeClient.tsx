@@ -49,8 +49,8 @@ const stats = [
 
 // ─── UPDATE NEXT EVENT ZOOM LINK HERE ──────────────────────────────────────
 const nextEvent = {
-  title: "Next Event — Details Coming Soon",
-  zoomUrl: "https://zoom.us/j/PLACEHOLDER",
+  title: "His Blessed Footsteps — Seerah Program",
+  zoomUrl: "https://us06web.zoom.us/j/82146015727",
 };
 // ─────────────────────────────────────────────────────────────────────────
 
