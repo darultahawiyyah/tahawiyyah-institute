@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Calendar,
@@ -211,60 +210,37 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              {/* Logo */}
-              <div className="mt-6 flex flex-1 items-end justify-center">
-                <Image
-                  src="/logo2.svg"
-                  alt="Tahawiyyah Institute Logo"
-                  width={480}
-                  height={480}
-                  className="h-auto w-full max-w-[380px] object-contain opacity-75 md:max-w-[460px]"
-                />
-              </div>
+              {/* Join Next Event — Zoom */}
+              <Card className="relative mt-6 overflow-hidden border-gold/25 bg-surface2 ring-1 ring-gold/15">
+                <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
+                <CardContent className="flex flex-col items-start gap-4 py-6">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/10 ring-1 ring-gold/20">
+                      <Video className="h-5 w-5 text-gold" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-gold">
+                        Join Us Live
+                      </p>
+                      <p className="mt-1 text-base font-semibold text-text">
+                        {nextEvent.title}
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonLink
+                    href={nextEvent.zoomUrl}
+                    variant="primary"
+                    size="md"
+                    className="w-full text-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Join on Zoom →
+                  </ButtonLink>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
-        </Container>
-      </section>
-
-      {/* ── JOIN NEXT EVENT ──────────────────────────────────── */}
-      <section className="border-b border-border bg-bg py-12 md:py-16">
-        <Container>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeUpVariants}
-            transition={{ duration: 0.6 }}
-          >
-            <Card className="relative overflow-hidden border-gold/25 bg-surface2 ring-1 ring-gold/15">
-              <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
-              <CardContent className="flex flex-col items-center gap-6 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/10 ring-1 ring-gold/20">
-                    <Video className="h-6 w-6 text-gold" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-gold">
-                      Join Us Live
-                    </p>
-                    <p className="mt-1 font-display text-xl font-semibold text-text">
-                      {nextEvent.title}
-                    </p>
-                  </div>
-                </div>
-                <ButtonLink
-                  href={nextEvent.zoomUrl}
-                  variant="primary"
-                  size="md"
-                  className="w-full sm:w-auto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join on Zoom →
-                </ButtonLink>
-              </CardContent>
-            </Card>
-          </motion.div>
         </Container>
       </section>
 
