@@ -18,6 +18,13 @@ const events: {
   location: string;
   description: string;
 }[] = [
+  {
+    title: "His Blessed Footsteps — A Rabī' al-Awwal Sīrah Series",
+    date: "August 20, 2026",
+    time: "After Maghrib",
+    location: "Zoom (Online)",
+    description: "A 4-week Seerah program by Mawlānā Ibraheim on the life, character, and mission of Prophet Muhammad ﷺ. Held every Thursday after Maghrib on Zoom. Sessions: August 20, 27, September 3, and September 10.",
+  },
   // Example (remove when real events are added):
   // {
   //   title: "Open House & Info Session",
@@ -60,6 +67,7 @@ export default function EventsPage() {
           {(() => {
             const flyers = [
               { src: "/PHOTO-2026-04-05-13-32-20.jpg", alt: "Event flyer" },
+              { src: "/his-blessed-footsteps-flyer.png", alt: "His Blessed Footsteps - A Rabi al-Awwal Sirah Series flyer" },
               // { src: "/next-event.jpg", alt: "Next event" },
             ];
             return (
