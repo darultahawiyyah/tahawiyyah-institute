@@ -88,6 +88,28 @@ export default function Home() {
         <div className="absolute right-0 top-1/2 h-[700px] w-[700px] -translate-y-1/2 translate-x-1/3 rounded-full bg-gold/6 blur-3xl pointer-events-none" />
         <div className="absolute left-0 bottom-0 h-[400px] w-[500px] translate-y-1/2 -translate-x-1/4 rounded-full bg-brand/20 blur-3xl pointer-events-none" />
 
+        {/* Rosette medallion watermark */}
+        <svg
+          className="absolute left-1/2 top-1/2 h-[820px] w-[820px] -translate-x-1/2 -translate-y-1/2 text-gold/[0.06] pointer-events-none"
+          viewBox="0 0 200 200"
+          fill="none"
+          aria-hidden="true"
+        >
+          <g stroke="currentColor" strokeWidth="1">
+            <circle cx="100" cy="100" r="70" />
+            <circle cx="100" cy="100" r="55" />
+            <circle cx="100" cy="100" r="4" fill="currentColor" stroke="none" />
+            <path d="M100,30 L108,70 L100,100 L92,70 Z" />
+            <path d="M100,170 L108,130 L100,100 L92,130 Z" />
+            <path d="M30,100 L70,92 L100,100 L70,108 Z" />
+            <path d="M170,100 L130,92 L100,100 L130,108 Z" />
+            <path d="M50,50 L80,72 L100,100 L72,80 Z" />
+            <path d="M150,150 L120,128 L100,100 L128,120 Z" />
+            <path d="M150,50 L128,80 L100,100 L120,72 Z" />
+            <path d="M50,150 L72,120 L100,100 L80,128 Z" />
+          </g>
+        </svg>
+
         <Container className="pt-4 md:pt-0">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
 
