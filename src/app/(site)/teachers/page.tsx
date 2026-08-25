@@ -96,7 +96,7 @@ function Initials({ name }: { name: string }) {
 export default function TeachersPage() {
   return (
     <div className="relative min-h-screen bg-bg py-16 md:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.07)_0%,transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,97,0.10)_0%,transparent_60%)] pointer-events-none" />
       <Container className="relative">
 
         {/* Page Header */}

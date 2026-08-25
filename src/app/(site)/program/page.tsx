@@ -83,7 +83,7 @@ export default function Program() {
 
       {/* HEADER */}
       <section className="relative border-b border-border bg-bg pb-12 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,115,85,0.08)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(201,169,97,0.11)_0%,transparent_60%)] pointer-events-none" />
         <Container className="relative pt-4 md:pt-0">
           <motion.div
             initial="hidden"
@@ -114,7 +114,7 @@ export default function Program() {
 
       {/* VISION */}
       <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.06)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,97,0.09)_0%,transparent_65%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -209,7 +209,7 @@ export default function Program() {
 
       {/* PROGRAM STRUCTURE */}
       <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(139,115,85,0.06)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(201,169,97,0.09)_0%,transparent_65%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -310,7 +310,7 @@ export default function Program() {
 
       {/* IJAZAH CALLOUT */}
       <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,115,85,0.07)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,97,0.10)_0%,transparent_70%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"

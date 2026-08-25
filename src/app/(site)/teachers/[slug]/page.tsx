@@ -148,7 +148,7 @@ export default function TeacherBiographyPage({
 
   return (
     <div className="relative min-h-screen bg-bg py-16 md:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,175,55,0.06)_0%,transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(201,169,97,0.09)_0%,transparent_60%)] pointer-events-none" />
       <Container className="relative">
         {/* Breadcrumb */}
         <motion.nav

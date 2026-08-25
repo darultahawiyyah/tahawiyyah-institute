@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* Design System Colors — Gold & White */
-  --bg: #FFFFFF;
-  --surface: #FFFFFF;
-  --surface2: #FFFBF2;
-  --text: #1A1710;
-  --muted: #6B6045;
-  --brand: #F5E8C4;
-  --brand2: #EDD49A;
-  --gold: #D4AF37;
-  --gold2: #B8960C;
-  --border: rgba(212, 175, 55, 0.20);
+  /* Design System Colors — Modern Scholarly (emerald & gold) */
+  --bg: #0F2A2E;
+  --surface: #123338;
+  --surface2: #163A3F;
+  --text: #F5F1E6;
+  --muted: #9FB0AC;
+  --brand: #2E6560;
+  --brand2: #1D4A47;
+  --gold: #C9A961;
+  --gold2: #B8944A;
+  --border: rgba(201, 169, 97, 0.20);
 }
 
 @theme {
@@ -26,11 +26,11 @@
   --color-gold2: var(--gold2);
   --color-border: var(--border);
 
-  --shadow-soft: 0 10px 30px rgba(212, 175, 55, 0.12);
-  --shadow-card: 0 4px 20px rgba(212, 175, 55, 0.10), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.20), 0 1px 4px rgba(0, 0, 0, 0.15);
 
-  /* Display font — Playfair Display for headings */
-  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  /* Display font — Lora for headings */
+  --font-display: var(--font-lora), Georgia, "Times New Roman", serif;
 }
 
 body {
@@ -51,8 +51,8 @@ body::before {
   height: 60%;
   background: radial-gradient(
     ellipse at top left,
-    rgba(212, 175, 55, 0.08) 0%,
-    rgba(212, 175, 55, 0.02) 50%,
+    rgba(201, 169, 97, 0.10) 0%,
+    rgba(201, 169, 97, 0.03) 50%,
     transparent 70%
   );
   pointer-events: none;
@@ -69,7 +69,7 @@ body::after {
   height: 50%;
   background: radial-gradient(
     ellipse at bottom right,
-    rgba(212, 175, 55, 0.06) 0%,
+    rgba(201, 169, 97, 0.07) 0%,
     transparent 70%
   );
   pointer-events: none;

@@ -246,7 +246,7 @@ export default function Home() {
 
       {/* ── PROGRAM HIGHLIGHTS ───────────────────────────────── */}
       <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.07)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,97,0.10)_0%,transparent_65%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -356,7 +356,7 @@ export default function Home() {
 
       {/* ── CURRICULUM PREVIEW ───────────────────────────────── */}
       <section className="relative border-b border-border bg-surface2 py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,115,85,0.07)_0%,transparent_65%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(201,169,97,0.10)_0%,transparent_65%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"
@@ -427,7 +427,7 @@ export default function Home() {
           >
             <Card className="relative overflow-hidden border-gold/25 bg-surface2 ring-1 ring-gold/15">
               <div className="h-2 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,115,85,0.06)_0%,transparent_70%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,169,97,0.09)_0%,transparent_70%)] pointer-events-none" />
               <CardContent className="relative py-14 text-center md:py-20">
                 <div className="mx-auto mb-6 flex items-center justify-center gap-3">
                   <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/50" />

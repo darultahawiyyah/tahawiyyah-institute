@@ -28,7 +28,7 @@ export default function Curriculum() {
 
       {/* HEADER */}
       <section className="relative border-b border-border bg-bg pb-12 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,115,85,0.08)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(201,169,97,0.11)_0%,transparent_60%)] pointer-events-none" />
         <Container className="relative pt-4 md:pt-0">
           <motion.div
             initial="hidden"
@@ -59,7 +59,7 @@ export default function Curriculum() {
 
       {/* SEMESTER 1 */}
       <section className="relative border-b border-border bg-bg py-16 md:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,115,85,0.05)_0%,transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,97,0.08)_0%,transparent_60%)] pointer-events-none" />
         <Container>
           <motion.div
             initial="hidden"

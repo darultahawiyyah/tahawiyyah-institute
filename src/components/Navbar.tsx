@@ -43,8 +43,8 @@ export function Navbar() {
         className={cn(
           "sticky top-0 z-50 h-[72px] backdrop-blur-md",
           isMobileMenuOpen
-            ? "bg-white"
-            : "bg-[rgba(255,255,255,0.92)] border-b border-border"
+            ? "bg-surface"
+            : "bg-[rgba(18,51,56,0.92)] border-b border-border"
         )}
         role="navigation"
         aria-label="Main navigation"
