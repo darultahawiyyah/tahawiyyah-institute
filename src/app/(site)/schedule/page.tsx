@@ -27,78 +27,78 @@ const staggerContainer = {
   },
 };
 
-const scheduleData = [
-  {
+const semester1Schedule = [
+    {
     day: "Monday",
     dayAbbr: "Mon",
     sessions: [
       {
-        time: "8:00–8:50 PM",
+        time: "7:00–7:40 PM",
         courseCode: "FQH 101",
         courseSlug: "fqh-101",
-        courseName: "Ḥanafī Jurisprudence and Legal Methodology",
+        courseName: "Fiqh",
         instructor: "Mawlānā Abdurrahman Khan",
         instructorSlug: "mawlana-abdurrahman-khan",
         location: "Online",
         isOnline: true,
       },
-      {
-        time: "8:55–9:45 PM",
-        courseCode: "AQD 101",
-        courseSlug: "aqd-101",
-        courseName: "Foundations of Islamic Theology (ʿAqīdah)",
-        instructor: "Mawlānā Rohan",
-        instructorSlug: "mawlana-rohan",
-        location: "Online",
-        isOnline: true,
-      },
     ],
   },
-  {
+    {
     day: "Tuesday",
     dayAbbr: "Tue",
     sessions: [
       {
-        time: "8:00–8:50 PM",
-        courseCode: "SAR 101",
-        courseSlug: "sar-101",
-        courseName: "Foundations of Arabic Morphology (Ṣarf)",
-        instructor: "Muftī Umair",
-        instructorSlug: "mufti-umair",
-        location: "Online",
-        isOnline: true,
-      },
-      {
-        time: "8:55–9:45 PM",
+        time: "7:00–7:40 PM",
         courseCode: "ARB 101",
         courseSlug: "arb-101",
-        courseName: "Classical Arabic Grammar (Naḥw)",
+        courseName: "Naḥw",
         instructor: "Mawlānā Ibraheem",
         instructorSlug: "mawlana-ibraheem",
         location: "Online",
         isOnline: true,
       },
+      {
+        time: "8:00–8:40 PM",
+        courseCode: "SAR 101",
+        courseSlug: "sar-101",
+        courseName: "Ṣarf",
+        instructor: "Muftī Umair",
+        instructorSlug: "mufti-umair",
+        location: "Online",
+        isOnline: true,
+      },
     ],
   },
-  {
+    {
     day: "Saturday",
     dayAbbr: "Sat",
     sessions: [
       {
-        time: "3:00–3:50 PM",
+        time: "2:30–3:10 PM",
         courseCode: "TAF 101",
         courseSlug: "taf-101",
-        courseName: "Classical Tafsīr and Qurʾānic Sciences",
-        instructor: "Mawlānā Arqam Masroor",
+        courseName: "Tafsīr",
+        instructor: "Mawlānā Arqam",
         instructorSlug: "mawlana-arqam",
         location: "Masjid Ḥanafiyyah",
         isOnline: false,
       },
       {
-        time: "3:55–4:45 PM",
+        time: "3:15–3:55 PM",
+        courseCode: "AQD 101",
+        courseSlug: "aqd-101",
+        courseName: "ʿAqīdah",
+        instructor: "Mawlānā Rohan",
+        instructorSlug: "mawlana-rohan",
+        location: "Masjid Ḥanafiyyah",
+        isOnline: false,
+      },
+      {
+        time: "4:00–4:40 PM",
         courseCode: "TAJ 101",
         courseSlug: "taj-101",
-        courseName: "Principles of Qurʾānic Recitation (Tajwīd)",
+        courseName: "Tajwīd",
         instructor: "Mawlānā Rohan",
         instructorSlug: "mawlana-rohan",
         location: "Masjid Ḥanafiyyah",
@@ -107,6 +107,110 @@ const scheduleData = [
     ],
   },
 ];
+
+const semester2Schedule = [
+    {
+    day: "Monday",
+    dayAbbr: "Mon",
+    sessions: [
+      {
+        time: "7:00–7:40 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "Fiqh",
+        instructor: "Mawlānā Fahim",
+        instructorSlug: "mawlana-fahim",
+        location: "Online",
+        isOnline: true,
+      },
+    ],
+  },
+    {
+    day: "Tuesday",
+    dayAbbr: "Tue",
+    sessions: [
+      {
+        time: "7:00–7:40 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "Naḥw 102",
+        instructor: "Mawlānā Ibraheem",
+        instructorSlug: "mawlana-ibraheem",
+        location: "Online",
+        isOnline: true,
+      },
+    ],
+  },
+    {
+    day: "Saturday",
+    dayAbbr: "Sat",
+    sessions: [
+      {
+        time: "2:30–3:10 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "Tajwīd",
+        instructor: "Mawlānā Rohan",
+        instructorSlug: "mawlana-rohan",
+        location: "Masjid Ḥanafiyyah",
+        isOnline: false,
+      },
+      {
+        time: "3:15–3:55 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "Tafsīr",
+        instructor: "Mawlānā Arqam",
+        instructorSlug: "mawlana-arqam",
+        location: "Masjid Ḥanafiyyah",
+        isOnline: false,
+      },
+      {
+        time: "4:00–4:40 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "Ṣarf",
+        instructor: "Mawlānā Arqam",
+        instructorSlug: "mawlana-arqam",
+        location: "Masjid Ḥanafiyyah",
+        isOnline: false,
+      },
+      {
+        time: "4:40–5:20 PM",
+        courseCode: null,
+        courseSlug: null,
+        courseName: "ʿAqīdah",
+        instructor: "Mawlānā Rohan",
+        instructorSlug: "mawlana-rohan",
+        location: "Masjid Ḥanafiyyah",
+        isOnline: false,
+      },
+    ],
+  },
+];
+
+const semesters = [
+  { label: "Semester 1", data: semester1Schedule },
+  { label: "Semester 2", data: semester2Schedule },
+];
+
+function SessionLink({
+  slug,
+  children,
+}: {
+  slug: string | null;
+  children: React.ReactNode;
+}) {
+  if (!slug) return <div className="block h-full">{children}</div>;
+  return (
+    <Link
+      href={`/curriculum/${slug}`}
+      className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default function Schedule() {
   return (
@@ -123,7 +227,7 @@ export default function Schedule() {
             className="max-w-3xl"
           >
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Semester 1
+              Fall 2026
             </p>
             <h1 className="font-display text-4xl font-semibold tracking-tight text-text md:text-5xl lg:text-6xl">
               Schedule
@@ -134,7 +238,7 @@ export default function Schedule() {
               <div className="h-px w-10 bg-gradient-to-l from-gold to-gold/20" />
             </div>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-muted md:text-lg">
-              Classes run Monday, Tuesday, and Saturday. In-person sessions on Saturdays are held at Masjid Ḥanafiyyah; online sessions are conducted via a virtual platform.
+              Classes run Monday, Tuesday, and Saturday, and each class is 40 minutes. Saturday classes are held in person at Masjid Ḥanafiyyah; all other classes are online.
             </p>
           </motion.div>
         </Container>
@@ -164,7 +268,15 @@ export default function Schedule() {
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
           >
-            {scheduleData.map((day) => (
+            {semesters.map((sem) => (
+              <div key={sem.label} className="space-y-8">
+                <motion.h3
+                  variants={fadeUpVariants}
+                  className="font-display text-2xl font-semibold text-gold"
+                >
+                  {sem.label}
+                </motion.h3>
+            {sem.data.map((day) => (
               <motion.div key={day.day} variants={fadeUpVariants}>
                 {/* Day label */}
                 <div className="mb-4 flex items-center gap-3">
@@ -178,11 +290,7 @@ export default function Schedule() {
                 {/* Sessions */}
                 <div className="ml-0 md:ml-14 grid gap-4 sm:grid-cols-2">
                   {day.sessions.map((session, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/curriculum/${session.courseSlug}`}
-                      className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-2xl"
-                    >
+                    <SessionLink key={idx} slug={session.courseSlug}>
                     <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group-hover:border-gold/30">
                       <div className="h-1.5 rounded-t-2xl bg-gradient-to-r from-gold to-gold2" />
                       <CardContent className="pt-5 space-y-3">
@@ -194,9 +302,11 @@ export default function Schedule() {
 
                         {/* Course */}
                         <div>
-                          <span className="text-xs font-semibold uppercase tracking-wide text-muted">
-                            {session.courseCode}
-                          </span>
+                          {session.courseCode && (
+                            <span className="text-xs font-semibold uppercase tracking-wide text-muted">
+                              {session.courseCode}
+                            </span>
+                          )}
                           <p className="mt-0.5 text-base font-semibold text-text leading-snug group-hover:text-gold transition-colors">
                             {session.courseName}
                           </p>
@@ -223,10 +333,12 @@ export default function Schedule() {
                         </div>
                       </CardContent>
                     </Card>
-                    </Link>
+                    </SessionLink>
                   ))}
                 </div>
               </motion.div>
+            ))}
+              </div>
             ))}
           </motion.div>
         </Container>
